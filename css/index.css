@@ -1,0 +1,319 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --color-azul-escuro:#0B2545;
+    --color-azul-claro0:#8DA9C4;
+    --color-azul-claro2:#13315C;
+    --color-azul-claro1:#276ebe;
+    --color-mint:#EEF4ED;
+    
+}
+
+.hide{
+    display: none;
+}
+
+body{
+    display: flex;
+    background-color: var(--color-mint);
+    flex-direction: column;
+
+}
+
+#nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75em 15px;
+    background-color:var(--color-mint);
+    color:var(--color-azul-escuro);
+}
+
+#nav img.logo{
+  display: none;
+}
+
+.desktop-nav{
+    display: none;
+}
+
+.nav-fixed{
+    position: fixed;
+   width: 100%;
+}
+
+.nav-mobile{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 3px;
+}
+
+.nav-mobile img{
+    width: 20px;
+    height: 21px;
+    margin: 6px 7px 0px 7px;
+}
+
+#nav h2{
+    font-size: 1.5em;
+}
+
+#menu-hamburguer{
+    font-size: 34px;
+    font-weight: 600;
+    margin-left: 19px;
+}
+
+
+#main-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 2em 20px 0em 20px;
+   white-space: nowrap;
+}
+
+header h1{
+    text-align: center;
+    font-size: 2em;
+    color: var(--color-azul-escuro);
+    padding-right: 6px;
+    border-right: 6px solid var(--color-azul-escuro);
+    overflow: hidden;
+
+}
+
+header p{
+    font-size: 1.5em;
+    font-weight: 400;
+
+}
+
+header button{
+    margin-top: 20px;
+    font-family: 'Poppins', sans-serif;
+    padding: 1em;
+    border-radius: 10px;
+    border: 2px solid var(--color-azul-escuro);
+    color: var(--color-azul-escuro);
+   
+
+}
+
+section h2{
+    font-size: 2.3em;
+    color: var(--color-azul-escuro);
+    margin-bottom: 5px;
+}
+
+section#about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em;
+    margin-top: 3em;
+    margin-bottom: 5.5em;
+}
+
+section#about p{
+    text-align: center;
+    margin: 1em 1em 10px 1em;
+    color: rgb(47, 47, 47);
+}
+
+section#skills{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em;
+    margin-bottom: 3.5em;
+}
+
+.typingAnimations{
+    animation: blink steps(30) 500ms infinite normal,
+     typing 3s steps(30) 1s normal ;
+
+    
+}
+
+
+
+
+@keyframes blink {
+    from{
+        border-right-color: #0B2545;
+    }
+    to{
+        border-right-color: transparent
+    }
+}
+
+@keyframes typing {
+
+    from{
+        width: 0;
+    }
+    to{
+        width: 96%;
+    }
+    
+}
+
+
+@media (min-width:768px) {
+
+  
+
+}
+
+
+@media (min-width:1000px) {
+
+    body{
+        flex-direction: row;
+    }
+
+    .nav-mobile{
+        display: none;
+    }
+  
+    .desktop-nav{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-fixed{
+        width: 19%;
+       
+    }
+
+    #nav{
+        display: flex;
+        flex-direction: column;
+        justify-content:space-around;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
+        padding: 1em 5px 10px 5px;
+        border-right: 1px solid var(--color-azul-escuro);
+    }
+
+    .name-div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #nav img.logo{
+        display: flex;
+        border-radius: 50%;
+        border: 2px solid var(--color-azul-escuro);
+        width: 60%;
+        margin: 10px 0px;
+    }
+
+    ul{
+        list-style: none;
+        text-align: center;
+        
+
+    }
+
+    ul li a{
+        text-decoration: none;
+        color:black;
+        padding: 1em 0em;
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    ul li a:hover{
+        color:var(--color-azul-claro1) ;
+    }
+
+    ul li{
+        margin: 1.5em 0em;
+    }
+
+    ul li button{
+        border-radius: 10px;
+        color:var(--color-mint) ;
+        background-color: var(--color-azul-escuro);
+        padding: 0.75em 1em;
+        margin: 20px;
+
+    }
+
+    #webicons-nav{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin: 1.5em 0em;
+    }
+
+    #webicons-nav img{
+        display: flex;
+       
+        width: 20px;
+        height: 21px;
+        margin: 6px 10px 0px 10px;
+    }
+
+    #main-content{
+        padding-left: 16em;
+    }
+
+    header{
+       width: 70%;
+       padding-top: 0em;
+    }
+
+    header h1{
+        font-size: 3.8em;
+    }
+
+    section#about{
+
+        width: 70%;
+    }
+
+
+
+    
+}
+
+@media (max-width:430px) {
+
+  #icons-nav{
+    display: none;
+  }
+
+  #nav h2{
+    font-size: 1.39em;
+
+  }
+
+  #menu-hamburguer{
+    font-size: 30px;
+  }
+
+}
