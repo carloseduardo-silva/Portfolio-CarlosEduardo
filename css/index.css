@@ -154,6 +154,50 @@ section#skills{
     
 }
 
+section#skills{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1em;
+}
+
+.container-skills{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 70%;
+    margin: 3em 0.5em;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #8DA9C4;
+    width: 94px;
+    padding: 15px 0px;
+    margin: 1.75em;
+    border-bottom: 5px solid #3c87dc ;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.card p {
+    margin-bottom: 7px;
+}
+
+.card:hover{
+    width: 97px;
+    height: 93px;
+    transition: 400ms;
+    cursor: pointer;
+}
+
 
 
 
