@@ -5,12 +5,14 @@
 }
 
 :root{
-    --color-azul-escuro:#0B2545;
+    --color-azul-escuro:rgb(11, 37, 69);
     --color-azul-claro0:#8DA9C4;
     --color-azul-claro2:#13315C;
     --color-azul-claro1:#276ebe;
-    --color-mint:#EEF4ED;
+    --color-azul-claro:rgb(60, 135, 220);
     
+    --color-mint:#EEF4ED;
+
 }
 
 .hide{
@@ -60,6 +62,8 @@ body{
     margin: 6px 7px 0px 7px;
 }
 
+
+
 #nav h2{
     font-size: 1.5em;
 }
@@ -69,6 +73,38 @@ body{
     font-weight: 600;
     margin-left: 19px;
 }
+
+#menu-hamburguer:hover{
+    cursor: pointer;
+}
+
+
+#menu-close{
+    font-size: 34px;
+    font-weight: 600;
+    margin-left: 19px;
+}
+
+#menu-close:hover{
+    cursor: pointer;
+}
+
+.nav-mobile img:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+    }
+    
+#webicons-nav img:hover{
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+
+nav button:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+
+}
+
 
 
 #main-content{
@@ -116,6 +152,12 @@ header button{
 
 }
 
+header span{
+    position: absolute;
+    bottom: 10px;
+    color: var(--color-azul-escuro);
+}
+
 section h2{
     font-size: 2.3em;
     color: var(--color-azul-escuro);
@@ -128,8 +170,8 @@ section#about{
     align-items: center;
     justify-content: center;
     padding: 2em;
-    margin-top: 3em;
-    margin-bottom: 5.5em;
+    margin-top: 11em;
+    margin-bottom: 7.5em;
 }
 
 section#about p{
@@ -144,15 +186,10 @@ section#skills{
     align-items: center;
     justify-content: center;
     padding: 2em;
-    margin-bottom: 3.5em;
+    margin-bottom: 5em;
 }
 
-.typingAnimations{
-    animation: blink steps(30) 500ms infinite normal,
-     typing 3s steps(30) 1s normal ;
 
-    
-}
 
 section#skills{
     display: flex;
@@ -164,11 +201,11 @@ section#skills{
 
 .container-skills{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 70%;
+    width: 90%;
     margin: 3em 0.5em;
 }
 
@@ -177,29 +214,119 @@ section#skills{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #8DA9C4;
-    width: 94px;
-    padding: 15px 0px;
+    background-color:var(--color-azul-escuro);
+    width: 100px;
+    padding: 15px 0px 17px 0px;
     margin: 1.75em;
-    border-bottom: 5px solid #3c87dc ;
-    border-top-left-radius: 20px;
+    border-bottom: 5px solid var(--color-azul-claro) ;
+    border-top-left-radius: 25px;
     border-bottom-left-radius: 2px;
     border-bottom-right-radius: 2px;
 }
 
 .card p {
     margin-bottom: 7px;
+    color: var(--color-azul-claro)
 }
 
 .card:hover{
-    width: 97px;
-    height: 93px;
-    transition: 400ms;
+    transform: scale(1.1);
+    transition: 340ms;
     cursor: pointer;
+}
+
+section#projects{
+
+}
+
+
+section#contacts{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1em;
+   
+}
+
+.contacts-icon{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 3em 1em 2em 1em;
+}
+
+.icon-contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 3em 2em;
+
+}
+
+.icon-contact:hover{
+    transform: scale(1.1);
+    transition: 220ms;
+    cursor: pointer;
+}
+
+.icon-contact a{
+    text-decoration: none;
+    color: var(--color-azul-escuro);
+}
+
+
+.icon-contact span{
+    background-color: var(--color-azul-escuro);
+    padding: 0.3em;
+    border-radius: 50%;
+    color: var(--color-azul-claro);
+    font-size: 40px;
+    margin-bottom: 14px;
+}
+
+.icon-contact img{
+    background-color: var(--color-azul-escuro);
+    padding: 0.7em;
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+
+.bold{
+    font-weight: bold;
 }
 
 
 
+
+.typingAnimations{
+    animation: blink steps(30) 500ms infinite normal,
+     typing 3s steps(30) 1s normal ;
+
+    
+}
+
+.slideAnimation{
+    animation: slide 1200ms infinite normal
+}
+
+
+
+@keyframes slide {
+
+    from{
+        opacity: 0;
+        bottom: 30px;
+    }
+    to{
+        opacity: 1;
+        bottom: 5px;
+    }
+    
+}
 
 @keyframes blink {
     from{
@@ -290,7 +417,7 @@ section#skills{
     }
 
     ul li a:hover{
-        color:var(--color-azul-claro1) ;
+        color:var(--color-azul-claro) ;
     }
 
     ul li{
@@ -357,6 +484,10 @@ section#skills{
   }
 
   #menu-hamburguer{
+    font-size: 30px;
+  }
+
+  #menu-close{
     font-size: 30px;
   }
 
