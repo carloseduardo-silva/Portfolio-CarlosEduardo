@@ -9,12 +9,15 @@ class indexController{
         this.highlights = document.querySelector('.highlights-projects')
         this.all = document.querySelector('.all-projects')
         this.projectsArr = document.querySelectorAll('.box')
-
+        this.divModal = document.querySelector('#modal')
+        this.closeModalBtn = document.querySelector("#close-modal")
+        
 
         this.menuHamburguerToggle()
         this.menuCloseToggle()
         this.projectsToggle()
         this.projectsClick()
+        this.closeModal()
 
     }
 
@@ -76,13 +79,14 @@ class indexController{
 
     showHighLightDiv(){
 
-        this.highlights.classList.remove('hide')
+        this.all.classList.remove('flex')
         this.all.classList.add('hide')
     }
 
     showAllDiv(){
         this.all.classList.remove('hide')
-        this.highlights.classList.add('hide')
+        this.all.classList.add('flex')
+        
     }
 
     projectsClick(){
@@ -92,6 +96,7 @@ class indexController{
          el.addEventListener('click', e =>{
 
             document.body.classList.add('transparent')
+            this.divModal.style.display = 'flex'
 
             let id = el.getAttribute('id')
            
@@ -113,6 +118,16 @@ class indexController{
 
             
         });
+    }
+
+    closeModal(){
+        this.closeModalBtn.addEventListener('click', e =>{
+
+            this.divModal.style.display = 'none'
+            document.body.classList.remove('transparent')
+
+        })
+
     }
 
 

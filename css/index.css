@@ -18,6 +18,10 @@
     display: none;
 }
 
+.flex{
+    display: flex;
+}
+
 body{
     display: flex;
     background-color: var(--color-mint);
@@ -101,6 +105,7 @@ body{
 nav button:hover{
     transform: scale(1.1);
     cursor: pointer;
+    transition: 300ms;
 
 }
 
@@ -224,7 +229,7 @@ section#skills{
 
 .card:hover{
     transform: scale(1.1);
-    transition: 340ms;
+    transition: 300ms;
     cursor: pointer;
 }
 
@@ -262,7 +267,7 @@ section#projects h2{
 }
 
 .all-projects{
-    display: flex;
+   
     flex-direction: row;
     align-items: center;
     justify-content: center;
@@ -369,13 +374,78 @@ section#projects h2{
 }
 
 div#modal{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 75%;
+    padding: 2.5rem;
+    gap: 1.85rem;
+    background-color: var(--color-azul-escuro);
+    border-radius: 1rem;
+    animation: fade 1s;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 5;
+    transform: translate(-50%, -50%);
+    color: white;
+
 
 }
+
 div#modal img{
-    width: 500px;
-    height: 300px;
+    width: 100%;
+    
+    
 }
 
+
+.modal-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+
+.modal-header span{
+    position: absolute;
+    right: 32px;
+    margin-top: 3px;
+}
+
+.modal-header span:hover{
+    cursor: pointer;
+}
+
+.modal-content{
+    margin-top: 10px;
+}
+
+.modal-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-content h3{
+    margin: 1em 0em;
+}
+
+.modal-content ul{
+    list-style: none;
+    text-align: left;
+}
+
+.modal-content ul li{
+    padding-bottom: 8px;
+    margin-bottom: 1em;
+    border-bottom: 1px solid var(--color-mint);
+}
+
+.modal-content p{
+    display: inline;
+    margin-right: 5px;
+}
 
 
 
@@ -531,7 +601,18 @@ body.transparent::after{
 
 @media (min-width:768px) {
 
-  
+  .modal-container{
+    flex-direction: row;
+  }
+  div#modal img{
+    width: 280px;
+    height: 370px;
+    margin: 10px 2em 10px 0.35em;
+  }
+
+  .modal-content{
+    margin-top: 0px;
+}
 
 }
 
@@ -647,6 +728,11 @@ body.transparent::after{
         width: 70%;
     }
 
+    div#modal img{
+        width: 480px;
+        margin: 10px 3em 10px 0.75em;
+      }
+    
 
 
     
@@ -670,5 +756,7 @@ body.transparent::after{
   #menu-close{
     font-size: 30px;
   }
+
+  
 
 }
