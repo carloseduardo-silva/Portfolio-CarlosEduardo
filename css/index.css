@@ -11,6 +11,21 @@
     --color-azul-claro1:#276ebe;
     --color-azul-claro:#3c87dc;
     --color-mint:#EEF4ED;
+    --color-grey: #dadada;
+
+}
+
+.hidden{
+    opacity: 0;
+    filter: blur(10px);
+    transition: all 0.75s;
+}
+
+.show{
+    opacity: 1;
+    animation: show 1.3s ;
+    filter: blur(0px);
+    transition: all 0.75s;
 
 }
 
@@ -24,7 +39,7 @@
 
 body{
     display: flex;
-    background-color: rgb(218, 218, 218);
+    background-color: var(--color-grey);
     flex-direction: column;
 
 }
@@ -35,7 +50,7 @@ body{
     justify-content: space-between;
     align-items: center;
     padding: 0.75em 15px;
-    background-color:rgb(218, 218, 218);
+    background-color:var(--color-grey);
     color:var(--color-azul-escuro);
 }
 
@@ -49,7 +64,66 @@ body{
 
 .nav-fixed{
     position: fixed;
-   width: 100%;
+    width: 100%;
+    z-index: 5;
+   
+}
+
+#mobile-nav{
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1em;
+    animation: fade 1s ;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 5;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 99%;
+    
+}
+
+#mobile-nav h1{
+    color: var(--color-mint);
+    text-align: center;
+    margin-bottom: 1em;
+    margin-top: 2.2em;
+    font-size: 37px;
+}
+
+#mobile-nav h1:hover{
+    cursor: pointer;
+    color: var(--color-azul-claro);
+    transition: 350ms;
+}
+
+#mobile-nav ul{
+    list-style: none;
+}
+
+#mobile-nav ul li{
+    margin:1.5em 1em;
+}
+
+#mobile-nav ul li a {
+   text-decoration: none;
+   font-size: 32px;
+   color: var(--color-mint);
+}
+
+#mobile-nav ul li a:hover{
+    transform: scale(1.2);
+    color: var(--color-azul-claro);
+    transition: 300ms;
+}
+
+#mobile-nav ul li:hover{
+    transform: scale(1.2);
+    color: var(--color-azul-escuro);
+    transition: 300ms;
+    cursor: pointer;
 }
 
 .nav-mobile{
@@ -116,6 +190,7 @@ nav button:hover{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 8em;
    
 }
 
@@ -186,8 +261,9 @@ section#about{
     align-items: center;
     justify-content: center;
     padding: 2em;
-    margin-top: 11em;
-    margin-bottom: 7.5em;
+    margin-top: 7.5em;
+    
+   
 }
 
 section#about p{
@@ -202,10 +278,10 @@ section#skills{
     align-items: center;
     justify-content: center;
     padding: 1em;
-    margin-bottom: 6em;
+    margin-top: 2em;
+   
+
 }
-
-
 
 
 
@@ -251,7 +327,8 @@ section#projects{
     align-items: center;
     justify-content: center;
     padding: 1em;
-    margin-bottom: 7.5em;
+       
+    
 }
 
 section#projects h2{
@@ -405,16 +482,9 @@ div#modal{
 
 }
 
-
-
-
-
 div#modal img{
     width: 100%;
-    
-    
 }
-
 
 .modal-header{
     display: flex;
@@ -476,11 +546,12 @@ section#contacts{
     flex-direction: column;
     padding: 1em;
    
+   
 }
 
 .contacts-icon{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -526,9 +597,25 @@ section#contacts{
 
 .bold{
     font-weight: bold;
+   
+   
 }
 
 body.transparent::after{
+    content: "";
+    width: 100%;
+    height: 1000%;
+    background-color: rgba(0,0,0,0.65);
+    backdrop-filter: blur(3px);
+    display: block;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 0;
+    animation: fade 1s;
+}
+
+body.transparent2::after{
     content: "";
     width: 100%;
     height: 1000%;
@@ -549,12 +636,28 @@ body.transparent::after{
 
 .typingAnimations{
     animation: blink steps(30) 550ms infinite normal,
-     typing 4s steps(30) 8s infinite
+     typing 4s steps(30) 2s infinite alternate-reverse
      
 }
 
 .slideAnimation{
     animation: slide 1200ms infinite normal
+
+    
+}
+
+@keyframes show {
+
+    from{
+        opacity: 0;
+        transform: translateX(-8rem);
+
+    }
+    to{
+        transform: translateX(0rem);
+
+    }
+    
 }
 
 
@@ -610,7 +713,7 @@ body.transparent::after{
         width: 0;
     }
     to{
-        width: 96%;
+        width: 103%;
     }
 
 }
@@ -632,6 +735,11 @@ body.transparent::after{
 
 @media (min-width:768px) {
 
+
+    .contacts-icon{
+        flex-direction: row;
+    }
+
   .modal-container{
     flex-direction: column;
    
@@ -647,7 +755,6 @@ body.transparent::after{
     margin-top: 0px;
     margin: 5px 3em;
 }
-
 
 
 .modal-content p{
@@ -667,6 +774,25 @@ body.transparent::after{
         flex-direction: row;
     }
 
+    body.transparent2::after{
+        content: "";
+        width: 0%;
+        height: 0%;
+        background-color: rgba(0, 0, 0, 0.092);
+        backdrop-filter: blur(3px);
+        display: block;
+        top: 0;
+        left: 0;
+        position: absolute;
+        z-index: 0;
+        animation: fade 1s;
+    }
+  
+
+    #mobile-nav{
+        display: none;
+    }
+
     .nav-mobile{
         display: none;
     }
@@ -678,6 +804,7 @@ body.transparent::after{
 
     .nav-fixed{
         width: 19%;
+        z-index: 0;
        
     }
 
@@ -756,6 +883,7 @@ body.transparent::after{
 
     #main-content{
         padding-left: 17em;
+        gap: 0em;
     }
 
     header{
@@ -766,11 +894,26 @@ body.transparent::after{
         font-size: 3.8em;
     }
 
-    section#about{
-
+    section#skills{
+        height:100vh ;
         width: 70%;
     }
 
+    section#contacts{
+        height:85vh ;
+        width: 99%;
+    }
+
+    section#projects{
+        margin: 8em 0em 6em 0em;
+    }
+
+    section#about{
+        height:100vh ;
+        width: 70%;
+    }
+
+  
     .modal-container{
         flex-direction: row;
         align-items: normal;
@@ -830,16 +973,29 @@ body.transparent::after{
     header{
       width: 90%;
     }
+
+    #mobile-nav h1{
+        margin-bottom: 0.5em;
+        font-size: 34px;
+    }
+
+    #mobile-nav ul li a{
+       
+        font-size: 28px;
+    }
+
+    #mobile-nav ul li{
+       
+        margin: 2em 10px;
+    }
     
   }
 
 @media (min-width:1370px) {
 
 
-    div#modal img{
-
-        
-
+    #main-content{
+        padding-left: 21em;
     }
     
 }

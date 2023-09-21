@@ -16,14 +16,45 @@ class indexController{
         this.dateContentModal = document.querySelector('#date-project')
         this.urlContentModal = document.querySelector('#url-project')
         this.tituloHeader = document.querySelector('#h1-header')
+        this.sectionArr = document.querySelectorAll('.hidden')
 
-     
+        
+
         this.menuHamburguerToggle()
         this.menuCloseToggle()
         this.projectsToggle()
         this.projectsClick()
         this.closeModal()
+        this.observer()
         
+
+    }
+
+    observer(){
+
+        const myObserver = new IntersectionObserver( (entries) =>{
+
+          entries.forEach(entry =>{
+
+            if(entry.isIntersecting === true){
+                entry.target.classList.add('show')
+            }
+            else{
+                entry.target.classList.remove('show')
+            }
+
+          })
+
+
+        })
+
+        this.sectionArr.forEach(section =>{
+            
+            myObserver.observe(section)
+
+        })
+
+
 
     }
 
@@ -31,9 +62,10 @@ class indexController{
 
         this.menuHamburguer.addEventListener('click', e =>{
            
-            this.mobileNav.classList.toggle('hide')
+            this.mobileNav.classList.toggle('flex')
             this.menuHamburguer.classList.toggle('hide')
             this.menuClose.classList.toggle('hide')
+            document.body.classList.toggle('transparent2')
             
             
         })
@@ -44,9 +76,10 @@ class indexController{
 
         this.menuClose.addEventListener('click', e =>{
            
-            this.mobileNav.classList.toggle('hide')
+            this.mobileNav.classList.toggle('flex')
             this.menuHamburguer.classList.toggle('hide')
             this.menuClose.classList.toggle('hide')
+            document.body.classList.toggle('transparent2')
             
             
         })
@@ -102,6 +135,9 @@ class indexController{
          el.addEventListener('click', e =>{
 
             document.body.classList.add('transparent')
+            if(document.body.classList.contains('transparent2')){
+                document.body.classList.remove('transparent2')
+            }
             this.divModal.style.display = 'flex'
 
             let id = el.getAttribute('id')
