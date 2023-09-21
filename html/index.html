@@ -82,14 +82,14 @@
 
 <div id="main-content">
 
-    <header>
+    <header id="particles-js">
     
-        <p>Bem-Vindo</p>
-
-        <h1 class="typingAnimations">Desenvolvedor Front-End </h1>
-        
-        
-        <button>Contate-me</button>
+        <div class="header">
+            <p>Bem-Vindo</p>
+            <h1 id="h1-header" class="typingAnimations">Desenvolvedor Front-End </h1>
+            
+            <button>Contate-me</button>
+        </div>
     
         <span style=" font-size: 34px; font-weight: bolder;" class="material-symbols-outlined slideAnimation">
             keyboard_arrow_down
@@ -206,7 +206,7 @@
             <div id="1" class="box">
 
                 <div class="content">
-                    <img src="/images/viniport-projectB.png" alt="">
+                    <img src="/images/viniport-projectB2.png" alt="">
 
                     <div class="details">
                         <p>ViniPort Serviços</p>
@@ -223,7 +223,7 @@
             <div id="2" class="box">
 
                 <div class="content">
-                    <img src="/images/viniport-projectB.png" alt="">
+                    <img src="/images/barbearia-projectB.png" alt="">
                     <div class="details">
                         <p>Barberia Kadu Corte's</p>
                     </div>
@@ -236,9 +236,9 @@
             <div id="3" class="box">
 
                 <div class="content">
-                    <img src="/images/viniport-projectB.png" alt="">
+                    <img src="/images/saboroso-projectB.png" alt="">
                     <div class="details">
-                        <p>Teste </p>
+                        <p> Restaurante Saboroso </p>
                     </div>
                 </div>
             
@@ -252,9 +252,9 @@
             <div id="3" class="box">
 
                 <div class="content">
-                    <img src="/images/viniport-projectB.png" alt="">
+                    <img src="/images/whatsapp-projectB.png" alt="">
                     <div class="details">
-                        <p>Teste 3</p>
+                        <p>Whatsapp Clone</p>
                     </div>
                 </div>
             
@@ -265,9 +265,9 @@
             <div id="4" class="box">
 
                 <div class="content">
-                    <img src="/images/viniport-projectB.png" alt="">
+                    <img src="/images/usuarios-projectB.png" alt="">
                     <div class="details">
-                        <p>Teste 4</p>
+                        <p>Manage Users</p>
                     </div>
                 </div>
             
@@ -278,9 +278,9 @@
             <div id="5" class="box">
 
                 <div class="content">
-                    <img src="/images/viniport-projectB.png" alt="">
+                    <img src="/images/dropbox-projectB.png" alt="">
                     <div class="details">
-                        <p>Teste 5</p>
+                        <p>DropBox Clone</p>
                     </div>
                 </div>
             
@@ -363,13 +363,13 @@
 
             <div class="modal-content">
                 <h3>Informações do projeto:</h3>
-                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui rerum perferendis omnis maxime molestiae aliquam eos fuga optio natus laudantium amet ea voluptate vero, commodi eum dolor nam voluptatibus voluptates?</p>
+                <p id="info-project"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui rerum perferendis omnis maxime molestiae aliquam eos fuga optio natus laudantium amet ea voluptate vero, commodi eum dolor nam voluptatibus voluptates?</p>
 
                 <h3> Detalhes do Projeto:</h3>
                 <ul>
-                    <li><p class="bold">Tecnologia:</p> HTML5, CSS3, JavaScript, Canva</li>
-                    <li><p class="bold">Data:</p> Set, 2023</li>
-                    <li> <p class="bold">URL:</p>https://www.testeexemplo.com</li>
+                    <li><p class="bold">Tecnologia:</p> <p id="tecnology-project" ></p>  </li>
+                    <li><p  class="bold">Data:</p> <p id="date-project"></p> </li>
+                    <li> <p  class="bold">URL:</p> <a target="_blank" href="" id="url-project"></a></li>
                 </ul>
 
             </div>
@@ -385,6 +385,11 @@
 </div>    
 </body>
 
+
+<script src="/js/particles.js"></script>
+<script src="/js/app.js"></script>
 <script src="/js/index.js"></script>
 <script src="/js/indexView.js"></script>
+
+
 </html>

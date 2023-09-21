@@ -5,11 +5,11 @@
 }
 
 :root{
-    --color-azul-escuro:rgb(11, 37, 69);
+    --color-azul-escuro:#0b2545;
     --color-azul-claro0:#8DA9C4;
     --color-azul-claro2:#13315C;
     --color-azul-claro1:#276ebe;
-    --color-azul-claro:rgb(60, 135, 220);
+    --color-azul-claro:#3c87dc;
     --color-mint:#EEF4ED;
 
 }
@@ -24,7 +24,7 @@
 
 body{
     display: flex;
-    background-color: var(--color-mint);
+    background-color: rgb(218, 218, 218);
     flex-direction: column;
 
 }
@@ -35,7 +35,7 @@ body{
     justify-content: space-between;
     align-items: center;
     padding: 0.75em 15px;
-    background-color:var(--color-mint);
+    background-color:rgb(218, 218, 218);
     color:var(--color-azul-escuro);
 }
 
@@ -126,10 +126,22 @@ header{
     align-items: center;
     height: 100vh;
     padding: 2em 20px 0em 20px;
-   white-space: nowrap;
+    white-space: nowrap;
+    width: 93%;
+  
+    
 }
 
-header h1{
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+
+}
+
+.header h1{
     text-align: center;
     font-size: 2em;
     color: var(--color-azul-escuro);
@@ -139,13 +151,13 @@ header h1{
 
 }
 
-header p{
+.header p{
     font-size: 1.5em;
     font-weight: 400;
 
 }
 
-header button{
+.header button{
     margin-top: 20px;
     font-family: 'Poppins', sans-serif;
     padding: 1em;
@@ -389,9 +401,13 @@ div#modal{
     z-index: 5;
     transform: translate(-50%, -50%);
     color: white;
-
+    
 
 }
+
+
+
+
 
 div#modal img{
     width: 100%;
@@ -445,11 +461,13 @@ div#modal img{
 .modal-content p{
     display: inline;
     margin-right: 5px;
+    font-size: 12px;
 }
 
-
-
-
+.modal-content a{
+   color: var(--color-mint);
+   font-size: 12px;
+}
 
 section#contacts{
     display: flex;
@@ -530,10 +548,9 @@ body.transparent::after{
 
 
 .typingAnimations{
-    animation: blink steps(30) 500ms infinite normal,
-     typing 3s steps(30) 1s normal ;
-
-    
+    animation: blink steps(30) 550ms infinite normal,
+     typing 4s steps(30) 8s infinite
+     
 }
 
 .slideAnimation{
@@ -595,23 +612,50 @@ body.transparent::after{
     to{
         width: 96%;
     }
-    
+
 }
+
+
+@keyframes typingBack {
+
+    from{
+        width: 96%;
+    }
+    to{
+        width: 0%;
+    }
+
+}
+
+
 
 
 @media (min-width:768px) {
 
   .modal-container{
-    flex-direction: row;
+    flex-direction: column;
+   
   }
+
   div#modal img{
-    width: 280px;
-    height: 370px;
-    margin: 10px 2em 10px 0.35em;
+    width: 80%;
+    height: 240px;
+    margin: 10px 0em;
   }
 
   .modal-content{
     margin-top: 0px;
+    margin: 5px 3em;
+}
+
+
+
+.modal-content p{
+    font-size: 13px ;
+}
+
+.modal-content a{
+   font-size: 13px;
 }
 
 }
@@ -715,11 +759,10 @@ body.transparent::after{
     }
 
     header{
-       width: 70%;
        padding-top: 0em;
     }
 
-    header h1{
+    .header h1{
         font-size: 3.8em;
     }
 
@@ -728,10 +771,28 @@ body.transparent::after{
         width: 70%;
     }
 
+    .modal-container{
+        flex-direction: row;
+        align-items: normal;
+    }
+
+    .modal-content{
+        margin: 0px;
+    }
+
     div#modal img{
-        width: 480px;
-        margin: 10px 3em 10px 0.75em;
+        width: 520px;
+        height: 400px;
+        margin: 30px 3em 10px 0.75em;
       }
+
+    .modal-content p{
+        font-size: 16px ;
+    }
+    
+    .modal-content a{
+       font-size: 16px;
+    }
     
 
 
@@ -757,6 +818,28 @@ body.transparent::after{
     font-size: 30px;
   }
 
+  header{
+    width: 90%;
+  }
+
   
 
+}
+
+@media (max-width:600px) {
+    header{
+      width: 90%;
+    }
+    
+  }
+
+@media (min-width:1370px) {
+
+
+    div#modal img{
+
+        
+
+    }
+    
 }
