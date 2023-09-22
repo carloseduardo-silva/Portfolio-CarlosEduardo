@@ -17,7 +17,9 @@ class indexController{
         this.urlContentModal = document.querySelector('#url-project')
         this.tituloHeader = document.querySelector('#h1-header')
         this.sectionArr = document.querySelectorAll('.hidden')
-
+        this.photoModal = document.querySelector('#photo-modal')
+        this.h2Modal = document.querySelector('#h2-project')
+        
         
 
         this.menuHamburguerToggle()
@@ -25,6 +27,7 @@ class indexController{
         this.projectsToggle()
         this.projectsClick()
         this.closeModal()
+        this.menuMobileClick()
         this.observer()
         
 
@@ -145,20 +148,23 @@ class indexController{
             switch(id){
                 case "1":
                     this.infoContentModal.innerHTML = 'Projeto desenvolvido para Empresa de Terceirização ViniPort Serviços, a qual solicitou um sistema web responsivo para aplicações mobiles e que fosse interativo para os clientes. Alêm da interface atrativa, também há todo o sistema de contato e solicitação de propostas o qual está emparelhado com uma AdminPage restringida com sistema de login e senha, que armazena não só todas as informações fornecidas pelos usuários mas também dados da empresa, como mensagens, propostas, funcionários e usuários. '
-                    this.tecnologyContentModal.innerHTML = 'HTML5, CSS3, JavaScript, Redis, Canva'
+                    this.tecnologyContentModal.innerHTML = 'HTML5, CSS3, JavaScript, Redis, Canva, MySql'
                     this.dateContentModal.innerHTML = 'Set, 2023'
                     this.urlContentModal.innerHTML = 'https://github.com/carloseduardo-silva/Projeto-ViniPort'
                     this.urlContentModal.href = 'https://github.com/carloseduardo-silva/Projeto-ViniPort'
-
+                    this.photoModal.src = '/images/viniport-responsive.png'
+                    this.h2Modal.innerHTML = 'ViniPort Serviços'
                    
                 break
 
                 case "2":
-                    this.infoContentModal.innerHTML = ''
-                    this.tecnologyContentModal.innerHTML = ''
-                    this.dateContentModal.innerHTML = ''
-                    this.urlContentModal.innerHTML = ''
-                    this.urlContentModal.href = ''
+                    this.infoContentModal.innerHTML = `Projeto desenvolvido para Barbearia Kadu Corte's, a qual solicitou um sistema web responsivo para aplicações mobiles e que fosse interativo para os clientes. O sistema web conta tanto com uma ClientPage atrativa a qual expoem para os usuários as informações da barbearia e fornece um sistema de agendamento completo com validações, quanto uma AdminPage restringida por uma aplicação de login e senha, que armazena os dados dos clientes agendados, horarios marcados e disponíveis e muito mais.  `
+                    this.tecnologyContentModal.innerHTML = 'HTML5, CSS3, JavaScript, Redis, Canva, MySql'
+                    this.dateContentModal.innerHTML = 'Ago, 2023'
+                    this.urlContentModal.innerHTML = 'https://github.com/carloseduardo-silva/projeto-Barbearia'
+                    this.urlContentModal.href = 'https://github.com/carloseduardo-silva/projeto-Barbearia'
+                    this.photoModal.src = '/images/barbearia-responsive.png'
+                    this.h2Modal.innerHTML = `Barbearia Kadu Corte's `
                 break
 
                 case "3":
@@ -167,7 +173,10 @@ class indexController{
                     this.dateContentModal.innerHTML = ''
                     this.urlContentModal.innerHTML = ''
                     this.urlContentModal.href = ''
+                    this.photoModal.src = '/images/saboroso-responsive.png'
+                    this.h2Modal.innerHTML = ` Restaurante Saboroso `
                 break
+
 
                 case "4":
                     this.infoContentModal.innerHTML = ''
@@ -175,6 +184,7 @@ class indexController{
                     this.dateContentModal.innerHTML = ''
                     this.urlContentModal.innerHTML = ''
                     this.urlContentModal.href = ''
+                    this.h2Modal.innerHTML = `WhatsApp Clone `
                 break
 
                 case "5":
@@ -183,6 +193,7 @@ class indexController{
                     this.dateContentModal.innerHTML = ''
                     this.urlContentModal.innerHTML = ''
                     this.urlContentModal.href = ''
+                    this.h2Modal.innerHTML = `Manage Users `
                 break
 
                 case "6":
@@ -191,6 +202,7 @@ class indexController{
                     this.dateContentModal.innerHTML = ''
                     this.urlContentModal.innerHTML = ''
                     this.urlContentModal.href = ''
+                    this.h2Modal.innerHTML = `DropBox Clone `
                 break
             }
 
@@ -205,6 +217,19 @@ class indexController{
 
             this.divModal.style.display = 'none'
             document.body.classList.remove('transparent')
+
+        })
+
+    }
+
+    menuMobileClick(){
+
+        let arr = this.mobileNav.querySelectorAll('ul li a')
+        
+        arr.forEach(a =>{
+            a.addEventListener('click', e=>{
+                this.menuClose.click()
+            })
 
         })
 

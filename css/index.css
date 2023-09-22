@@ -146,6 +146,11 @@ body{
     font-size: 1.5em;
 }
 
+#nav h2:hover{
+    color: var(--color-azul-claro);
+    transition: 500ms;
+}
+
 #menu-hamburguer{
     font-size: 34px;
     font-weight: 600;
@@ -230,6 +235,7 @@ header{
 .header p{
     font-size: 1.5em;
     font-weight: 400;
+    color: var(--color-azul-escuro);
 
 }
 
@@ -244,7 +250,19 @@ header{
 
 }
 
-header span{
+.header button:hover{
+    transform: scale(1.1);
+    transition: 400ms;
+    cursor: pointer;
+    color: var(--color-azul-claro);
+    border: 2px solid var(--color-azul-claro);
+
+}
+
+
+
+header a span{
+    
     position: absolute;
     bottom: 10px;
     color: var(--color-azul-escuro);
@@ -897,7 +915,7 @@ body.transparent2::after{
 
     section#skills{
         height:100vh ;
-        width: 70%;
+        
     }
 
     section#contacts{
