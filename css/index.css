@@ -759,7 +759,7 @@ body.transparent2::after{
         flex-direction: row;
     }
 
-  .modal-container{
+.modal-container{
     flex-direction: column;
    
   }
@@ -920,7 +920,7 @@ body.transparent2::after{
 
     section#contacts{
         height:85vh ;
-        width: 99%;
+       
     }
 
     section#projects{
@@ -932,29 +932,24 @@ body.transparent2::after{
         width: 70%;
     }
 
-  
-    .modal-container{
-        flex-direction: row;
-        align-items: normal;
+    div#modal img{
+        width: 65%;
     }
+
 
     .modal-content{
-        margin: 0px;
+        margin: 5px 7em;
     }
 
-    div#modal img{
-        width: 520px;
-        height: 400px;
-        margin: 30px 3em 10px 0.75em;
-      }
-
     .modal-content p{
-        font-size: 16px ;
+        font-size: 15px ;
     }
     
     .modal-content a{
-       font-size: 16px;
+       font-size: 15px;
     }
+  
+    
     
 
 
@@ -1015,6 +1010,33 @@ body.transparent2::after{
 
     #main-content{
         padding-left: 21em;
+    }
+    
+}
+
+@media (min-width: 1250px){
+
+    .modal-container{
+        flex-direction: row;
+        align-items: normal;
+    }
+
+    .modal-content{
+        margin: 0px;
+    }
+
+    div#modal img{
+        width: 520px;
+        height: 400px;
+        margin: 30px 3em 10px 0.75em;
+      }
+
+    .modal-content p{
+        font-size: 16px ;
+    }
+    
+    .modal-content a{
+       font-size: 16px;
     }
     
 }
