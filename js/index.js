@@ -141,6 +141,13 @@ class indexController{
             if(document.body.classList.contains('transparent2')){
                 document.body.classList.remove('transparent2')
             }
+
+            if(this.mobileNav.classList.contains('flex')){
+                this.mobileNav.classList.remove('flex')
+                this.menuHamburguer.classList.toggle('hide')
+                this.menuClose.classList.toggle('hide')
+            }
+
             this.divModal.style.display = 'flex'
 
             let id = el.getAttribute('id')
