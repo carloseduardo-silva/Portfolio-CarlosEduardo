@@ -847,7 +847,8 @@ body.transparent2::after{
     #nav img.logo{
         display: flex;
         border-radius: 50%;
-        border: 2px solid var(--color-azul-escuro);
+        border: 2px solid var(--color-);
+        box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.549);
         width: 60%;
         margin: 10px 0px;
     }

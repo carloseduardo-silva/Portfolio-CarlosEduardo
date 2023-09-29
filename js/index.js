@@ -167,7 +167,7 @@ class indexController{
                 case "2":
                     this.infoContentModal.innerHTML = `Projeto desenvolvido para Barbearia Kadu Corte's, a qual solicitou um sistema web responsivo para aplicações mobiles e que fosse interativo para os clientes. O sistema web conta tanto com uma ClientPage atrativa a qual expoem para os usuários as informações da barbearia e fornece um sistema de agendamento completo com validações, quanto uma AdminPage restringida por uma aplicação de login e senha, que armazena os dados dos clientes agendados, horarios marcados e disponíveis e muito mais.  `
                     this.tecnologyContentModal.innerHTML = 'HTML5, CSS3, JavaScript, Redis, Canva, MySql'
-                    this.dateContentModal.innerHTML = 'Ago, 2023'
+                    this.dateContentModal.innerHTML = 'Jun, 2023'
                     this.urlContentModal.innerHTML = 'https://github.com/carloseduardo-silva/projeto-Barbearia'
                     this.urlContentModal.href = 'https://github.com/carloseduardo-silva/projeto-Barbearia'
                     this.photoModal.src = '/images/barbearia-responsive.png'
@@ -175,40 +175,40 @@ class indexController{
                 break
 
                 case "3":
-                    this.infoContentModal.innerHTML = ''
-                    this.tecnologyContentModal.innerHTML = ''
-                    this.dateContentModal.innerHTML = ''
-                    this.urlContentModal.innerHTML = ''
-                    this.urlContentModal.href = ''
+                    this.infoContentModal.innerHTML = 'Projeto de um website para um Restaurante, desenvolvido utilizando em sua base JavaScript e Embedded JavaScript em conexão com o banco de dados MySql, suportando tanto uma ClientPage regidas pelo sistema de rotas CRUD, quanto uma AdminPage (dashboard) com restrição de acesso por usuário e senha e dados assíncronos.'
+                    this.tecnologyContentModal.innerHTML = 'HTML5, CSS3, JavaScript, Redis, Canva, MySql'
+                    this.dateContentModal.innerHTML = 'Ago, 2023'
+                    this.urlContentModal.innerHTML = 'https://github.com/carloseduardo-silva/projeto-Restaurante'
+                    this.urlContentModal.href = 'https://github.com/carloseduardo-silva/projeto-Restaurante'
                     this.photoModal.src = '/images/saboroso-responsive.png'
                     this.h2Modal.innerHTML = ` Restaurante Saboroso `
                 break
 
 
                 case "4":
-                    this.infoContentModal.innerHTML = ''
-                    this.tecnologyContentModal.innerHTML = ''
-                    this.dateContentModal.innerHTML = ''
-                    this.urlContentModal.innerHTML = ''
-                    this.urlContentModal.href = ''
+                    this.infoContentModal.innerHTML = 'Projeto desenvolvido durante o curso de JavaScript Avançado da HCODEBR, o qual nos trouxe o desenvolvimento de um clone do Whatsapp, contanto com todas as suas funcionalidades programadas através do banco de dados Firebase(FireStore + RealTimeDataBase), em conjunto com o JavaScript e algumas libs como: APIs de audio, camera e video, Path, Navigator, etc.'
+                    this.tecnologyContentModal.innerHTML = 'HTML5, CSS3, JavaScript, Firebase'
+                    this.dateContentModal.innerHTML = 'Jul, 2023'
+                    this.urlContentModal.innerHTML = 'https://github.com/carloseduardo-silva/curso-javascript-projeto-whatsapp-clone'
+                    this.urlContentModal.href = 'https://github.com/carloseduardo-silva/curso-javascript-projeto-whatsapp-clone'
                     this.h2Modal.innerHTML = `WhatsApp Clone `
                 break
 
                 case "5":
-                    this.infoContentModal.innerHTML = ''
-                    this.tecnologyContentModal.innerHTML = ''
-                    this.dateContentModal.innerHTML = ''
-                    this.urlContentModal.innerHTML = ''
-                    this.urlContentModal.href = ''
+                    this.infoContentModal.innerHTML = 'Projeto desenvolvido essencialmente com JavaScript, afim de otimizar meus conhecimentos em sistemas de routes CRUD regido por uma API REST que consome dados do Banco de Dados Nedb, trazendo assincronidade ao website.'
+                    this.tecnologyContentModal.innerHTML = 'HTML5, CSS3, JavaScript, Nedb'
+                    this.dateContentModal.innerHTML = 'Jun, 2023'
+                    this.urlContentModal.innerHTML = 'https://github.com/carloseduardo-silva/curso-javascript-projeto-usuarios-restapi'
+                    this.urlContentModal.href = 'https://github.com/carloseduardo-silva/curso-javascript-projeto-usuarios-restapi'
                     this.h2Modal.innerHTML = `Manage Users `
                 break
 
                 case "6":
-                    this.infoContentModal.innerHTML = ''
-                    this.tecnologyContentModal.innerHTML = ''
-                    this.dateContentModal.innerHTML = ''
-                    this.urlContentModal.innerHTML = ''
-                    this.urlContentModal.href = ''
+                    this.infoContentModal.innerHTML = 'Projeto desenvolvido durante o curso de JavaScript Avançado da HCODEBR, o qual nos trouxe o desenvolvimento de um clone do DropBox, contanto com todas as suas funcionalidades programadas através do banco de dados Firebase(FireStore + RealTimeDataBase), em conjunto com o JavaScript, por meio do sistema de routes CRUD e algumas libs como: Formidable, Path, Fs, etc.'
+                    this.tecnologyContentModal.innerHTML = 'HTML5, CSS3, JavaScript, Firebase'
+                    this.dateContentModal.innerHTML = 'Jun, 2023'
+                    this.urlContentModal.innerHTML = 'https://github.com/carloseduardo-silva/curso-javascript-projeto-dropbox-clone'
+                    this.urlContentModal.href = 'https://github.com/carloseduardo-silva/curso-javascript-projeto-dropbox-clone'
                     this.h2Modal.innerHTML = `DropBox Clone `
                 break
             }
