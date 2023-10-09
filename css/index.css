@@ -44,6 +44,19 @@ body{
 
 }
 
+body::-webkit-scrollbar{
+    background-color: var(--color-grey);
+    color: #00000053;
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: #0B2545;
+    border-radius: 3px;
+
+}
+
+
+
 #nav{
     display: flex;
     flex-direction: row;
@@ -515,14 +528,20 @@ section#projects h2{
     border-bottom: 2.2px solid var(--color-azul-claro1);
 }
 
+div#modal-parent{
+    display: flex;
+    flex-direction: row;
+}
+
 div#modal{
     display: none;
     flex-direction: column;
     align-items: center;
-    width: 75%;
+    max-height: 660px;
+    width: 76%;
     padding: 2.5rem;
     gap: 1.85rem;
-    background-color: var(--color-azul-escuro);
+    background-color: var(--color-grey);
     border-radius: 1rem;
     animation: fade 1s;
     position: fixed;
@@ -530,7 +549,15 @@ div#modal{
     left: 50%;
     z-index: 5;
     transform: translate(-50%, -50%);
-    color: white;
+    color: var(--color-azul-escuro);
+    overflow-y: scroll;
+    
+
+}
+
+div#modal::-webkit-scrollbar{
+    color: var(--color-azul-claro);
+    width: 5px;
     
 
 }
@@ -549,7 +576,8 @@ div#modal img{
 .modal-header span{
     position: absolute;
     right: 32px;
-    margin-top: 3px;
+    margin-top: 2px;
+    font-size: 28px;
 }
 
 .modal-header span:hover{
@@ -578,7 +606,7 @@ div#modal img{
 .modal-content ul li{
     padding-bottom: 8px;
     margin-bottom: 1em;
-    border-bottom: 1px solid var(--color-mint);
+    border-bottom: 1px solid var(--color-azul-escuro);
 }
 
 .modal-content p{
@@ -588,9 +616,17 @@ div#modal img{
 }
 
 .modal-content a{
-   color: var(--color-mint);
+   color: var(--color-azul-claro2);
    font-size: 12px;
 }
+
+.hidden-arrow{
+    display: none;
+}
+
+
+
+
 
 section#contacts{
     display: flex;
@@ -648,10 +684,25 @@ section#contacts{
     margin-bottom: 5px;
 }
 
+
+footer{
+    padding: 1em;
+    color: var(--color-azul-escuro);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
 .bold{
     font-weight: bold;
    
    
+}
+
+.transparent{
+    overflow-y: hidden;
 }
 
 body.transparent::after{
@@ -1013,6 +1064,36 @@ body.transparent2::after{
        font-size: 15px;
     }
   
+    .modal-header span{
+        margin-top: 0px;
+        font-size: 32px;
+    }
+
+    .modal-arrow{
+        position: fixed;
+        top: 50%;
+        z-index: 6;
+        transform: translate(-50%, -50%);
+        font-size: 4.5em;
+        margin:5px;
+        color: var(--color-mint);
+    }
+    
+    .modal-arrow:hover{
+        color: var(--color-azul-claro1);
+        transition: 300ms;
+        cursor: pointer;
+        font-size: 4.55em;
+    }
+    
+    #modalArrowPrev{
+        left: 4%;
+    }
+    
+    #modalArrowNext{
+        
+        right: -1.5%;
+    }
     
     
 

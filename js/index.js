@@ -4,6 +4,7 @@ class indexController{
         this.menuHamburguer = document.querySelector('#menu-hamburguer')
         this.menuClose = document.querySelector('#menu-close')
         this.mobileNav = document.querySelector('#mobile-nav')
+        this.navFixed = document.querySelector('.nav-fixed')
         this.highlightDiv = document.querySelector('#div-highlights')
         this.allDiv = document.querySelector('#div-all')
         this.highlights = document.querySelector('.highlights-projects')
@@ -19,6 +20,9 @@ class indexController{
         this.sectionArr = document.querySelectorAll('.hidden')
         this.photoModal = document.querySelector('#photo-modal')
         this.h2Modal = document.querySelector('#h2-project')
+        this.modalArrowPrev = document.querySelector("#modalArrowPrev")
+        this.modalArrowNext= document.querySelector("#modalArrowNext")
+        this.modalContainer = document.querySelector('.modal-container')
         
         
 
@@ -29,6 +33,8 @@ class indexController{
         this.closeModal()
         this.menuMobileClick()
         this.observer()
+        
+        
         
 
     }
@@ -131,13 +137,134 @@ class indexController{
         
     }
 
+    showArrows(){
+        document.querySelectorAll('.hidden-arrow').forEach(arrow =>{
+            arrow.classList.remove('hidden-arrow')
+            arrow.classList.add('modal-arrow')
+        })
+    }
+
+    hideArrows(){
+        document.querySelectorAll('.modal-arrow').forEach(arrow =>{
+            arrow.classList.remove('modal-arrow')
+            arrow.classList.add('hidden-arrow')
+        })
+    }
+
+    arrowClick(id){
+
+     let i = this.modalContainer.id
+    console.log(id)
+    
+
+    console.log('i:' + i)
+
+    if(i === id){
+        this.modalArrowNext.addEventListener('click', e =>{
+            console.log(i)
+            i++
+        })
+
+        this.modalArrowPrev.addEventListener('click', e =>{
+           
+            i--
+        })
+
+        switch(i){
+            case "1":
+                this.infoContentModal.innerHTML = 'Projeto desenvolvido para Empresa de Terceirização ViniPort Serviços, a qual solicitou um sistema web responsivo para aplicações mobiles e que fosse interativo para os clientes. Alêm da interface atrativa, também há todo o sistema de contato e solicitação de propostas o qual está emparelhado com uma AdminPage restringida com sistema de login e senha, que armazena não só todas as informações fornecidas pelos usuários mas também dados da empresa, como mensagens, propostas, funcionários e usuários. '
+                this.tecnologyContentModal.innerHTML = 'HTML5, CSS3, JavaScript, Redis, Canva, MySql'
+                this.dateContentModal.innerHTML = 'Set, 2023'
+                this.urlContentModal.innerHTML = 'https://github.com/carloseduardo-silva/Projeto-ViniPort'
+                this.urlContentModal.href = 'https://github.com/carloseduardo-silva/Projeto-ViniPort'
+                this.photoModal.src = '/images/viniport-responsive.png'
+                this.h2Modal.innerHTML = 'ViniPort Serviços'
+                this.modalContainer.id = '1'
+               
+            break
+
+            case "2":
+                this.infoContentModal.innerHTML = `Projeto desenvolvido para Barbearia Kadu Corte's, a qual solicitou um sistema web responsivo para aplicações mobiles e que fosse interativo para os clientes. O sistema web conta tanto com uma ClientPage atrativa a qual expoem para os usuários as informações da barbearia e fornece um sistema de agendamento completo com validações, quanto uma AdminPage restringida por uma aplicação de login e senha, que armazena os dados dos clientes agendados, horarios marcados e disponíveis e muito mais.  `
+                this.tecnologyContentModal.innerHTML = 'HTML5, CSS3, JavaScript, Redis, Canva, MySql'
+                this.dateContentModal.innerHTML = 'Jun, 2023'
+                this.urlContentModal.innerHTML = 'https://github.com/carloseduardo-silva/projeto-Barbearia'
+                this.urlContentModal.href = 'https://github.com/carloseduardo-silva/projeto-Barbearia'
+                this.photoModal.src = '/images/barbearia-responsive2.png'
+                this.h2Modal.innerHTML = `Barbearia Kadu Corte's `
+                this.modalContainer.id = '2'
+            break
+
+            case "3":
+                this.infoContentModal.innerHTML = 'Projeto de um website para um Restaurante, desenvolvido utilizando em sua base JavaScript e Embedded JavaScript em conexão com o banco de dados MySql, suportando tanto uma ClientPage regidas pelo sistema de rotas CRUD, quanto uma AdminPage (dashboard) com restrição de acesso por usuário e senha e dados assíncronos.'
+                this.tecnologyContentModal.innerHTML = 'HTML5, CSS3, JavaScript, Redis, Canva, MySql'
+                this.dateContentModal.innerHTML = 'Ago, 2023'
+                this.urlContentModal.innerHTML = 'https://github.com/carloseduardo-silva/projeto-Restaurante'
+                this.urlContentModal.href = 'https://github.com/carloseduardo-silva/projeto-Restaurante'
+                this.photoModal.src = '/images/saboroso-responsive.png'
+                this.h2Modal.innerHTML = ` Restaurante Saboroso `
+                this.modalContainer.id = '3'
+            break
+
+
+            case "4":
+                this.infoContentModal.innerHTML = 'Projeto desenvolvido durante o curso de JavaScript Avançado da HCODEBR, o qual nos trouxe o desenvolvimento de um clone do Whatsapp, contanto com todas as suas funcionalidades programadas através do banco de dados Firebase(FireStore + RealTimeDataBase), em conjunto com o JavaScript e algumas libs como: APIs de audio, camera e video, Path, Navigator, etc.'
+                this.tecnologyContentModal.innerHTML = 'HTML5, CSS3, JavaScript, Firebase'
+                this.dateContentModal.innerHTML = 'Jul, 2023'
+                this.urlContentModal.innerHTML = 'https://github.com/carloseduardo-silva/curso-javascript-projeto-whatsapp-clone'
+                this.urlContentModal.href = 'https://github.com/carloseduardo-silva/curso-javascript-projeto-whatsapp-clone'
+                this.h2Modal.innerHTML = `WhatsApp Clone `
+                this.modalContainer.id = '4'
+            break
+
+            case "5":
+                this.infoContentModal.innerHTML = 'Projeto desenvolvido essencialmente com JavaScript, afim de otimizar meus conhecimentos em sistemas de routes CRUD regido por uma API REST que consome dados do Banco de Dados Nedb, trazendo assincronidade ao website.'
+                this.tecnologyContentModal.innerHTML = 'HTML5, CSS3, JavaScript, Nedb'
+                this.dateContentModal.innerHTML = 'Jun, 2023'
+                this.urlContentModal.innerHTML = 'https://github.com/carloseduardo-silva/curso-javascript-projeto-usuarios-restapi'
+                this.urlContentModal.href = 'https://github.com/carloseduardo-silva/curso-javascript-projeto-usuarios-restapi'
+                this.h2Modal.innerHTML = `Manage Users `
+                this.modalContainer.id = '5'
+            break
+
+            case "6":
+                this.infoContentModal.innerHTML = 'Projeto desenvolvido durante o curso de JavaScript Avançado da HCODEBR, o qual nos trouxe o desenvolvimento de um clone do DropBox, contanto com todas as suas funcionalidades programadas através do banco de dados Firebase(FireStore + RealTimeDataBase), em conjunto com o JavaScript, por meio do sistema de routes CRUD e algumas libs como: Formidable, Path, Fs, etc.'
+                this.tecnologyContentModal.innerHTML = 'HTML5, CSS3, JavaScript, Firebase'
+                this.dateContentModal.innerHTML = 'Jun, 2023'
+                this.urlContentModal.innerHTML = 'https://github.com/carloseduardo-silva/curso-javascript-projeto-dropbox-clone'
+                this.urlContentModal.href = 'https://github.com/carloseduardo-silva/curso-javascript-projeto-dropbox-clone'
+                this.h2Modal.innerHTML = `DropBox Clone `
+                this.modalContainer.id = '6'
+            break
+
+            case "7":
+                this.infoContentModal.innerHTML = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta eligendi earum quas maxime nam asperiores dolor nesciunt odio quasi aspernatur natus voluptatum, quae dignissimos fugiat dolorum qui nemo sit doloribus.'
+                this.tecnologyContentModal.innerHTML = 'HTML5, CSS3, JavaScript, Firebase'
+                this.dateContentModal.innerHTML = 'Jun, 2023'
+                this.urlContentModal.innerHTML = ''
+                this.urlContentModal.href = ''
+                this.h2Modal.innerHTML = `TESTE  `
+                this.modalContainer.id = '7'
+            break
+        }
+
+    }
+
+     
+
+    }
+
+
+
     projectsClick(){
 
         this.projectsArr.forEach(el => {
 
          el.addEventListener('click', e =>{
 
+            this.showArrows()
+            
             document.body.classList.add('transparent')
+            this.navFixed.style.display = 'none'
             if(document.body.classList.contains('transparent2')){
                 document.body.classList.remove('transparent2')
             }
@@ -151,6 +278,8 @@ class indexController{
             this.divModal.style.display = 'flex'
 
             let id = el.getAttribute('id')
+            
+           
            
             switch(id){
                 case "1":
@@ -161,6 +290,7 @@ class indexController{
                     this.urlContentModal.href = 'https://github.com/carloseduardo-silva/Projeto-ViniPort'
                     this.photoModal.src = '/images/viniport-responsive.png'
                     this.h2Modal.innerHTML = 'ViniPort Serviços'
+                    this.modalContainer.id = '1'
                    
                 break
 
@@ -170,8 +300,9 @@ class indexController{
                     this.dateContentModal.innerHTML = 'Jun, 2023'
                     this.urlContentModal.innerHTML = 'https://github.com/carloseduardo-silva/projeto-Barbearia'
                     this.urlContentModal.href = 'https://github.com/carloseduardo-silva/projeto-Barbearia'
-                    this.photoModal.src = '/images/barbearia-responsive.png'
+                    this.photoModal.src = '/images/barbearia-responsive2.png'
                     this.h2Modal.innerHTML = `Barbearia Kadu Corte's `
+                    this.modalContainer.id = '2'
                 break
 
                 case "3":
@@ -182,6 +313,7 @@ class indexController{
                     this.urlContentModal.href = 'https://github.com/carloseduardo-silva/projeto-Restaurante'
                     this.photoModal.src = '/images/saboroso-responsive.png'
                     this.h2Modal.innerHTML = ` Restaurante Saboroso `
+                    this.modalContainer.id = '3'
                 break
 
 
@@ -192,6 +324,7 @@ class indexController{
                     this.urlContentModal.innerHTML = 'https://github.com/carloseduardo-silva/curso-javascript-projeto-whatsapp-clone'
                     this.urlContentModal.href = 'https://github.com/carloseduardo-silva/curso-javascript-projeto-whatsapp-clone'
                     this.h2Modal.innerHTML = `WhatsApp Clone `
+                    this.modalContainer.id = '4'
                 break
 
                 case "5":
@@ -201,6 +334,7 @@ class indexController{
                     this.urlContentModal.innerHTML = 'https://github.com/carloseduardo-silva/curso-javascript-projeto-usuarios-restapi'
                     this.urlContentModal.href = 'https://github.com/carloseduardo-silva/curso-javascript-projeto-usuarios-restapi'
                     this.h2Modal.innerHTML = `Manage Users `
+                    this.modalContainer.id = '5'
                 break
 
                 case "6":
@@ -210,8 +344,21 @@ class indexController{
                     this.urlContentModal.innerHTML = 'https://github.com/carloseduardo-silva/curso-javascript-projeto-dropbox-clone'
                     this.urlContentModal.href = 'https://github.com/carloseduardo-silva/curso-javascript-projeto-dropbox-clone'
                     this.h2Modal.innerHTML = `DropBox Clone `
+                    this.modalContainer.id = '6'
+                break
+
+                case "7":
+                    this.infoContentModal.innerHTML = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta eligendi earum quas maxime nam asperiores dolor nesciunt odio quasi aspernatur natus voluptatum, quae dignissimos fugiat dolorum qui nemo sit doloribus.'
+                    this.tecnologyContentModal.innerHTML = 'HTML5, CSS3, JavaScript, Firebase'
+                    this.dateContentModal.innerHTML = 'Jun, 2023'
+                    this.urlContentModal.innerHTML = ''
+                    this.urlContentModal.href = ''
+                    this.h2Modal.innerHTML = `TESTE  `
+                    this.modalContainer.id = '7'
                 break
             }
+            this.arrowClick(id)
+           
 
          })
 
@@ -222,8 +369,11 @@ class indexController{
     closeModal(){
         this.closeModalBtn.addEventListener('click', e =>{
 
+            this.navFixed.style.display = 'block'
             this.divModal.style.display = 'none'
+            this.modalContainer.id = 'none'
             document.body.classList.remove('transparent')
+            this.hideArrows()
 
         })
 
@@ -242,6 +392,7 @@ class indexController{
 
     }
 
+  
 
 
 
