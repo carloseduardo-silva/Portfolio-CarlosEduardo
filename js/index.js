@@ -184,7 +184,6 @@ class indexController{
                 this.dateContentModal.innerHTML = 'Set, 2023'
                 this.urlContentModal.innerHTML = 'https://vini-port-servicos-client.vercel.app/'
                 this.urlContentModal.href = 'https://vini-port-servicos-client.vercel.app/'
-                this.photoModal.src = '/images/viniport-responsive.png'
                 this.h2Modal.innerHTML = 'ViniPort Serviços'
                 this.modalContainer.id = '1'
                
@@ -196,7 +195,6 @@ class indexController{
                 this.dateContentModal.innerHTML = 'Jun, 2023'
                 this.urlContentModal.innerHTML = 'https://barbearia-kadu-cortes-client.vercel.app/html'
                 this.urlContentModal.href = 'https://barbearia-kadu-cortes-client.vercel.app/html'
-                this.photoModal.src = '/images/barbearia-responsive2.png'
                 this.h2Modal.innerHTML = `Barbearia Kadu Corte's `
                 this.modalContainer.id = '2'
             break
