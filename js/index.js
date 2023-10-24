@@ -203,9 +203,9 @@ class indexController{
                 this.infoContentModal.innerHTML = 'Projeto de um website para o Restaurante Bucéfalus residente em Guarujá-SP, desenvolvido utilizando em sua base JavaScript e Embedded JavaScript em conexão com o banco de dados MySql, suportando tanto uma ClientPage regidas pelo sistema de rotas CRUD, quanto uma AdminPage (dashboard) com restrição de acesso por usuário e senha e dados assíncronos.'
                 this.tecnologyContentModal.innerHTML = 'HTML5, CSS3, JavaScript, Redis, Canva, MySql'
                 this.dateContentModal.innerHTML = 'Ago, 2023'
-                this.urlContentModal.innerHTML = 'https://github.com/carloseduardo-silva/projeto-Restaurante'
-                this.urlContentModal.href = 'https://github.com/carloseduardo-silva/projeto-Restaurante'
-                this.photoModal.src = '/images/saboroso-responsive.png'
+                this.urlContentModal.innerHTML = 'https://restaurente-bucefalus-client.vercel.app/html/index.html'
+                this.urlContentModal.href = 'https://restaurente-bucefalus-client.vercel.app/html/index.html'
+                
                 this.h2Modal.innerHTML = ` Restaurante Bucéfalus `
                 this.modalContainer.id = '3'
             break
