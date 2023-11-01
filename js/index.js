@@ -23,6 +23,7 @@ class indexController{
         this.modalArrowPrev = document.querySelector("#modalArrowPrev")
         this.modalArrowNext= document.querySelector("#modalArrowNext")
         this.modalContainer = document.querySelector('.modal-container')
+        this.projectVideo = document.querySelector('#project-video')
         
         
 
@@ -182,10 +183,11 @@ class indexController{
                 this.infoContentModal.innerHTML = 'Projeto desenvolvido para Empresa de Terceirização ViniPort Serviços residente em Diadema-SP, a qual solicitou um sistema web responsivo para aplicações mobiles e que fosse interativo para os clientes. Alêm da interface atrativa, também há todo o sistema de contato e solicitação de propostas o qual está emparelhado com uma AdminPage restringida com sistema de login e senha, que armazena não só todas as informações fornecidas pelos usuários mas também dados da empresa, como mensagens, propostas, funcionários e usuários. '
                 this.tecnologyContentModal.innerHTML = 'HTML5, CSS3, JavaScript, Redis, Canva, MySql'
                 this.dateContentModal.innerHTML = 'Set, 2023'
-                this.urlContentModal.innerHTML = 'https://vini-port-servicos-client.vercel.app/'
-                this.urlContentModal.href = 'https://vini-port-servicos-client.vercel.app/'
+                this.urlContentModal.innerHTML = 'https://viniport-servicos-client.vercel.app/html/index.html'
+                this.urlContentModal.href = 'https://viniport-servicos-client.vercel.app/html/index.html'
                 this.h2Modal.innerHTML = 'ViniPort Serviços'
                 this.modalContainer.id = '1'
+                this.projectVideo.src = '/videos/barbeariaKaduCortesProjectVideo.mp4'
                
             break
 
@@ -193,10 +195,11 @@ class indexController{
                 this.infoContentModal.innerHTML = `Projeto desenvolvido para Barbearia Kadu Corte's residente em Guarujá-SP, a qual solicitou um sistema web responsivo para aplicações mobiles e que fosse interativo para os clientes. O sistema web conta tanto com uma ClientPage atrativa a qual expoem para os usuários as informações da barbearia e fornece um sistema de agendamento completo com validações, quanto uma AdminPage restringida por uma aplicação de login e senha, que armazena os dados dos clientes agendados, horarios marcados e disponíveis e muito mais.  `
                 this.tecnologyContentModal.innerHTML = 'HTML5, CSS3, JavaScript, Redis, Canva, MySql'
                 this.dateContentModal.innerHTML = 'Jun, 2023'
-                this.urlContentModal.innerHTML = 'https://barbearia-kadu-cortes-client.vercel.app/html'
-                this.urlContentModal.href = 'https://barbearia-kadu-cortes-client.vercel.app/html'
+                this.urlContentModal.innerHTML = 'https://barbearia-kadu-cortes-client.vercel.app/html/index.html'
+                this.urlContentModal.href = 'https://barbearia-kadu-cortes-client.vercel.app/html/index.html'
                 this.h2Modal.innerHTML = `Barbearia Kadu Corte's `
                 this.modalContainer.id = '2'
+                this.projectVideo.src = '/videos/barbeariaKaduCortesProjectVideo.mp4'
             break
 
             case "3":
@@ -205,7 +208,7 @@ class indexController{
                 this.dateContentModal.innerHTML = 'Ago, 2023'
                 this.urlContentModal.innerHTML = 'https://restaurente-bucefalus-client.vercel.app/html/index.html'
                 this.urlContentModal.href = 'https://restaurente-bucefalus-client.vercel.app/html/index.html'
-                
+                this.projectVideo.src = '/videos/restauranteBucefalusProjectVideo.mp4'
                 this.h2Modal.innerHTML = ` Restaurante Bucéfalus `
                 this.modalContainer.id = '3'
             break
@@ -219,6 +222,7 @@ class indexController{
                 this.urlContentModal.href = 'https://github.com/carloseduardo-silva/curso-javascript-projeto-whatsapp-clone'
                 this.h2Modal.innerHTML = `WhatsApp Clone `
                 this.modalContainer.id = '4'
+                this.projectVideo.src = '/videos/whatsappProjectVideo.mp4'
             break
 
             case "5":
@@ -229,6 +233,7 @@ class indexController{
                 this.urlContentModal.href = 'https://github.com/carloseduardo-silva/curso-javascript-projeto-usuarios-restapi'
                 this.h2Modal.innerHTML = `Manage Users `
                 this.modalContainer.id = '5'
+                this.projectVideo.src = '/videos/userdashboardProjectVideo.mp4'
             break
 
             case "6":
@@ -239,6 +244,7 @@ class indexController{
                 this.urlContentModal.href = 'https://github.com/carloseduardo-silva/curso-javascript-projeto-dropbox-clone'
                 this.h2Modal.innerHTML = `DropBox Clone `
                 this.modalContainer.id = '6'
+                this.projectVideo.src = '/videos/dropboxCloneProjectVideo.mp4'
             break
 
             case "7":
@@ -249,6 +255,7 @@ class indexController{
                 this.urlContentModal.href = ''
                 this.h2Modal.innerHTML = `TESTE  `
                 this.modalContainer.id = '7'
+                this.projectVideo.src = '/videos/barbeariaKaduCortesProjectVideo.mp4'
             break
         }
     }
