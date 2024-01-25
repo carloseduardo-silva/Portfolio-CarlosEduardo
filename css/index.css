@@ -338,7 +338,7 @@ section#skills{
     justify-content: center;
     background-color:var(--color-azul-escuro);
     width: 100px;
-    padding: 15px 0px 17px 0px;
+    padding: 13px 7px 15px;
     margin: 1.75em;
     border-bottom: 5px solid var(--color-azul-claro) ;
     border-top-left-radius: 25px;
@@ -347,8 +347,14 @@ section#skills{
 }
 
 .card p {
+    font-size:1.15rem;
     margin-bottom: 7px;
     color: var(--color-azul-claro)
+}
+
+.card i{
+    font-size: 4rem;
+    color:var(--color-azul-claro);
 }
 
 .card:hover{
@@ -356,6 +362,8 @@ section#skills{
     transition: 300ms;
     cursor: pointer;
 }
+
+
 
 .container-service{
     display: flex;
@@ -443,6 +451,19 @@ section#projects h2{
 
 .box{
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1em 1em 5px 1em;
+  
+}
+
+.box .content img{
+    border: 0.75px solid var(--color-azul-claro);
+}
+
+.normal-project{
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -932,7 +953,7 @@ body.transparent2::after{
     #nav{
         display: flex;
         flex-direction: column;
-        justify-content:space-around;
+        justify-content:space-evenly;
         align-items: center;
         height: 100vh;
         width: 100%;
@@ -949,11 +970,11 @@ body.transparent2::after{
 
     #nav img.logo{
         display: flex;
-        border-radius: 50%;
+        border-radius: 49%;
         border: 2px solid var(--color-);
         box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.549);
-        width: 60%;
-        margin: 10px 0px;
+        width: 64%;
+        margin: 10px 0px 1rem;
     }
 
     #nav img.logo:hover{

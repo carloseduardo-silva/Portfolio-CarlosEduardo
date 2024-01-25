@@ -8,8 +8,8 @@ class indexController{
         this.highlightDiv = document.querySelector('#div-highlights')
         this.allDiv = document.querySelector('#div-all')
         this.highlights = document.querySelector('.highlights-projects')
-        this.all = document.querySelector('.all-projects')
-        this.projectsArr = document.querySelectorAll('.box')
+        this.normalProjectsArr = document.querySelectorAll('.normal-project')
+        this.projectsArr = document.querySelectorAll('.project')
         this.divModal = document.querySelector('#modal')
         this.closeModalBtn = document.querySelector("#close-modal")
         this.infoContentModal = document.querySelector('#info-project')
@@ -128,13 +128,18 @@ class indexController{
 
     showHighLightDiv(){
 
-        this.all.classList.remove('flex')
-        this.all.classList.add('hide')
+        this.normalProjectsArr.forEach((project) =>{
+            project.classList.add('normal-project')
+            project.classList.remove('box')
+        })
     }
 
     showAllDiv(){
-        this.all.classList.remove('hide')
-        this.all.classList.add('flex')
+        
+        this.normalProjectsArr.forEach((project) =>{
+            project.classList.remove('normal-project')
+            project.classList.add('box')
+        })
         
     }
 
@@ -179,17 +184,18 @@ class indexController{
 
     switchProjectsClick(id){
         switch(id){
+
             case "1":
-                this.infoContentModal.innerHTML = 'Projeto desenvolvido para Empresa de Terceirização ViniPort Serviços residente em Diadema-SP, a qual solicitou um sistema web responsivo para aplicações mobiles e que fosse interativo para os clientes. Alêm da interface atrativa, também há todo o sistema de contato e solicitação de propostas o qual está emparelhado com uma AdminPage restringida com sistema de login e senha, que armazena não só todas as informações fornecidas pelos usuários mas também dados da empresa, como mensagens, propostas, funcionários e usuários. '
-                this.tecnologyContentModal.innerHTML = 'HTML5, CSS3, JavaScript, Redis, Canva, MySql'
-                this.dateContentModal.innerHTML = 'Set, 2023'
-                this.urlContentModal.innerHTML = 'https://viniport-servicos-client.vercel.app/html/index.html'
-                this.urlContentModal.href = 'https://viniport-servicos-client.vercel.app/html/index.html'
-                this.h2Modal.innerHTML = 'ViniPort Serviços'
+                this.infoContentModal.innerHTML = `Projeto de Sistema Web responsivo para uma loja de roupas. Aplicação desenvolvida afim de consolidar meus conhecimentos em React.js, como React Hooks, Context API, Redux, Styled-Components, Ciclo de Vida, entre outros conceitos. O projeto conta com requisições assíncronas provenientes do Firebase (Banco de Dados do Google), as quais são responsáveis pela exibição e filtragem dos produtos.  `
+                this.tecnologyContentModal.innerHTML = 'HTML5, CSS3, JavaScript, React.js, Firebase, Canva'
+                this.dateContentModal.innerHTML = 'Dez, 2023'
+                this.urlContentModal.innerHTML = ''
+                this.urlContentModal.href = ''
+                this.h2Modal.innerHTML = `CLSEED Shop `
                 this.modalContainer.id = '1'
-                this.projectVideo.src = '/videos/barbeariaKaduCortesProjectVideo.mp4'
-               
+                this.projectVideo.src = '/videos/clseedShopProjectVideo.mp4'
             break
+           
 
             case "2":
                 this.infoContentModal.innerHTML = `Projeto desenvolvido para Barbearia Kadu Corte's residente em Guarujá-SP, a qual solicitou um sistema web responsivo para aplicações mobiles e que fosse interativo para os clientes. O sistema web conta tanto com uma ClientPage atrativa a qual expoem para os usuários as informações da barbearia e fornece um sistema de agendamento completo com validações, quanto uma AdminPage restringida por uma aplicação de login e senha, que armazena os dados dos clientes agendados, horarios marcados e disponíveis e muito mais.  `
@@ -213,8 +219,20 @@ class indexController{
                 this.modalContainer.id = '3'
             break
 
-
             case "4":
+                this.infoContentModal.innerHTML = 'Projeto desenvolvido para Empresa de Terceirização ViniPort Serviços residente em Diadema-SP, a qual solicitou um sistema web responsivo para aplicações mobiles e que fosse interativo para os clientes. Alêm da interface atrativa, também há todo o sistema de contato e solicitação de propostas o qual está emparelhado com uma AdminPage restringida com sistema de login e senha, que armazena não só todas as informações fornecidas pelos usuários mas também dados da empresa, como mensagens, propostas, funcionários e usuários. '
+                this.tecnologyContentModal.innerHTML = 'HTML5, CSS3, JavaScript, Redis, Canva, MySql'
+                this.dateContentModal.innerHTML = 'Set, 2023'
+                this.urlContentModal.innerHTML = 'https://viniport-servicos-client.vercel.app/html/index.html'
+                this.urlContentModal.href = 'https://viniport-servicos-client.vercel.app/html/index.html'
+                this.h2Modal.innerHTML = 'ViniPort Serviços'
+                this.modalContainer.id = '1'
+                this.projectVideo.src = '/videos/viniPortProjectVideo.mp4'
+               
+            break
+
+
+            case "5":
                 this.infoContentModal.innerHTML = 'Projeto desenvolvido durante o curso de JavaScript Avançado da HCODEBR, o qual nos trouxe o desenvolvimento de um clone do Whatsapp, contanto com todas as suas funcionalidades programadas através do banco de dados Firebase(FireStore + RealTimeDataBase), em conjunto com o JavaScript e algumas libs como: APIs de audio, camera e video, Path, Navigator, etc.'
                 this.tecnologyContentModal.innerHTML = 'HTML5, CSS3, JavaScript, Firebase'
                 this.dateContentModal.innerHTML = 'Jul, 2023'
@@ -225,7 +243,7 @@ class indexController{
                 this.projectVideo.src = '/videos/whatsappProjectVideo.mp4'
             break
 
-            case "5":
+            case "6":
                 this.infoContentModal.innerHTML = 'Projeto desenvolvido essencialmente com JavaScript, afim de otimizar meus conhecimentos em sistemas de routes CRUD regido por uma API REST que consome dados do Banco de Dados Nedb, trazendo assincronidade ao website.'
                 this.tecnologyContentModal.innerHTML = 'HTML5, CSS3, JavaScript, Nedb'
                 this.dateContentModal.innerHTML = 'Jun, 2023'
@@ -236,7 +254,7 @@ class indexController{
                 this.projectVideo.src = '/videos/userdashboardProjectVideo.mp4'
             break
 
-            case "6":
+            case "7":
                 this.infoContentModal.innerHTML = 'Projeto desenvolvido durante o curso de JavaScript Avançado da HCODEBR, o qual nos trouxe o desenvolvimento de um clone do DropBox, contanto com todas as suas funcionalidades programadas através do banco de dados Firebase(FireStore + RealTimeDataBase), em conjunto com o JavaScript, por meio do sistema de routes CRUD e algumas libs como: Formidable, Path, Fs, etc.'
                 this.tecnologyContentModal.innerHTML = 'HTML5, CSS3, JavaScript, Firebase'
                 this.dateContentModal.innerHTML = 'Jun, 2023'
@@ -247,7 +265,7 @@ class indexController{
                 this.projectVideo.src = '/videos/dropboxCloneProjectVideo.mp4'
             break
 
-            case "7":
+            case "8":
                 this.infoContentModal.innerHTML = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta eligendi earum quas maxime nam asperiores dolor nesciunt odio quasi aspernatur natus voluptatum, quae dignissimos fugiat dolorum qui nemo sit doloribus.'
                 this.tecnologyContentModal.innerHTML = 'HTML5, CSS3, JavaScript, Firebase'
                 this.dateContentModal.innerHTML = 'Jun, 2023'
