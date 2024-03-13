@@ -15,14 +15,8 @@
 
 }
 
-
-
-.hidden{
-    opacity: 0;
-    filter: blur(10px);
-    transition: all 0.75s;
-}
-
+@media (min-width: 768px) {
+    
 .show{
     opacity: 1;
     animation: show 1.3s ;
@@ -30,6 +24,24 @@
     transition: all 0.75s;
 
 }
+    
+}
+
+.hidden{
+    opacity: 0;
+    filter: blur(10px);
+    transition: all 0.75s;
+}
+
+
+.show{
+    opacity: 1;
+    filter: blur(0px);
+    transition: all 0.25s;
+
+}
+
+
 
 .hide{
     display: none;
