@@ -278,13 +278,13 @@ class indexController{
 
             case "9":
                 this.infoContentModal.innerHTML = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta eligendi earum quas maxime nam asperiores dolor nesciunt odio quasi aspernatur natus voluptatum, quae dignissimos fugiat dolorum qui nemo sit doloribus.'
-                this.tecnologyContentModal.innerHTML = 'HTML5, CSS3, JavaScript, Firebase'
-                this.dateContentModal.innerHTML = 'Jun, 2023'
-                this.urlContentModal.innerHTML = ''
+                this.tecnologyContentModal.innerHTML = '...'
+                this.dateContentModal.innerHTML = '...'
+                this.urlContentModal.innerHTML = '...'
                 this.urlContentModal.href = ''
-                this.h2Modal.innerHTML = `TESTE  `
+                this.h2Modal.innerHTML = `NOVOS PROJETOS EM DESENVOLVIMENTO  `
                 this.modalContainer.id = '9'
-                this.projectVideo.src = '/videos/barbeariaKaduCortesProjectVideo.mp4'
+                this.projectVideo.src = '#'
             break
         }
     }
