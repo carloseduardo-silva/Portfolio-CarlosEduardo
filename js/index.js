@@ -186,21 +186,21 @@ class indexController{
         switch(id){
 
             case "1":
-                this.infoContentModal.innerHTML = `Projeto de Sistema Web responsivo para uma Academia. Aplicação desenvolvida afim de consolidar meus conhecimentos em React.js, como React Hooks, Context API, Redux, Styled-Components, Ciclo de Vida, entre outros conceitos. O projeto conta com requisições assíncronas provenientes do Firebase (Banco de Dados do Google), as quais são responsáveis pela exibição e filtragem dos produtos.  `
+                this.infoContentModal.innerHTML = `Projeto de Sistema Web responsivo para uma Academia. Aplicação desenvolvida afim de consolidar meus conhecimentos em React.js, como React Hooks, Context API, Redux, Styled-Components, Ciclo de Vida, entre outros conceitos. O projeto conta com páginas interativas e reponsivas para navegação dos clietes da academia, exibindo o seus serviços como: modalidades, unidades próximas (consultas baseadas no cep utilizando BrasilAPI), planos e horários.`
                 this.tecnologyContentModal.innerHTML = 'HTML5, CSS3, JavaScript, React.js, Firebase, Canva'
                 this.dateContentModal.innerHTML = 'Dez, 2023'
-                this.urlContentModal.innerHTML = ''
-                this.urlContentModal.href = ''
+                this.urlContentModal.innerHTML = 'https://carloseduardo-silva.github.io/pump-gym/'
+                this.urlContentModal.href = 'https://carloseduardo-silva.github.io/pump-gym/'
                 this.h2Modal.innerHTML = `PUMP GYM `
                 this.modalContainer.id = '1'
-                this.projectVideo.src = '/videos/clseedShopProjectVideo.mp4'
+                this.projectVideo.src = ''
             break
 
             case "2":
                 this.infoContentModal.innerHTML = `Projeto de Sistema Web responsivo para uma loja de roupas. Aplicação desenvolvida afim de consolidar meus conhecimentos em React.js, como React Hooks, Context API, Redux, Styled-Components, Ciclo de Vida, entre outros conceitos. O projeto conta com requisições assíncronas provenientes do Firebase (Banco de Dados do Google), as quais são responsáveis pela exibição e filtragem dos produtos.  `
                 this.tecnologyContentModal.innerHTML = 'HTML5, CSS3, JavaScript, React.js, Firebase, Canva'
                 this.dateContentModal.innerHTML = 'Dez, 2023'
-                this.urlContentModal.innerHTML = ''
+                this.urlContentModal.innerHTML = 'PROJETO NÃO HOSPEDADO'
                 this.urlContentModal.href = ''
                 this.h2Modal.innerHTML = `CLSEED Shop `
                 this.modalContainer.id = '2'
