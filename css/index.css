@@ -1229,7 +1229,7 @@ body.transparent2::after{
     
 }
 
-@media (min-width: 1250px){
+@media (min-width: 1400px){
 
     .modal-container{
         flex-direction: row;
