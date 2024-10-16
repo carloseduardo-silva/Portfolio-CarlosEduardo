@@ -1113,6 +1113,11 @@ body.transparent2::after{
         flex-direction: row;
     }
 
+    .exp-desc{
+        margin-top: 0.1rem;
+        padding: 0px 20px;
+    }
+
     .desc-header{
         
         flex-direction: row;
