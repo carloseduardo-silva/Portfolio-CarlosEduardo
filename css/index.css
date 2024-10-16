@@ -354,6 +354,14 @@ section#experience{
     flex-direction: column;
 }
 
+.exp-desc{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 1.5rem;
+    padding: 6px;
+}
+
 
 section#skills{
     display: flex;
