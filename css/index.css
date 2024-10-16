@@ -327,14 +327,26 @@ section#experience{
     justify-content: center;
     padding: 2em;
     margin-top: 2em;
-    
-   
+    width: 95%;   
 }
 
 .exp-container{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-top: 3em;
+}
+
+.exp-titles{
+    padding: 0.7rem;
+    background-color: #e2e2e2;
+    border-radius: 4px;
+}
+
+.title-exp{
+
+    padding: 1rem;
+
 }
 
 
