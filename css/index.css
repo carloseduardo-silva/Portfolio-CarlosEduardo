@@ -1105,8 +1105,12 @@ body.transparent2::after{
 
     section#experience{
         display: flex;
-        flex-direction: row;
         width: 75%;   
+    }
+
+    .exp-container{
+        display: flex;
+        flex-direction: row;
     }
 
     .desc-header{
