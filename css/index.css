@@ -326,9 +326,15 @@ section#experience{
     align-items: center;
     justify-content: center;
     padding: 2em;
-    margin-top: 7.5em;
+    margin-top: 2em;
     
    
+}
+
+.exp-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 
