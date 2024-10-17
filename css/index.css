@@ -338,7 +338,7 @@ section#experience{
 }
 
 .exp-titles{
-    padding: 0.7rem;
+
     background-color: #e2e2e2;
     border-radius: 4px;
     min-width: 250px;
@@ -346,8 +346,12 @@ section#experience{
 
 .title-exp{
 
-    padding: 1rem;
+    padding: 1.25rem;
 
+}
+
+.active-exp{
+    border-left: 3px solid var(--color-azul-escuro);
 }
 
 .desc-header{
