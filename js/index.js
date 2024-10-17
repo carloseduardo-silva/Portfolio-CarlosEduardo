@@ -24,6 +24,7 @@ class indexController{
         this.modalArrowNext= document.querySelector("#modalArrowNext")
         this.modalContainer = document.querySelector('.modal-container')
         this.projectVideo = document.querySelector('#project-video')
+        this.experienceArr = document.querySelectorAll(".title-exp")
         
         
 
@@ -31,6 +32,7 @@ class indexController{
         this.menuCloseToggle()
         this.projectsToggle()
         this.projectsClick()
+        this.experienceClick()
         this.closeModal()
         this.menuMobileClick()
         this.observer()
@@ -160,9 +162,6 @@ class indexController{
     arrowClick(id){
 
         this.IdProject = id
-
-      
-        
 
         if(this.projectsArr.length > parseInt(id)){
             this.modalArrowNext.addEventListener('click', e=>{
@@ -371,6 +370,43 @@ class indexController{
 
         })
 
+    }
+
+    experienceClick(){
+
+        this.experienceArr.forEach( el => {
+
+            el.addEventListener("click", e=>{
+
+                let id = el.getAttribute("id");
+
+                this.switchExperienceClick(id);
+            })
+
+        })
+
+    }
+
+    switchExperienceClick(id){
+        switch(id){
+
+            case "prefeitura":
+                console.log("teste" + id);
+            break
+
+            case "endolife":
+                console.log("teste" + id);
+            break
+
+            case "mvconcept":
+                console.log("teste" + id);
+            break
+
+            case "digital-max":
+                console.log("teste" + id);
+            break
+
+        }
     }
 
   
