@@ -371,7 +371,6 @@ section#skills{
     justify-content: center;
     padding: 1em;
     margin-top: 2em;
-   
 
 }
 
@@ -1124,6 +1123,11 @@ body.transparent2::after{
         flex-direction: row;
         justify-content: space-between;
     }
+
+    
+section#skills{ 
+    margin-top: 12em;
+}
 
     .container-service{
         margin-top: 3.15em;
