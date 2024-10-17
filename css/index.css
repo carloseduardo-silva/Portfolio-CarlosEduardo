@@ -346,7 +346,7 @@ section#experience{
 
 .title-exp{
 
-    padding: 1.25rem;
+    padding: 1.35rem;
 
 }
 
@@ -365,6 +365,22 @@ section#experience{
     gap: 20px;
     margin-top: 1.5rem;
     padding: 6px;
+}
+
+.exp-desc h4{
+    font-size: 20px;
+}
+
+.exp-desc span{
+    font-size: 18px;
+}
+
+.exp-desc h3{
+    font-size: 24px;
+}
+
+.exp-desc p{
+    font-size: 18px;
 }
 
 
@@ -1120,6 +1136,10 @@ body.transparent2::after{
     .exp-desc{
         margin-top: 0.1rem;
         padding: 0px 20px;
+    }
+
+    .exp-desc p{
+        font-size: 18.8px;
     }
 
     .desc-header{
