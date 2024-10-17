@@ -348,7 +348,13 @@ section#experience{
 .title-exp{
 
     padding: 1.35rem;
+    
+    background-color: #d4d4d4;
 
+}
+
+.title-exp{
+    cursor: pointer;
 }
 
 .active-exp{
