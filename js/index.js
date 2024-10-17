@@ -403,30 +403,30 @@ class indexController{
                 
                 this.expCargo.innerHTML = `testea`
                 this.expTime.innerHTML = `testea`
-                this.expLocal.innerHTML = `testea`
-                this.expParagraph.innerHTML = `testea`
+                this.expLocal.innerHTML = `${id}`
+                this.expParagraph.innerHTML = ` Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse ipsa, ullam repellat sequi nisi numquam quidem totam sapiente fugit voluptates facilis animi repellendus dicta quibusdam consectetur cum illum excepturi ut?Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto harum, et delectus fugiat veniam alias provident quibusdam possimus consequuntur ullam recusandae doloremque natus eius ratione, dolor esse beatae perspiciatis. Quod!`
 
             break
 
             case "endolife":
                 this.expCargo.innerHTML = `testea`
                 this.expTime.innerHTML = `testea`
-                this.expLocal.innerHTML = `testea`
-                this.expParagraph.innerHTML = `testea`
+                this.expLocal.innerHTML = `${id}`
+                this.expParagraph.innerHTML = `tesLorem ipsum, dolor sit amet consectetur adipisicing elit. Esse ipsa, ullam repellat sequi nisi numquam quidem totam sapiente fugit voluptates facilis animi repellendus dicta quibusdam consectetur cum illum excepturi ut?Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto harum, et delectus fugiat veniam alias provident quibusdam possimus consequuntur ullam recusandae doloremque natus eius ratione, dolor esse beatae perspiciatis. Quod!tea`
             break
 
             case "mvconcept":
                 this.expCargo.innerHTML = `testea`
                 this.expTime.innerHTML = `testea`
-                this.expLocal.innerHTML = `testea`
-                this.expParagraph.innerHTML = `testea`
+                this.expLocal.innerHTML = `${id}`
+                this.expParagraph.innerHTML = `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse ipsa, ullam repellat sequi nisi numquam quidem totam sapiente fugit voluptates facilis animi repellendus dicta quibusdam consectetur cum illum excepturi ut?Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto harum, et delectus fugiat veniam alias provident quibusdam possimus consequuntur ullam recusandae doloremque natus eius ratione, dolor esse beatae perspiciatis. Quod!`
             break
 
             case "digital-max":
                 this.expCargo.innerHTML = `testea`
                 this.expTime.innerHTML = `testea`
-                this.expLocal.innerHTML = `testea`
-                this.expParagraph.innerHTML = `testea`
+                this.expLocal.innerHTML = `${id}`
+                this.expParagraph.innerHTML = `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse ipsa, ullam repellat sequi nisi numquam quidem totam sapiente fugit voluptates facilis animi repellendus dicta quibusdam consectetur cum illum excepturi ut?Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto harum, et delectus fugiat veniam alias provident quibusdam possimus consequuntur ullam recusandae doloremque natus eius ratione, dolor esse beatae perspiciatis. Quod!`
             break
 
         }
