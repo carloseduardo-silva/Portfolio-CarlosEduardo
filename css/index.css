@@ -1133,6 +1133,7 @@ body.transparent2::after{
         display: flex;
         flex-direction: row;
         gap: 40px;
+        margin-top: 4.25rem;
     }
 
     .exp-desc{
@@ -1151,9 +1152,9 @@ body.transparent2::after{
     }
 
     
-section#skills{ 
-    margin-top: 12em;
-}
+    section#skills{ 
+        margin-top: 14em;
+    }
 
     .container-service{
         margin-top: 3.15em;
