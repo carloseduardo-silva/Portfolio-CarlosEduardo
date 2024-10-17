@@ -25,6 +25,10 @@ class indexController{
         this.modalContainer = document.querySelector('.modal-container')
         this.projectVideo = document.querySelector('#project-video')
         this.experienceArr = document.querySelectorAll(".title-exp")
+        this.expCargo = document.querySelector("#exp-cargo")
+        this.expParagraph = document.querySelector("#exp-paragraph")
+        this.expTime = document.querySelector("#exp-time")
+        this.expLocal = document.querySelector("#exp-local")
         
         
 
@@ -380,6 +384,11 @@ class indexController{
 
                 let id = el.getAttribute("id");
 
+                let selectedEl = document.querySelector(".active-exp");
+
+                el.classList.add('active-exp');
+                selectedEl.classList.remove('active-exp');
+
                 this.switchExperienceClick(id);
             })
 
@@ -391,19 +400,33 @@ class indexController{
         switch(id){
 
             case "prefeitura":
-                console.log("teste" + id);
+                
+                this.expCargo.innerHTML = `testea`
+                this.expTime.innerHTML = `testea`
+                this.expLocal.innerHTML = `testea`
+                this.expParagraph.innerHTML = `testea`
+
             break
 
             case "endolife":
-                console.log("teste" + id);
+                this.expCargo.innerHTML = `testea`
+                this.expTime.innerHTML = `testea`
+                this.expLocal.innerHTML = `testea`
+                this.expParagraph.innerHTML = `testea`
             break
 
             case "mvconcept":
-                console.log("teste" + id);
+                this.expCargo.innerHTML = `testea`
+                this.expTime.innerHTML = `testea`
+                this.expLocal.innerHTML = `testea`
+                this.expParagraph.innerHTML = `testea`
             break
 
             case "digital-max":
-                console.log("teste" + id);
+                this.expCargo.innerHTML = `testea`
+                this.expTime.innerHTML = `testea`
+                this.expLocal.innerHTML = `testea`
+                this.expParagraph.innerHTML = `testea`
             break
 
         }
