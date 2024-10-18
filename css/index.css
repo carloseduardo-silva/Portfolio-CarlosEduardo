@@ -799,6 +799,7 @@ section#contacts{
 
 
 footer{
+    display: flex;
     padding: 1em;
     color: var(--color-azul-escuro);
     flex-direction: column;
