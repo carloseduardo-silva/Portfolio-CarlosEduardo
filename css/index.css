@@ -93,7 +93,7 @@ body::-webkit-scrollbar-thumb{
 
 .nav-fixed{
     position: fixed;
-    width: 100%;
+    width: 98%;
     z-index: 5;
    
 }
@@ -327,7 +327,7 @@ section#experience{
     justify-content: center;
     padding: 2em;
     margin-top: 2em;
-    width: 90%;   
+  
 }
 
 .exp-container{
@@ -1155,7 +1155,10 @@ body.transparent2::after{
         font-size: 18.5px;
     }
 
-
+    section#experience{
+        width: 90%;   
+    }
+    
     .exp-desc{
         margin-top: 0.1rem;
         padding: 0px 20px;
