@@ -800,6 +800,7 @@ section#contacts{
 
 footer{
     display: flex;
+    text-align: center;
     padding: 1em;
     color: var(--color-azul-escuro);
     flex-direction: column;
@@ -959,6 +960,10 @@ body.transparent2::after{
 
     .desktop-nav ul li{
         margin: 12px 0px;
+    }
+
+    .desktop-nav ul li button{
+        font-size: 14px !important;
     }
 
     #webicons-nav {
