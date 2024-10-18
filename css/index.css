@@ -738,15 +738,12 @@ div#modal video{
 }
 
 
-
-
-
 section#contacts{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 1em;
+    padding: 1em 0em;
    
    
 }
@@ -1207,7 +1204,7 @@ body.transparent2::after{
 
     section#contacts{
         height:85vh ;
-       
+       padding: 1em;
     }
 
     section#projects{
