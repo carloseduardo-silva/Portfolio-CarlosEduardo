@@ -387,7 +387,10 @@ class indexController{
                 let selectedEl = document.querySelector(".active-exp");
 
                 el.classList.add('active-exp');
-                selectedEl.classList.remove('active-exp');
+                if(selectedEl){
+                    selectedEl.classList.remove('active-exp');
+                }
+                
 
                 this.switchExperienceClick(id);
             })
