@@ -307,7 +307,7 @@ section#about{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 2em;
+    padding: 2em 0.75em;
     margin-top: 7.5em;
     
    
@@ -327,7 +327,7 @@ section#experience{
     justify-content: center;
     padding: 2em;
     margin-top: 2em;
-    width: 95%;   
+    width: 90%;   
 }
 
 .exp-container{
@@ -335,12 +335,11 @@ section#experience{
     flex-direction: column;
     justify-content: center;
     margin-top: 3em;
-    gap: 15px;
+    gap: 0px;
 }
 
 .exp-titles{
 
-    background-color: #e2e2e2;
     border-radius: 4px;
     min-width: 265px;
 }
@@ -379,7 +378,7 @@ section#experience{
 }
 
 .exp-desc span{
-    font-size: 18px;
+    font-size: 17.3px;
 }
 
 .exp-desc h3{
@@ -950,6 +949,20 @@ body.transparent2::after{
 
 
 
+@media (max-height: 850px){
+    .desktop-nav a {
+        font-size: 16.7px;
+
+    }
+
+    .desktop-nav ul li{
+        margin: 12px 0px;
+    }
+
+    #webicons-nav {
+        margin: 0px 0px 12px 0px !important;
+    }
+}
 
 @media (min-width:768px) {
 
@@ -1055,6 +1068,8 @@ body.transparent2::after{
         border: 2px solid var(--color-);
         box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.549);
         width: 64%;
+        max-width: 380px;
+        max-height: 380px;
         margin: 10px 0px 1rem;
     }
 
@@ -1130,17 +1145,6 @@ body.transparent2::after{
         font-size: 18.5px;
     }
 
-    section#experience{
-        display: flex;
-        width: 75%;   
-    }
-
-    .exp-container{
-        display: flex;
-        flex-direction: row;
-        gap: 40px;
-        margin-top: 4.25rem;
-    }
 
     .exp-desc{
         margin-top: 0.1rem;
@@ -1155,8 +1159,12 @@ body.transparent2::after{
         
         flex-direction: row;
         justify-content: space-between;
+        align-items: center;
     }
-
+    
+    .exp-titles{
+        padding: 0px 20px 25px 20px;
+    }
     
     section#skills{ 
         margin-top: 14em;
@@ -1328,6 +1336,17 @@ body.transparent2::after{
     #main-content{
         padding-left: 21em;
     }
+
+    .exp-container{
+        display: flex;
+        flex-direction: row;
+        margin-top: 4.25rem;
+        gap: 30px;
+    }
+
+    .exp-titles{
+        padding: 0px;
+    }
     
 }
 
@@ -1363,5 +1382,15 @@ body.transparent2::after{
     .modal-content a{
        font-size: 16px;
     }
+
+   
     
+}
+
+@media (min-width: 1670px){
+    section#experience{
+        width: 75%;
+        max-width: 1400px;
+        
+    }
 }

@@ -401,32 +401,32 @@ class indexController{
 
             case "prefeitura":
                 
-                this.expCargo.innerHTML = `testea`
-                this.expTime.innerHTML = `testea`
+                this.expCargo.innerHTML = `Desenvolvedor Frontend`
+                this.expTime.innerHTML = `Mai 2024 - Atualmente`
                 this.expLocal.innerHTML = `Prefeitura Municipal de Santo André`
-                this.expParagraph.innerHTML = ` Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse ipsa, ullam repellat sequi nisi numquam quidem totam sapiente fugit voluptates facilis animi repellendus dicta quibusdam consectetur cum illum excepturi ut?Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto harum, et delectus fugiat veniam alias provident quibusdam possimus consequuntur ullam recusandae doloremque natus eius ratione, dolor esse beatae perspiciatis. Quod!`
+                this.expParagraph.innerHTML = ` Responsável por operar na criação do conteúdo, estilos, layout, design interativo, funcionalidades e integrações com API dos Sistemas Web da Prefeitura de Santo André. Suporte e manutenção de bugs dos sites apresentados pelos setores da saúde, RH, segurança, frotas, além da vivência e prática atuando sob Metodologias Ágeis (SCRUM e KANBAN).`
 
             break
 
             case "endolife":
-                this.expCargo.innerHTML = `testea`
-                this.expTime.innerHTML = `testea`
+                this.expCargo.innerHTML = `Web Developer e UI Designer`
+                this.expTime.innerHTML = `Jul 2024 - Out 2024`
                 this.expLocal.innerHTML = `Endolife HealthTech`
-                this.expParagraph.innerHTML = `tesLorem ipsum, dolor sit amet consectetur adipisicing elit. Esse ipsa, ullam repellat sequi nisi numquam quidem totam sapiente fugit voluptates facilis animi repellendus dicta quibusdam consectetur cum illum excepturi ut?Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto harum, et delectus fugiat veniam alias provident quibusdam possimus consequuntur ullam recusandae doloremque natus eius ratione, dolor esse beatae perspiciatis. Quod!tea`
+                this.expParagraph.innerHTML = `Webdesign e desenvolvimento de Site Intitucional + Landing Pages de alta conversão para empresa, incluindo a criação do conteúdo, estilos, interatividades, layout e design não só interativo do site, mas também responsivo sendo adaptativo para tablets e celulares. Para design utilizei softwares como: Photoshop, Canva, Figma. `
             break
 
             case "mvconcept":
-                this.expCargo.innerHTML = `testea`
-                this.expTime.innerHTML = `testea`
+                this.expCargo.innerHTML = `Web Developer e UI Designer`
+                this.expTime.innerHTML = `Mai 2024 - Set 2024`
                 this.expLocal.innerHTML = `MV Concept`
-                this.expParagraph.innerHTML = `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse ipsa, ullam repellat sequi nisi numquam quidem totam sapiente fugit voluptates facilis animi repellendus dicta quibusdam consectetur cum illum excepturi ut?Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto harum, et delectus fugiat veniam alias provident quibusdam possimus consequuntur ullam recusandae doloremque natus eius ratione, dolor esse beatae perspiciatis. Quod!`
+                this.expParagraph.innerHTML = `Webdesign e desenvolvimento de uma Loja Virtual (e-commerce) para loja de roupas femininas, fui responsável pela criação dos contéudos, estilos, interatividades, banners, elementos visuais, além de toda configuração do sistema de compra e venda de produtos, fretes, brindes e promoções.`
             break
 
             case "digital-max":
-                this.expCargo.innerHTML = `testea`
-                this.expTime.innerHTML = `testea`
+                this.expCargo.innerHTML = `Auxiliar de Informática`
+                this.expTime.innerHTML = `Jul 2019 - Dez 2019`
                 this.expLocal.innerHTML = `Digital Max`
-                this.expParagraph.innerHTML = `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse ipsa, ullam repellat sequi nisi numquam quidem totam sapiente fugit voluptates facilis animi repellendus dicta quibusdam consectetur cum illum excepturi ut?Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto harum, et delectus fugiat veniam alias provident quibusdam possimus consequuntur ullam recusandae doloremque natus eius ratione, dolor esse beatae perspiciatis. Quod!`
+                this.expParagraph.innerHTML = `Primeira experiência profissional na área, onde era responsável por auxiliar os novos alunos nas aulas de informática e computação, preparação do material das aulas de informática e suporte aos professores durante os plantões de dúvidas. Tive contato com tecnologias como: Pacote Office, Excel, PowerPoint, Word, Sistema Operacional Linux`
             break
 
         }
