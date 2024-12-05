@@ -23,12 +23,14 @@ class indexController{
         this.modalArrowPrev = document.querySelector("#modalArrowPrev")
         this.modalArrowNext= document.querySelector("#modalArrowNext")
         this.modalContainer = document.querySelector('.modal-container')
-        this.projectVideo = document.querySelector('#project-video')
+        this.projectVideo = document.querySelector('#video-src')
         this.experienceArr = document.querySelectorAll(".title-exp")
         this.expCargo = document.querySelector("#exp-cargo")
         this.expParagraph = document.querySelector("#exp-paragraph")
         this.expTime = document.querySelector("#exp-time")
         this.expLocal = document.querySelector("#exp-local")
+        this.imgContainer = document.querySelector("#img-container")
+        this.videoContainer = document.querySelector("#video-container")
         
         
 
@@ -195,8 +197,10 @@ class indexController{
                 this.urlContentModal.innerHTML = 'https://mvconcept.com.br/'
                 this.urlContentModal.href = 'https://mvconcept.com.br/'
                 this.h2Modal.innerHTML = `MV Concept`
+                this.imgContainer.classList.remove("hide")
+                this.videoContainer.classList.add("hide")
                 this.modalContainer.id = '1'
-                this.projectVideo.src = ''
+                this.imgContainer.src = '/images/projects-mvconcept.png'
             break
 
             case "2":
@@ -206,8 +210,10 @@ class indexController{
                 this.urlContentModal.innerHTML = 'https://llgrupo.com.br/'
                 this.urlContentModal.href = 'https://llgrupo.com.br/'
                 this.h2Modal.innerHTML = `Grupo LL `
+                this.imgContainer.classList.remove("hide")
+                this.videoContainer.classList.add("hide")
                 this.modalContainer.id = '2'
-                this.projectVideo.src = ''
+                this.imgContainer.src = '/images/projects-grupoll.png'
             break
 
             case "3":
@@ -217,8 +223,10 @@ class indexController{
                 this.urlContentModal.innerHTML = 'https://endoflow.com.br/'
                 this.urlContentModal.href = 'https://endoflow.com.br/'
                 this.h2Modal.innerHTML = `Endolife `
+                this.imgContainer.classList.remove("hide")
+                this.videoContainer.classList.add("hide")
                 this.modalContainer.id = '3'
-                this.projectVideo.src = ''
+                this.imgContainer.src = '/images/projects-endolife.png'
             break
 
             case "4":
@@ -228,8 +236,10 @@ class indexController{
                 this.urlContentModal.innerHTML = 'https://www.ascostaengenharia.com.br/'
                 this.urlContentModal.href = 'https://www.ascostaengenharia.com.br/'
                 this.h2Modal.innerHTML = `ASC.COSTA Engenharia `
+                this.imgContainer.classList.remove("hide")
+                this.videoContainer.classList.add("hide")
                 this.modalContainer.id = '4'
-                this.projectVideo.src = ''
+                this.imgContainer.src = '/images/projects-ascosta.png'
             break
 
             case "5":
@@ -239,8 +249,10 @@ class indexController{
                 this.urlContentModal.innerHTML = 'https://dramandanunes.com.br/'
                 this.urlContentModal.href = 'https://dramandanunes.com.br/'
                 this.h2Modal.innerHTML = `Dra. Amanda Nunes`
+                this.imgContainer.classList.remove("hide")
+                this.videoContainer.classList.add("hide")
                 this.modalContainer.id = '5'
-                this.projectVideo.src = ''
+                this.imgContainer.src = '/images/projects-dramanda.png'
             break
 
             case "6":
@@ -250,8 +262,10 @@ class indexController{
                 this.urlContentModal.innerHTML = 'https://endoflow.com.br/endoflow'
                 this.urlContentModal.href = 'https://endoflow.com.br/endoflow'
                 this.h2Modal.innerHTML = `Endoflow `
+                this.imgContainer.classList.remove("hide")
+                this.videoContainer.classList.add("hide")
                 this.modalContainer.id = '6'
-                this.projectVideo.src = ''
+                this.imgContainer.src = '/images/projects-endoflow.png'
             break
 
             case "7":
@@ -261,8 +275,10 @@ class indexController{
                 this.urlContentModal.innerHTML = 'https://carloseduardo-silva.github.io/pump-gym/'
                 this.urlContentModal.href = 'https://carloseduardo-silva.github.io/pump-gym/'
                 this.h2Modal.innerHTML = `PUMP GYM `
+                this.imgContainer.classList.remove("hide")
+                this.videoContainer.classList.add("hide")
                 this.modalContainer.id = '7'
-                this.projectVideo.src = ''
+                this.imgContainer.src = '/images/projects-pumpgyn.png'
             break
 
             case "8":
@@ -273,6 +289,8 @@ class indexController{
                 this.urlContentModal.href = ''
                 this.h2Modal.innerHTML = `CLSEED Shop `
                 this.modalContainer.id = '8'
+                this.imgContainer.classList.add("hide")
+                this.videoContainer.classList.remove("hide")
                 this.projectVideo.src = '/videos/clseedShopProjectVideo.mp4'
             break
            
@@ -285,6 +303,8 @@ class indexController{
                 this.urlContentModal.href = 'https://barbearia-kadu-cortes-client.vercel.app/html/index.html'
                 this.h2Modal.innerHTML = `Barbearia Kadu Corte's `
                 this.modalContainer.id = '9'
+                this.imgContainer.classList.add("hide")
+                this.videoContainer.classList.remove("hide")
                 this.projectVideo.src = '/videos/barbeariaKaduCortesProjectVideo.mp4'
             break
 
@@ -296,7 +316,10 @@ class indexController{
                 this.urlContentModal.href = 'https://restaurente-bucefalus-client.vercel.app/html/index.html'
                 this.projectVideo.src = '/videos/restauranteBucefalusProjectVideo.mp4'
                 this.h2Modal.innerHTML = ` Restaurante Bucéfalus `
+                this.imgContainer.classList.remove("hide")
+                this.videoContainer.classList.add("hide")
                 this.modalContainer.id = '10'
+                this.imgContainer.src = '/images/projects-bucefalus.png'
             break
 
             case "11":
@@ -307,6 +330,8 @@ class indexController{
                 this.urlContentModal.href = 'https://viniport-servicos-client.vercel.app/html/index.html'
                 this.h2Modal.innerHTML = 'ViniPort Serviços'
                 this.modalContainer.id = '11'
+                this.imgContainer.classList.add("hide")
+                this.videoContainer.classList.remove("hide")
                 this.projectVideo.src = '/videos/viniPortProjectVideo.mp4'
                
             break
@@ -320,6 +345,8 @@ class indexController{
                 this.urlContentModal.href = 'https://github.com/carloseduardo-silva/curso-javascript-projeto-whatsapp-clone'
                 this.h2Modal.innerHTML = `WhatsApp Clone `
                 this.modalContainer.id = '12'
+                this.imgContainer.classList.add("hide")
+                this.videoContainer.classList.remove("hide")
                 this.projectVideo.src = '/videos/whatsappProjectVideo.mp4'
             break
 
@@ -331,6 +358,8 @@ class indexController{
                 this.urlContentModal.href = 'https://github.com/carloseduardo-silva/curso-javascript-projeto-usuarios-restapi'
                 this.h2Modal.innerHTML = `Manage Users `
                 this.modalContainer.id = '13'
+                this.imgContainer.classList.add("hide")
+                this.videoContainer.classList.remove("hide")
                 this.projectVideo.src = '/videos/userdashboardProjectVideo.mp4'
             break
 
@@ -342,6 +371,8 @@ class indexController{
                 this.urlContentModal.href = 'https://github.com/carloseduardo-silva/curso-javascript-projeto-dropbox-clone'
                 this.h2Modal.innerHTML = `DropBox Clone `
                 this.modalContainer.id = '14'
+                this.imgContainer.classList.add("hide")
+                this.videoContainer.classList.remove("hide")
                 this.projectVideo.src = '/videos/dropboxCloneProjectVideo.mp4'
             break
 
@@ -353,7 +384,9 @@ class indexController{
                 this.urlContentModal.href = ''
                 this.h2Modal.innerHTML = `NOVOS PROJETOS EM DESENVOLVIMENTO  `
                 this.modalContainer.id = '15'
-                this.projectVideo.src = '#'
+                this.imgContainer.classList.remove("hide")
+                this.videoContainer.classList.add("hide")
+                this.imgContainer.src = '#'
             break
         }
     }
