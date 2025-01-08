@@ -232,7 +232,7 @@ class indexController{
             case "4":
                 this.infoContentModal.innerHTML = `Landing Page responsiva para a Empresa de Reforma e Construção ASC.Costa Engenharia. Aplicação desenvolvida a fim de demonstrar os serviços realizados pela empreitera, legitimar a qualidade do produto e prospectar novos clientes. A página traz um destaque para o serviço de lavagem de fachada onde há maior detalhamento e destaque do processo.`
                 this.tecnologyContentModal.innerHTML = 'HTML5, CSS3, JavaScript, WordPress, Elementor, Canva'
-                this.dateContentModal.innerHTML = 'Jul, 2024'
+                this.dateContentModal.innerHTML = 'Mai, 2024'
                 this.urlContentModal.innerHTML = 'https://www.ascostaengenharia.com.br/'
                 this.urlContentModal.href = 'https://www.ascostaengenharia.com.br/'
                 this.h2Modal.innerHTML = `ASC.COSTA Engenharia `
@@ -245,7 +245,7 @@ class indexController{
             case "5":
                 this.infoContentModal.innerHTML = `Site institucional para a Dra. Amanda Nunes, a principal finalidade de um site instituicional é informar o cliente/usuário sobre quais são os principais serviços, vantagens e confiabilidade que ele pode ter nos serviços aplicados pela Dra. Fui responsável pela criação dos estilos, interatividades, banners e o webdesign, além da configuração do sistema de agendamentos por e-mail.`
                 this.tecnologyContentModal.innerHTML = 'HTML5, CSS3, JavaScript, WordPress, Elementor, Canva'
-                this.dateContentModal.innerHTML = 'Jul, 2024'
+                this.dateContentModal.innerHTML = 'Out, 2024'
                 this.urlContentModal.innerHTML = 'https://dramandanunes.com.br/'
                 this.urlContentModal.href = 'https://dramandanunes.com.br/'
                 this.h2Modal.innerHTML = `Dra. Amanda Nunes`
