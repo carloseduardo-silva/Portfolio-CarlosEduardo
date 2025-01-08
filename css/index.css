@@ -93,7 +93,7 @@ body::-webkit-scrollbar-thumb{
 
 .nav-fixed{
     position: fixed;
-    width: 98%;
+    width: 99.9%;
     z-index: 5;
    
 }
@@ -375,6 +375,7 @@ section#experience{
 
 .exp-desc h4{
     font-size: 20px;
+
 }
 
 .exp-desc span{
@@ -383,6 +384,7 @@ section#experience{
 
 .exp-desc h3{
     font-size: 24px;
+    color: var(--color-azul-escuro);
 }
 
 .exp-desc p{
