@@ -819,10 +819,14 @@ footer{
 
 .transparent{
     overflow-y: hidden;
+    position: fixed;
+    width: 100%; 
 }
 
 .transparent2{
     overflow-y: hidden;
+    position: fixed;
+    width: 100%; 
 }
 
 body.transparent::after{
