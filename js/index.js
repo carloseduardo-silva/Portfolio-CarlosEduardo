@@ -434,6 +434,7 @@ class indexController{
             this.divModal.style.display = 'none'
             this.modalContainer.id = 'none'
             document.body.classList.remove('transparent')
+            window.location.hash = 'projects';
             this.hideArrows()
 
         })
