@@ -228,6 +228,10 @@ nav button:hover{
    
 }
 
+.arrow-header-icon{
+    margin-right: 35px;
+}
+
 header{
     display: flex;
     flex-direction: column;
@@ -252,9 +256,9 @@ header{
 
 .header h1{
     text-align: center;
-    font-size: 2em;
+    font-size: 1.85em;
     color: var(--color-azul-escuro);
-    padding-right: 6px;
+    padding-right: 4px;
     border-right: 6px solid var(--color-azul-escuro);
     overflow: hidden;
 
@@ -978,7 +982,9 @@ body.transparent2::after{
 
 @media (min-width:768px) {
     
-
+    .arrow-header-icon{
+        margin-right: 25px;
+    }
 
     .contacts-icon{
         flex-direction: row;

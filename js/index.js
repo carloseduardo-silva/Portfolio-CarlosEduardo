@@ -416,6 +416,8 @@ class indexController{
 
             let id = el.getAttribute('id')
             
+            window.location.hash = '#';
+
             this.switchProjectsClick(id)
            
             this.arrowClick(id)
