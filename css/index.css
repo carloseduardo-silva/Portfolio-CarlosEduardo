@@ -229,7 +229,7 @@ nav button:hover{
 }
 
 .arrow-header-icon{
-    margin-right: 35px;
+    margin-right: 33px;
 }
 
 header{
@@ -237,7 +237,7 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 97vh;
     padding: 2em 20px 0em 20px;
     white-space: nowrap;
     width: 93%;
@@ -982,6 +982,10 @@ body.transparent2::after{
 
 @media (min-width:768px) {
     
+    header{
+        height: 100vh;
+    }
+
     .arrow-header-icon{
         margin-right: 25px;
     }
