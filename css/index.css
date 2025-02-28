@@ -322,6 +322,7 @@ section#about p{
     margin: 1em 1em 10px 1em;
     color: rgb(47, 47, 47);
     font-size: 17px;
+    line-height: 1.6;
 }
 
 section#experience{
