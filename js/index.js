@@ -256,19 +256,6 @@ class indexController{
             break
 
             case "6":
-                this.infoContentModal.innerHTML = `Landing Page responsiva para a empresa healthtech Endolife. Aplicação como foco na alta conversão desenvolvida a fim de divulgar o novo infoproduto lançado pela empresa, o qual consiste numa ferramenta IA que auxilia mulheres a gerenciar a endometriose diretamente no Whatsapp.  `
-                this.tecnologyContentModal.innerHTML = 'HTML5, CSS3, JavaScript, WordPress, Elementor, Canva'
-                this.dateContentModal.innerHTML = 'Out, 2024'
-                this.urlContentModal.innerHTML = 'https://endoflow.com.br/endoflow'
-                this.urlContentModal.href = 'https://endoflow.com.br/endoflow'
-                this.h2Modal.innerHTML = `Endoflow `
-                this.imgContainer.classList.remove("hide")
-                this.videoContainer.classList.add("hide")
-                this.modalContainer.id = '6'
-                this.imgContainer.src = '/images/projects-endoflow.png'
-            break
-
-            case "7":
                 this.infoContentModal.innerHTML = `Projeto de Sistema Web responsivo para uma Academia. Aplicação desenvolvida afim de consolidar meus conhecimentos em React.js, como React Hooks, Context API, Redux, Styled-Components, Ciclo de Vida, entre outros conceitos. O projeto conta com páginas interativas e reponsivas para navegação dos clietes da academia, exibindo o seus serviços como: modalidades, unidades próximas (consultas baseadas no cep utilizando BrasilAPI), planos e horários.`
                 this.tecnologyContentModal.innerHTML = 'HTML5, CSS3, JavaScript, React.js, Firebase, Canva'
                 this.dateContentModal.innerHTML = 'Nov, 2023'
@@ -277,38 +264,38 @@ class indexController{
                 this.h2Modal.innerHTML = `PUMP GYM `
                 this.imgContainer.classList.remove("hide")
                 this.videoContainer.classList.add("hide")
-                this.modalContainer.id = '7'
+                this.modalContainer.id = '6'
                 this.imgContainer.src = '/images/projects-pumpgyn.png'
             break
 
-            case "8":
+            case "7":
                 this.infoContentModal.innerHTML = `Projeto de Sistema Web responsivo para uma loja de roupas. Aplicação desenvolvida afim de consolidar meus conhecimentos em React.js, como React Hooks, Context API, Redux, Styled-Components, Ciclo de Vida, entre outros conceitos. O projeto conta com requisições assíncronas provenientes do Firebase (Banco de Dados do Google), as quais são responsáveis pela exibição e filtragem dos produtos.  `
                 this.tecnologyContentModal.innerHTML = 'HTML5, CSS3, JavaScript, React.js, Firebase, Canva'
                 this.dateContentModal.innerHTML = 'Set, 2023'
                 this.urlContentModal.innerHTML = 'PROJETO NÃO HOSPEDADO'
                 this.urlContentModal.href = ''
                 this.h2Modal.innerHTML = `CLSEED Shop `
-                this.modalContainer.id = '8'
+                this.modalContainer.id = '7'
                 this.imgContainer.classList.add("hide")
                 this.videoContainer.classList.remove("hide")
                 this.projectVideo.src = '/videos/clseedShopProjectVideo.mp4'
             break
            
 
-            case "9":
+            case "8":
                 this.infoContentModal.innerHTML = `Projeto desenvolvido para Barbearia Kadu Corte's residente em Guarujá-SP, a qual solicitou um sistema web responsivo para aplicações mobiles e que fosse interativo para os clientes. O sistema web conta tanto com uma ClientPage atrativa a qual expoem para os usuários as informações da barbearia e fornece um sistema de agendamento completo com validações, quanto uma AdminPage restringida por uma aplicação de login e senha, que armazena os dados dos clientes agendados, horarios marcados e disponíveis e muito mais.  `
                 this.tecnologyContentModal.innerHTML = 'HTML5, CSS3, JavaScript, Redis, Canva, MySql'
                 this.dateContentModal.innerHTML = 'Jun, 2023'
                 this.urlContentModal.innerHTML = 'https://barbearia-kadu-cortes-client.vercel.app/html/index.html'
                 this.urlContentModal.href = 'https://barbearia-kadu-cortes-client.vercel.app/html/index.html'
                 this.h2Modal.innerHTML = `Barbearia Kadu Corte's `
-                this.modalContainer.id = '9'
+                this.modalContainer.id = '8'
                 this.imgContainer.classList.add("hide")
                 this.videoContainer.classList.remove("hide")
                 this.projectVideo.src = '/videos/barbeariaKaduCortesProjectVideo.mp4'
             break
 
-            case "10":
+            case "9":
                 this.infoContentModal.innerHTML = 'Projeto de um website para o Restaurante Bucéfalus residente em Guarujá-SP, desenvolvido utilizando em sua base JavaScript e Embedded JavaScript em conexão com o banco de dados MySql, suportando tanto uma ClientPage regidas pelo sistema de rotas CRUD, quanto uma AdminPage (dashboard) com restrição de acesso por usuário e senha e dados assíncronos.'
                 this.tecnologyContentModal.innerHTML = 'HTML5, CSS3, JavaScript, Redis, Canva, MySql'
                 this.dateContentModal.innerHTML = 'Ago, 2023'
@@ -318,18 +305,18 @@ class indexController{
                 this.h2Modal.innerHTML = ` Restaurante Bucéfalus `
                 this.imgContainer.classList.remove("hide")
                 this.videoContainer.classList.add("hide")
-                this.modalContainer.id = '10'
+                this.modalContainer.id = '9'
                 this.imgContainer.src = '/images/projects-bucefalus.png'
             break
 
-            case "11":
+            case "10":
                 this.infoContentModal.innerHTML = 'Projeto desenvolvido para Empresa de Terceirização ViniPort Serviços residente em Diadema-SP, a qual solicitou um sistema web responsivo para aplicações mobiles e que fosse interativo para os clientes. Alêm da interface atrativa, também há todo o sistema de contato e solicitação de propostas o qual está emparelhado com uma AdminPage restringida com sistema de login e senha, que armazena não só todas as informações fornecidas pelos usuários mas também dados da empresa, como mensagens, propostas, funcionários e usuários. '
                 this.tecnologyContentModal.innerHTML = 'HTML5, CSS3, JavaScript, Redis, Canva, MySql'
                 this.dateContentModal.innerHTML = 'Set, 2023'
                 this.urlContentModal.innerHTML = 'https://viniport-servicos-client.vercel.app/html/index.html'
                 this.urlContentModal.href = 'https://viniport-servicos-client.vercel.app/html/index.html'
                 this.h2Modal.innerHTML = 'ViniPort Serviços'
-                this.modalContainer.id = '11'
+                this.modalContainer.id = '10'
                 this.imgContainer.classList.add("hide")
                 this.videoContainer.classList.remove("hide")
                 this.projectVideo.src = '/videos/viniPortProjectVideo.mp4'
@@ -337,53 +324,53 @@ class indexController{
             break
 
 
-            case "12":
+            case "11":
                 this.infoContentModal.innerHTML = 'Projeto desenvolvido durante o curso de JavaScript Avançado da HCODEBR, o qual nos trouxe o desenvolvimento de um clone do Whatsapp, contanto com todas as suas funcionalidades programadas através do banco de dados Firebase(FireStore + RealTimeDataBase), em conjunto com o JavaScript e algumas libs como: APIs de audio, camera e video, Path, Navigator, etc.'
                 this.tecnologyContentModal.innerHTML = 'HTML5, CSS3, JavaScript, Firebase'
                 this.dateContentModal.innerHTML = 'Jul, 2023'
                 this.urlContentModal.innerHTML = 'https://github.com/carloseduardo-silva/curso-javascript-projeto-whatsapp-clone'
                 this.urlContentModal.href = 'https://github.com/carloseduardo-silva/curso-javascript-projeto-whatsapp-clone'
                 this.h2Modal.innerHTML = `WhatsApp Clone `
-                this.modalContainer.id = '12'
+                this.modalContainer.id = '11'
                 this.imgContainer.classList.add("hide")
                 this.videoContainer.classList.remove("hide")
                 this.projectVideo.src = '/videos/whatsappProjectVideo.mp4'
             break
 
-            case "13":
+            case "12":
                 this.infoContentModal.innerHTML = 'Projeto desenvolvido essencialmente com JavaScript, afim de otimizar meus conhecimentos em sistemas de routes CRUD regido por uma API REST que consome dados do Banco de Dados Nedb, trazendo assincronidade ao website.'
                 this.tecnologyContentModal.innerHTML = 'HTML5, CSS3, JavaScript, Nedb'
                 this.dateContentModal.innerHTML = 'Jun, 2023'
                 this.urlContentModal.innerHTML = 'https://github.com/carloseduardo-silva/curso-javascript-projeto-usuarios-restapi'
                 this.urlContentModal.href = 'https://github.com/carloseduardo-silva/curso-javascript-projeto-usuarios-restapi'
                 this.h2Modal.innerHTML = `Manage Users `
-                this.modalContainer.id = '13'
+                this.modalContainer.id = '12'
                 this.imgContainer.classList.add("hide")
                 this.videoContainer.classList.remove("hide")
                 this.projectVideo.src = '/videos/userdashboardProjectVideo.mp4'
             break
 
-            case "14":
+            case "13":
                 this.infoContentModal.innerHTML = 'Projeto desenvolvido durante o curso de JavaScript Avançado da HCODEBR, o qual nos trouxe o desenvolvimento de um clone do DropBox, contanto com todas as suas funcionalidades programadas através do banco de dados Firebase(FireStore + RealTimeDataBase), em conjunto com o JavaScript, por meio do sistema de routes CRUD e algumas libs como: Formidable, Path, Fs, etc.'
                 this.tecnologyContentModal.innerHTML = 'HTML5, CSS3, JavaScript, Firebase'
                 this.dateContentModal.innerHTML = 'Jun, 2023'
                 this.urlContentModal.innerHTML = 'https://github.com/carloseduardo-silva/curso-javascript-projeto-dropbox-clone'
                 this.urlContentModal.href = 'https://github.com/carloseduardo-silva/curso-javascript-projeto-dropbox-clone'
                 this.h2Modal.innerHTML = `DropBox Clone `
-                this.modalContainer.id = '14'
+                this.modalContainer.id = '13'
                 this.imgContainer.classList.add("hide")
                 this.videoContainer.classList.remove("hide")
                 this.projectVideo.src = '/videos/dropboxCloneProjectVideo.mp4'
             break
 
-            case "15":
+            case "14":
                 this.infoContentModal.innerHTML = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta eligendi earum quas maxime nam asperiores dolor nesciunt odio quasi aspernatur natus voluptatum, quae dignissimos fugiat dolorum qui nemo sit doloribus.'
                 this.tecnologyContentModal.innerHTML = '...'
                 this.dateContentModal.innerHTML = '...'
                 this.urlContentModal.innerHTML = '...'
                 this.urlContentModal.href = ''
                 this.h2Modal.innerHTML = `NOVOS PROJETOS EM DESENVOLVIMENTO  `
-                this.modalContainer.id = '15'
+                this.modalContainer.id = '14'
                 this.imgContainer.classList.remove("hide")
                 this.videoContainer.classList.add("hide")
                 this.imgContainer.src = '#'
