@@ -228,12 +228,16 @@ nav button:hover{
    
 }
 
+.arrow-header-icon{
+    margin-right: 33px;
+}
+
 header{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 97vh;
     padding: 2em 20px 0em 20px;
     white-space: nowrap;
     width: 93%;
@@ -252,9 +256,9 @@ header{
 
 .header h1{
     text-align: center;
-    font-size: 2em;
+    font-size: 1.85em;
     color: var(--color-azul-escuro);
-    padding-right: 6px;
+    padding-right: 4px;
     border-right: 6px solid var(--color-azul-escuro);
     overflow: hidden;
 
@@ -308,7 +312,7 @@ section#about{
     align-items: center;
     justify-content: center;
     padding: 2em 0.75em;
-    margin-top: 7.5em;
+    margin-top: 4em;
     
    
 }
@@ -318,6 +322,7 @@ section#about p{
     margin: 1em 1em 10px 1em;
     color: rgb(47, 47, 47);
     font-size: 17px;
+    line-height: 1.6;
 }
 
 section#experience{
@@ -363,12 +368,13 @@ section#experience{
 .desc-header{
     display: flex;
     flex-direction: column;
+    margin-bottom: 15px;
 }
 
 .exp-desc{
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 5px;
     margin-top: 1.5rem;
     padding: 6px;
 }
@@ -818,6 +824,14 @@ footer{
 
 .transparent{
     overflow-y: hidden;
+    position: fixed;
+    width: 100%; 
+}
+
+.transparent2{
+    overflow-y: hidden;
+    position: fixed;
+    width: 100%; 
 }
 
 body.transparent::after{
@@ -847,9 +861,6 @@ body.transparent2::after{
     z-index: 0;
     animation: fade 1s;
 }
-
-
-
 
 
 
@@ -971,13 +982,20 @@ body.transparent2::after{
 }
 
 @media (min-width:768px) {
+    
+    header{
+        height: 100vh;
+    }
 
+    .arrow-header-icon{
+        margin-right: 25px;
+    }
 
     .contacts-icon{
         flex-direction: row;
     }
 
-.modal-container{
+    .modal-container{
     flex-direction: column;
    
   }
@@ -1062,7 +1080,7 @@ body.transparent2::after{
         height: 100vh;
         width: 100%;
         padding: 1em 6px 10px 5px;
-        box-shadow: 3px -2px 11px #0000005b;
+        box-shadow: 2px -2px 18px #0000005b;
     }
 
     .name-div{
@@ -1161,6 +1179,7 @@ body.transparent2::after{
     .exp-desc{
         margin-top: 0.1rem;
         padding: 0px 20px;
+        gap:20px
     }
 
     .exp-desc p{
@@ -1172,6 +1191,7 @@ body.transparent2::after{
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        margin-bottom: 0px;
     }
     
     .exp-titles{
@@ -1303,6 +1323,10 @@ body.transparent2::after{
   .container-service{
   padding: 1em 18px;
   margin-top: 2em;
+}
+
+body.transparent2::after{
+    width: 106%;
 }
 
   
