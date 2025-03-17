@@ -1130,10 +1130,10 @@ body.transparent2::after{
 
     #nav img.logo{
         display: flex;
-        width: 90%;
+        width: 88%;
         max-width: 380px;
         max-height: 380px;
-        margin: 10px 0px 5px;
+        margin: 10px 0px -25px;
     }
 
 
