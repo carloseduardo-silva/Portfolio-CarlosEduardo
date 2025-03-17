@@ -1130,21 +1130,12 @@ body.transparent2::after{
 
     #nav img.logo{
         display: flex;
-        /* border-radius: 49%; */
-        border: 2px solid var(--color-);
-        box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.549);
-        width: 70%;
+        width: 90%;
         max-width: 380px;
         max-height: 380px;
         margin: 10px 0px 5px;
     }
 
-    #nav img.logo:hover{
-        transform: scale(1.02);
-        transition: 500ms;
-        border: 2px solid var(--color-azul-claro);
-
-    }
 
     ul{
         list-style: none;
