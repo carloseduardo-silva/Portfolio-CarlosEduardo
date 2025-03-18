@@ -885,7 +885,7 @@ body.transparent2::after{
     overflow: hidden;
     outline: none;
     transition: color 0.4s;
-    animation: borderAnimation 2s linear infinite; /* Start the animation */
+    animation: borderAnimation 2s linear infinite; 
 }
 
 @keyframes borderAnimation {
@@ -899,10 +899,11 @@ body.transparent2::after{
         border: 2px solid var(--color-azul-claro1);
     }
     75% {
-        border: 2px solid var(--color-azul-claro); 
+        border: 2px solid var(--color-azul-claro);
+        transform: scale(1.05); 
     }
     100% {
-        border: 2px solid var(--color-azul-escuro);
+        border: 2px solid var(--color-azul-claro1);
     }
 }
 
@@ -1130,10 +1131,15 @@ body.transparent2::after{
 
     #nav img.logo{
         display: flex;
-        width: 85%;
+        width: 83%;
         max-width: 380px;
         max-height: 380px;
-        margin: 10px 0px -25px;
+        margin: 10px auto -5px;
+    }
+
+    #nav img.logo:hover{
+        transform: scale(1.02);
+        transition: 300ms;
     }
 
 
