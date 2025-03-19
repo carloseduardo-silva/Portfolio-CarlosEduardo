@@ -272,13 +272,13 @@ class indexController{
                 this.infoContentModal.innerHTML = `Projeto de Sistema Web responsivo para uma loja de roupas. Aplicação desenvolvida afim de consolidar meus conhecimentos em React.js, como React Hooks, Context API, Redux, Styled-Components, Ciclo de Vida, entre outros conceitos. O projeto conta com requisições assíncronas provenientes do Firebase (Banco de Dados do Google), as quais são responsáveis pela exibição e filtragem dos produtos.  `
                 this.tecnologyContentModal.innerHTML = 'HTML5, CSS3, JavaScript, React.js, Firebase, Canva'
                 this.dateContentModal.innerHTML = 'Set, 2023'
-                this.urlContentModal.innerHTML = 'PROJETO NÃO HOSPEDADO'
-                this.urlContentModal.href = ''
+                this.urlContentModal.innerHTML = 'https://clsed-shop.web.app/'
+                this.urlContentModal.href = 'https://clsed-shop.web.app/'
                 this.h2Modal.innerHTML = `CLSEED Shop `
                 this.modalContainer.id = '7'
-                this.imgContainer.classList.add("hide")
-                this.videoContainer.classList.remove("hide")
-                this.projectVideo.src = '/videos/clseedShopProjectVideo.mp4'
+                this.imgContainer.classList.remove("hide")
+                this.videoContainer.classList.add("hide")
+                this.imgContainer.src = '/images/img-clseed.png'
             break
            
 
@@ -290,9 +290,9 @@ class indexController{
                 this.urlContentModal.href = 'https://barbearia-kadu-cortes-client.vercel.app/html/index.html'
                 this.h2Modal.innerHTML = `Barbearia Kadu Corte's `
                 this.modalContainer.id = '8'
-                this.imgContainer.classList.add("hide")
-                this.videoContainer.classList.remove("hide")
-                this.projectVideo.src = '/videos/barbeariaKaduCortesProjectVideo.mp4'
+                this.imgContainer.classList.remove("hide")
+                this.videoContainer.classList.add("hide")
+                this.imgContainer.src = '/images/projects-barbeariakadu.png'
             break
 
             case "9":

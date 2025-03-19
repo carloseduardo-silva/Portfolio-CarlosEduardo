@@ -1111,7 +1111,7 @@ body.transparent2::after{
     #nav{
         display: flex;
         flex-direction: column;
-        justify-content:space-evenly;
+        justify-content:center;
         align-items: center;
         height: 100vh;
         width: 100%;
@@ -1134,11 +1134,11 @@ body.transparent2::after{
         border-radius: 49%; 
         border: 2px solid var(--color-azul-claro1);
         box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.549);
-        width: 70%;
-        /* width: 83%; */
+        width: 60%;
         max-width: 380px;
         max-height: 380px;
         margin: 10px auto -5px;
+        
     }
 
     #nav img.logo:hover{
@@ -1146,15 +1146,30 @@ body.transparent2::after{
         transition: 300ms;
     }
 
-
-    ul{
-        list-style: none;
-        text-align: center;
-        
-
+    nav.desktop-nav{
+        margin-right: 10px;
     }
 
-    ul li a{
+    nav.desktop-nav ul{
+        margin-top: 1.75rem;
+        list-style: none;
+        text-align: center;
+    }
+
+    nav.desktop-nav ul li{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 13px;
+        
+    }
+
+    nav.desktop-nav ul li svg{
+        font-size: 1.4em;
+    }
+
+    nav.desktop-nav ul li a{
         text-decoration: none;
         color:black;
         padding: 1em 0em;
@@ -1162,20 +1177,21 @@ body.transparent2::after{
         font-weight: 500;
     }
 
-    ul li a:hover{
+    nav.desktop-nav ul li:hover{
+        color:var(--color-azul-claro);
+    }
+
+    nav.desktop-nav ul li a:hover{
         color:var(--color-azul-claro) ;
     }
 
-    ul li{
-        margin: 1.5em 0em;
-    }
 
-    ul li button{
+    nav.desktop-nav ul li button{
         border-radius: 10px;
         color:var(--color-mint) ;
         background-color: var(--color-azul-escuro);
         padding: 0.75em 1.25em;
-        margin: 20px;
+        margin: 10px;
         font-size: 15px;
 
     }
