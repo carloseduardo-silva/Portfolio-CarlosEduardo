@@ -1131,7 +1131,11 @@ body.transparent2::after{
 
     #nav img.logo{
         display: flex;
-        width: 83%;
+        border-radius: 49%; 
+        border: 2px solid var(--color-azul-claro1);
+        box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.549);
+        width: 70%;
+        /* width: 83%; */
         max-width: 380px;
         max-height: 380px;
         margin: 10px auto -5px;
