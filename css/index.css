@@ -994,32 +994,7 @@ body.transparent2::after{
 
 
 
-@media (max-height: 850px){
-    .desktop-nav a {
-        font-size: 16.7px;
 
-    }
-
-    .desktop-nav ul li{
-        margin: -7px 0px;
-    }
-
-    .desktop-nav ul li button{
-        font-size: 14px !important;
-    }
-
-    #webicons-nav {
-        margin: 0px 0px 12px 0px !important;
-    }
-}
-
-@media (max-height: 725px){
-
-    .desktop-nav ul li{
-        margin: -12px 0px;
-    }
-
-}
 
 @media (min-width:768px) {
     
@@ -1510,4 +1485,33 @@ body.transparent2::after{
         max-width: 1400px;
         
     }
+}
+
+@media (max-height: 850px){
+
+
+    .desktop-nav ul li{
+        margin: -7px 0px;
+    }
+
+    .desktop-nav ul li button{
+        font-size: 14px !important;
+    }
+
+    #webicons-nav {
+        margin: -5px 0px 12px 12px !important;
+    }
+}
+
+@media (max-height: 700px){
+
+    .desktop-nav ul li{
+        margin: -12px 0px;
+    }
+
+    .desktop-nav a {
+        font-size: 16px !important; 
+
+    }
+
 }
