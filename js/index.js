@@ -217,7 +217,7 @@ class indexController{
             break
 
             case "3":
-                this.infoContentModal.innerHTML = `Site institucional para a empresa healthtech Endolife, a principal finalidade de um site instituicional é informar o cliente/usuário sobre quais são os principais serviços, vantagens e confiabilidade que ele pode ter em determinado produto. Fui responsável pela criação dos estilos, interatividades, banners e o webdesign em geral.`
+                this.infoContentModal.innerHTML = `Site institucional para a empresa healthtech Endolife, a principal finalidade de um site instituicional é informar o cliente/usuário sobre quais são os principais serviços, vantagens e confiabilidade que ele pode ter em determinado produto. Fui responsável pela criação dos estilos, interatividades, banners, além de desenhar o webdesign das páginas.`
                 this.tecnologyContentModal.innerHTML = 'HTML5, CSS3, JavaScript, WordPress, Elementor, Canva'
                 this.dateContentModal.innerHTML = 'Ago, 2024'
                 this.urlContentModal.innerHTML = 'https://endoflow.com.br/'
@@ -283,7 +283,7 @@ class indexController{
            
 
             case "8":
-                this.infoContentModal.innerHTML = `Projeto desenvolvido para Barbearia Kadu Corte's residente em Guarujá-SP, a qual solicitou um sistema web responsivo para aplicações mobiles e que fosse interativo para os clientes. O sistema web conta tanto com uma ClientPage atrativa a qual expoem para os usuários as informações da barbearia e fornece um sistema de agendamento completo com validações, quanto uma AdminPage restringida por uma aplicação de login e senha, que armazena os dados dos clientes agendados, horarios marcados e disponíveis e muito mais.  `
+                this.infoContentModal.innerHTML = `Projeto desenvolvido para Barbearia Kadu Corte's residente em Guarujá-SP, a qual solicitou um sistema web responsivo para aplicações mobiles e que fosse interativo para os clientes. O sistema conta tanto com uma ClientPage atrativa a qual expoem para os usuários as informações da barbearia e fornece um sistema de agendamento completo com validações, quanto uma AdminPage restringida por uma validação de login e senha, que armazena os dados dos clientes agendados, horarios marcados e muito mais.  `
                 this.tecnologyContentModal.innerHTML = 'HTML5, CSS3, JavaScript, Redis, Canva, MySql'
                 this.dateContentModal.innerHTML = 'Jun, 2023'
                 this.urlContentModal.innerHTML = 'https://barbearia-kadu-cortes-client.vercel.app/html/index.html'
@@ -296,7 +296,7 @@ class indexController{
             break
 
             case "9":
-                this.infoContentModal.innerHTML = 'Projeto de um website para o Restaurante Bucéfalus residente em Guarujá-SP, desenvolvido utilizando em sua base JavaScript e Embedded JavaScript em conexão com o banco de dados MySql, suportando tanto uma ClientPage regidas pelo sistema de rotas CRUD, quanto uma AdminPage (dashboard) com restrição de acesso por usuário e senha e dados assíncronos.'
+                this.infoContentModal.innerHTML = 'Projeto de um website para o Restaurante Bucéfalus residente em Guarujá-SP, desenvolvido utilizando em sua base JavaScript, Embedded JavaScript em conjunto com o Boostrap. Há também a conexão com o banco de dados MySql, suportando tanto uma ClientPage regida pelo sistema de rotas CRUD, quanto uma AdminPage (dashboard) com restrição de acesso por usuário e senha.'
                 this.tecnologyContentModal.innerHTML = 'HTML5, CSS3, JavaScript, Redis, Canva, MySql'
                 this.dateContentModal.innerHTML = 'Ago, 2023'
                 this.urlContentModal.innerHTML = 'https://restaurente-bucefalus-client.vercel.app/html/index.html'
