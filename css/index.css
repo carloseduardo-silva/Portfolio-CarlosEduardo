@@ -705,6 +705,7 @@ div#modal video{
 
 .modal-header span:hover{
     cursor: pointer;
+    transform: scale(1.03);
 }
 
 .modal-content{
@@ -1165,7 +1166,7 @@ body.transparent2::after{
     }
 
     nav.desktop-nav ul li a:hover{
-        color:var(--color-azul-claro) ;
+        color:var(--color-azul-claro);
     }
 
 
