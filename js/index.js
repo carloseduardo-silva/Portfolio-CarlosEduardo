@@ -294,7 +294,7 @@ class indexController{
                 this.modalContainer.id = '8'
                 this.imgContainer.classList.remove("hide")
                 this.videoContainer.classList.add("hide")
-                this.imgContainer.src = '/images/img-clseed.png'
+                this.imgContainer.src = '/images/projects-clsed.png'
             break
            
 
