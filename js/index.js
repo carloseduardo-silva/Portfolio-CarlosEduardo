@@ -222,7 +222,7 @@ class indexController{
                 this.dateContentModal.innerHTML = 'Jan, 2025'
                 this.urlContentModal.innerHTML = 'http://egovdes/controlefrotas/admin/'
                 this.urlContentModal.href = 'http://egovdes/controlefrotas/admin/'
-                this.h2Modal.innerHTML = `Endolife `
+                this.h2Modal.innerHTML = `Controle de Frotas `
                 this.imgContainer.classList.remove("hide")
                 this.videoContainer.classList.add("hide")
                 this.modalContainer.id = '3'
@@ -383,13 +383,13 @@ class indexController{
                 this.infoContentModal.innerHTML = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta eligendi earum quas maxime nam asperiores dolor nesciunt odio quasi aspernatur natus voluptatum, quae dignissimos fugiat dolorum qui nemo sit doloribus.'
                 this.tecnologyContentModal.innerHTML = '...'
                 this.dateContentModal.innerHTML = '...'
-                this.urlContentModal.innerHTML = '...'
-                this.urlContentModal.href = ''
+                this.urlContentModal.innerHTML = 'Voltar'
+                this.urlContentModal.href = '#projects'
                 this.h2Modal.innerHTML = `NOVOS PROJETOS EM DESENVOLVIMENTO  `
                 this.modalContainer.id = '15'
                 this.imgContainer.classList.remove("hide")
                 this.videoContainer.classList.add("hide")
-                this.imgContainer.src = '#'
+                this.imgContainer.src = '/images/perfil-blue3-Photoroom.jpg'
             break
         }
     }
