@@ -768,6 +768,16 @@ section#contacts{
     margin: 3em 1em 2em 1em;
 }
 
+.contacts-icon div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 2em 1em;
+    gap: 10px;
+}
+
+
 .icon-contact{
     display: flex;
     justify-content: center;
@@ -1013,6 +1023,7 @@ body.transparent2::after{
 
     .contacts-icon{
         flex-direction: row;
+        margin: 3em 1.3em 2em 0em;
     }
 
     .modal-container{
@@ -1044,6 +1055,11 @@ body.transparent2::after{
 
 .modal-content a{
    font-size: 13px;
+}
+
+.contacts-icon div{
+    margin: 3em 2em;
+    gap: 5px;
 }
 
 }
@@ -1431,7 +1447,7 @@ body.transparent2::after{
     div#modal img{
         width: 520px;
         height: 400px;
-        margin: 30px 3em 10px 0.75em;
+        margin: 13px 3em 10px 0.75em;
       }
 
       .modal-content p{
@@ -1457,7 +1473,7 @@ body.transparent2::after{
     div#modal img{
         width: 530px;
         height: 410px;
-        margin: 30px 3em 10px 0.75em;
+        margin: 13px 3em 10px 0.75em;
       }
 
       
