@@ -231,7 +231,7 @@ class indexController{
 
 
             case "4":
-                this.infoContentModal.innerHTML = `Landing Page responsiva para a Empresa de Reforma e Construção ASC.Costa Engenharia. Aplicação desenvolvida a fim de demonstrar os serviços realizados pela empreitera, legitimar a qualidade do produto e prospectar novos clientes. A página traz um destaque para o serviço de lavagem de fachada onde há maior detalhamento e destaque do processo.`
+                this.infoContentModal.innerHTML = ` Site Instituicional Educativo para o Colégio Adelia, aplicação desenvolvida a fim de disponibilizar um ambiente virtual completo e interativo para otimizar o aprendizado e o acesso aos materiais didáticos. O sistema conta com uma apostila virtual, materiais complementares como vídeos e pdfs, resumos e mapa mentais, além de ser 100% responsivo otimizado para qualquer tipo de dispositivo. A aplicação já está em uso e é acessada localmente por diversos alunos.`
                 this.tecnologyContentModal.innerHTML = 'HTML5, CSS3, JavaScript, Next.js, TailwindCSS, Python'
                 this.dateContentModal.innerHTML = 'Mar, 2025'
                 this.urlContentModal.innerHTML = 'https://deploy-apostila-adelia.vercel.app/apostila/POO5'
