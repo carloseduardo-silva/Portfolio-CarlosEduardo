@@ -87,6 +87,10 @@ body::-webkit-scrollbar-thumb{
   display: none;
 }
 
+#nav .name-div a{
+    margin-left: 8px;
+}
+
 .desktop-nav{
     display: none;
 }
