@@ -1027,7 +1027,7 @@ body.transparent2::after{
 
     .contacts-icon{
         flex-direction: row;
-        margin: 3em 1.3em 2em 0em;
+        margin: 1em 1.3em 3em 0em;
     }
 
     .modal-container{
@@ -1278,6 +1278,7 @@ body.transparent2::after{
     }
     .service-row span{
         font-size: 4.75em;
+        margin-top:25px;
         
     }
 
@@ -1290,7 +1291,7 @@ body.transparent2::after{
 
     section#contacts{
         height:85vh ;
-       padding: 1em;
+       padding: 2em 1em;
     }
 
     section#projects{
