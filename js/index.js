@@ -220,7 +220,7 @@ class indexController{
                 this.infoContentModal.innerHTML = `Sistema administrativo para o gerenciamento de Controle de Frotas da Prefeitura Municipal de Santo André, a aplicação é responsável pelo cadastro e edição de motoristas e veículos, contempla um sistema de agendamentos de viagens operadas e admitidas por um administrador, além de um sistema de relatórios e gráficos para o acompanhamento do desempenho da frota. O sistema foi desenvolvido com o intuito de otimizar o tempo e a eficiência dos processos administrativos das frotas da prefeitura.`
                 this.tecnologyContentModal.innerHTML = 'HTML5, CSS3, JavaScript, ASP.NET, C#, SQL Server, Bootstrap, Python, FASTAPI'
                 this.dateContentModal.innerHTML = 'Jan, 2025'
-                this.urlContentModal.innerHTML = 'http://egovdes/controlefrotas/admin/'
+                this.urlContentModal.innerHTML = 'http://egovdes/controlefrotas/admin/ - (ACESSO RESTRINGINDO POR VPN)'
                 this.urlContentModal.href = 'http://egovdes/controlefrotas/admin/'
                 this.h2Modal.innerHTML = `Controle de Frotas `
                 this.imgContainer.classList.remove("hide")
@@ -250,7 +250,7 @@ class indexController{
                 this.dateContentModal.innerHTML = 'Mai, 2024'
                 this.urlContentModal.innerHTML = 'https://www.ascostaengenharia.com.br/'
                 this.urlContentModal.href = 'https://www.ascostaengenharia.com.br/'
-                this.h2Modal.innerHTML = `ASC.COSTA Engenharia `
+                this.h2Modal.innerHTML = `ASC.COSTA Engenharia (RENOVAÇÃO DO SERVIÇO DE HOSPEDAGEM POR PARTE DO CLIENTE) `
                 this.imgContainer.classList.remove("hide")
                 this.videoContainer.classList.add("hide")
                 this.modalContainer.id = '5'
@@ -338,26 +338,26 @@ class indexController{
                 this.imgContainer.src = '/images/projects-bucefalus.png'
             break
 
-            case "12":
-                this.infoContentModal.innerHTML = 'Projeto desenvolvido para Empresa de Terceirização ViniPort Serviços residente em Diadema-SP, a qual solicitou um sistema web responsivo para aplicações mobiles e que fosse interativo para os clientes. Alêm da interface atrativa, também há todo o sistema de contato e solicitação de propostas o qual está emparelhado com uma AdminPage restringida com sistema de login e senha, que armazena não só todas as informações fornecidas pelos usuários mas também dados da empresa, como mensagens, propostas, funcionários e usuários. '
-                this.tecnologyContentModal.innerHTML = 'HTML5, CSS3, JavaScript, Redis, Canva, MySql'
-                this.dateContentModal.innerHTML = 'Set, 2023'
-                this.urlContentModal.innerHTML = 'https://viniport-servicos-client.vercel.app/html/index.html'
-                this.urlContentModal.href = 'https://viniport-servicos-client.vercel.app/html/index.html'
-                this.h2Modal.innerHTML = 'ViniPort Serviços'
-                this.modalContainer.id = '12'
-                this.imgContainer.classList.add("hide")
-                this.videoContainer.classList.remove("hide")
-                this.projectVideo.src = '/videos/viniPortProjectVideo.mp4'
+            // case "12":
+            //     this.infoContentModal.innerHTML = 'Projeto desenvolvido para Empresa de Terceirização ViniPort Serviços residente em Diadema-SP, a qual solicitou um sistema web responsivo para aplicações mobiles e que fosse interativo para os clientes. Alêm da interface atrativa, também há todo o sistema de contato e solicitação de propostas o qual está emparelhado com uma AdminPage restringida com sistema de login e senha, que armazena não só todas as informações fornecidas pelos usuários mas também dados da empresa, como mensagens, propostas, funcionários e usuários. '
+            //     this.tecnologyContentModal.innerHTML = 'HTML5, CSS3, JavaScript, Redis, Canva, MySql'
+            //     this.dateContentModal.innerHTML = 'Set, 2023'
+            //     this.urlContentModal.innerHTML = 'https://viniport-servicos-client.vercel.app/html/index.html'
+            //     this.urlContentModal.href = 'https://viniport-servicos-client.vercel.app/html/index.html'
+            //     this.h2Modal.innerHTML = 'ViniPort Serviços'
+            //     this.modalContainer.id = '12'
+            //     this.imgContainer.classList.add("hide")
+            //     this.videoContainer.classList.remove("hide")
+            //     this.projectVideo.src = '/videos/viniPortProjectVideo.mp4'
                
-            break
+            // break
 
 
-            case "13":
+            case "12":
                 this.infoContentModal.innerHTML = 'Projeto desenvolvido durante o curso de JavaScript Avançado da HCODEBR, o qual nos trouxe o desenvolvimento de um clone do Whatsapp, contanto com todas as suas funcionalidades programadas através do banco de dados Firebase(FireStore + RealTimeDataBase), em conjunto com o JavaScript e algumas libs como: APIs de audio, camera e video, Path, Navigator, etc.'
                 this.tecnologyContentModal.innerHTML = 'HTML5, CSS3, JavaScript, Firebase'
                 this.dateContentModal.innerHTML = 'Jul, 2023'
-                this.urlContentModal.innerHTML = 'https://github.com/carloseduardo-silva/curso-javascript-projeto-whatsapp-clone'
+                this.urlContentModal.innerHTML = 'REPOSITÓRIO - https://github.com/carloseduardo-silva/curso-javascript-projeto-whatsapp-clone'
                 this.urlContentModal.href = 'https://github.com/carloseduardo-silva/curso-javascript-projeto-whatsapp-clone'
                 this.h2Modal.innerHTML = `WhatsApp Clone `
                 this.modalContainer.id = '13'
@@ -366,11 +366,11 @@ class indexController{
                 this.projectVideo.src = '/videos/whatsappProjectVideo.mp4'
             break
 
-            case "14":
+            case "13":
                 this.infoContentModal.innerHTML = 'Projeto desenvolvido essencialmente com JavaScript, afim de otimizar meus conhecimentos em sistemas de routes CRUD regido por uma API REST que consome dados do Banco de Dados Nedb, trazendo assincronidade ao website.'
                 this.tecnologyContentModal.innerHTML = 'HTML5, CSS3, JavaScript, Nedb'
                 this.dateContentModal.innerHTML = 'Jun, 2023'
-                this.urlContentModal.innerHTML = 'https://github.com/carloseduardo-silva/curso-javascript-projeto-usuarios-restapi'
+                this.urlContentModal.innerHTML = 'REPOSITÓRIO - https://github.com/carloseduardo-silva/curso-javascript-projeto-usuarios-restapi'
                 this.urlContentModal.href = 'https://github.com/carloseduardo-silva/curso-javascript-projeto-usuarios-restapi'
                 this.h2Modal.innerHTML = `Manage Users `
                 this.modalContainer.id = '14'
@@ -379,11 +379,11 @@ class indexController{
                 this.projectVideo.src = '/videos/userdashboardProjectVideo.mp4'
             break
 
-            case "15":
+            case "14":
                 this.infoContentModal.innerHTML = 'Projeto desenvolvido durante o curso de JavaScript Avançado da HCODEBR, o qual nos trouxe o desenvolvimento de um clone do DropBox, contanto com todas as suas funcionalidades programadas através do banco de dados Firebase(FireStore + RealTimeDataBase), em conjunto com o JavaScript, por meio do sistema de routes CRUD e algumas libs como: Formidable, Path, Fs, etc.'
                 this.tecnologyContentModal.innerHTML = 'HTML5, CSS3, JavaScript, Firebase'
                 this.dateContentModal.innerHTML = 'Jun, 2023'
-                this.urlContentModal.innerHTML = 'https://github.com/carloseduardo-silva/curso-javascript-projeto-dropbox-clone'
+                this.urlContentModal.innerHTML = 'REPOSITÓRIO - https://github.com/carloseduardo-silva/curso-javascript-projeto-dropbox-clone'
                 this.urlContentModal.href = 'https://github.com/carloseduardo-silva/curso-javascript-projeto-dropbox-clone'
                 this.h2Modal.innerHTML = `DropBox Clone `
                 this.modalContainer.id = '15'
@@ -392,7 +392,7 @@ class indexController{
                 this.projectVideo.src = '/videos/dropboxCloneProjectVideo.mp4'
             break
 
-            case "16":
+            case "15":
                 this.infoContentModal.innerHTML = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta eligendi earum quas maxime nam asperiores dolor nesciunt odio quasi aspernatur natus voluptatum, quae dignissimos fugiat dolorum qui nemo sit doloribus.'
                 this.tecnologyContentModal.innerHTML = '...'
                 this.dateContentModal.innerHTML = '...'
