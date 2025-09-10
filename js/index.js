@@ -511,14 +511,14 @@ class indexController{
                 this.expCargo.innerHTML = `Web Developer e UI Designer`
                 this.expTime.innerHTML = `Fev 2024 - Ago 2024`
                 this.expLocal.innerHTML = `Endolife HealthTech`
-                this.expParagraph.innerHTML = `Webdesign e desenvolvimento de Site Intitucional + Landing Pages de alta conversão para empresa, incluindo a criação do conteúdo, estilos, interatividades, layout e design não só interativo do site, mas também responsivo sendo adaptativo para tablets e celulares. Para design e criação do material visual utilizei softwares como: Photoshop, Canva, Figma. `
+                this.expParagraph.innerHTML = `Webdesign e desenvolvimento de Site Intitucional + Landing Pages de alta conversão para empresa, incluindo a criação do conteúdo, estilos, interatividades, layout e design não só interativo do site, mas também responsivo sendo adaptativo para tablets e celulares.  `
             break
 
-            case "mvconcept":
-                this.expCargo.innerHTML = `Web Developer e UI Designer`
-                this.expTime.innerHTML = `Mai 2024 - Set 2024`
-                this.expLocal.innerHTML = `MV Concept`
-                this.expParagraph.innerHTML = `Webdesign e desenvolvimento de uma Loja Virtual (e-commerce) para loja de roupas femininas, fui responsável pela criação dos contéudos, estilos, interatividades, banners, elementos visuais, além de toda configuração do sistema de compra e venda de produtos, fretes, brindes e promoções.`
+            case "ipr":
+                this.expCargo.innerHTML = `Desenvolvedor Front-End`
+                this.expTime.innerHTML = `Jul 2025 - Atualmente`
+                this.expLocal.innerHTML = `Instituto Pedro Ruiz`
+                this.expParagraph.innerHTML = `Operar no desenvolvimento do CRM próprio do instituto, fui responsável por todo o desenvolvimento do Front-End do sistema desde o Design UI|UX das telas até a produção e integração com as APIs do backend. Além da manutenção dos outros sistemas web utilizados dentro da empresa, como o site institucional e landing pages.`
             break
 
             case "digital-max":
