@@ -190,32 +190,7 @@ class indexController{
     switchProjectsClick(id){
         switch(id){
 
-            case "1":
-                this.infoContentModal.innerHTML = `Webdesign e desenvolvimento de uma Loja Virtual (e-commerce) para loja de roupas femininas MV CONCEPT, fui responsável pela criação dos contéudos, estilos, interatividades, banners, elementos visuais, além de toda configuração do sistema de compra e venda de produtos, fretes, brindes e promoções.`
-                this.tecnologyContentModal.innerHTML = 'HTML5, CSS3, JavaScript, WordPress, Elementor, Canva'
-                this.dateContentModal.innerHTML = 'Set, 2024'
-                this.urlContentModal.innerHTML = 'https://mvconcept.com.br/'
-                this.urlContentModal.href = 'https://mvconcept.com.br/'
-                this.h2Modal.innerHTML = `MV Concept`
-                this.imgContainer.classList.remove("hide")
-                this.videoContainer.classList.add("hide")
-                this.modalContainer.id = '1'
-                this.imgContainer.src = '/images/projects-mvconcept.png'
-            break
-
-            case "2":
-                this.infoContentModal.innerHTML = `Site institucional para a empresa de despachante documentalista Grupo LL, a principal finalidade de um site instituicional é informar o cliente/usuário sobre quais são os principais serviços, vantagens e confiabilidade que ele pode ter em determinado produto. Fui responsável pela criação dos contéudos, webdesign, estilos, interatividades, banners, elementos visuais, além da configuração do sistema de depoimentos por e-mail.`
-                this.tecnologyContentModal.innerHTML = 'HTML5, CSS3, JavaScript, WordPress, Elementor, Canva'
-                this.dateContentModal.innerHTML = 'Out, 2024'
-                this.urlContentModal.innerHTML = 'https://llgrupo.com.br/'
-                this.urlContentModal.href = 'https://llgrupo.com.br/'
-                this.h2Modal.innerHTML = `Grupo LL `
-                this.imgContainer.classList.remove("hide")
-                this.videoContainer.classList.add("hide")
-                this.modalContainer.id = '2'
-                this.imgContainer.src = '/images/projects-grupoll.png'
-            break
-
+          
             case "3":
                 this.infoContentModal.innerHTML = `Sistema administrativo para o gerenciamento de Controle de Frotas da Prefeitura Municipal de Santo André, a aplicação é responsável pelo cadastro e edição de motoristas e veículos, contempla um sistema de agendamentos de viagens operadas e admitidas por um administrador, além de um sistema de relatórios e gráficos para o acompanhamento do desempenho da frota. O sistema foi desenvolvido com o intuito de otimizar o tempo e a eficiência dos processos administrativos das frotas da prefeitura.`
                 this.tecnologyContentModal.innerHTML = 'HTML5, CSS3, JavaScript, ASP.NET, C#, SQL Server, Bootstrap, Python, FASTAPI'
@@ -257,18 +232,6 @@ class indexController{
                 this.imgContainer.src = '/images/projects-ascosta.png'
             break
 
-            case "6":
-                this.infoContentModal.innerHTML = `Site institucional para a Dra. Amanda Nunes, a principal finalidade de um site instituicional é informar o cliente/usuário sobre quais são os principais serviços, vantagens e confiabilidade que ele pode ter nos serviços aplicados pela Dra. Fui responsável pela criação dos estilos, interatividades, banners e o webdesign, além da configuração do sistema de agendamentos por e-mail.`
-                this.tecnologyContentModal.innerHTML = 'HTML5, CSS3, JavaScript, WordPress, Elementor, Canva'
-                this.dateContentModal.innerHTML = 'Out, 2024'
-                this.urlContentModal.innerHTML = 'https://dramandanunes.com.br/'
-                this.urlContentModal.href = 'https://dramandanunes.com.br/'
-                this.h2Modal.innerHTML = `Dra. Amanda Nunes`
-                this.imgContainer.classList.remove("hide")
-                this.videoContainer.classList.add("hide")
-                this.modalContainer.id = '6'
-                this.imgContainer.src = '/images/projects-dramanda.png'
-            break
 
             case "7":
                 this.infoContentModal.innerHTML = `Site institucional para a empresa healthtech Endolife, a principal finalidade de um site instituicional é informar o cliente/usuário sobre quais são os principais serviços, vantagens e confiabilidade que ele pode ter em determinado produto. Fui responsável pela criação dos estilos, interatividades, banners, além de idealizar o webdesign das páginas.`
@@ -297,19 +260,6 @@ class indexController{
                 this.imgContainer.src = '/images/projects-pumpgyn.png'
             break
 
-            case "9":
-                this.infoContentModal.innerHTML = `Projeto de Sistema Web responsivo para uma loja de roupas. Aplicação desenvolvida afim de consolidar meus conhecimentos em React.js, como React Hooks, Context API, Redux, Styled-Components, Ciclo de Vida, entre outros conceitos. O projeto conta com requisições assíncronas provenientes do Firebase (Banco de Dados do Google), as quais são responsáveis pela exibição e filtragem dos produtos.  `
-                this.tecnologyContentModal.innerHTML = 'HTML5, CSS3, JavaScript, React.js, Firebase, Canva'
-                this.dateContentModal.innerHTML = 'Set, 2023'
-                this.urlContentModal.innerHTML = 'https://clsed-shop.web.app/'
-                this.urlContentModal.href = 'https://clsed-shop.web.app/'
-                this.h2Modal.innerHTML = `CLSEED Shop `
-                this.modalContainer.id = '9'
-                this.imgContainer.classList.remove("hide")
-                this.videoContainer.classList.add("hide")
-                this.imgContainer.src = '/images/projects-clsed.png'
-            break
-           
 
             case "10":
                 this.infoContentModal.innerHTML = `Projeto desenvolvido para Barbearia Kadu Corte's residente em Guarujá-SP, a qual solicitou um sistema web responsivo para aplicações mobiles e que fosse interativo para os clientes. O sistema conta tanto com uma ClientPage atrativa a qual expoem para os usuários as informações da barbearia e fornece um sistema de agendamento completo com validações, quanto uma AdminPage restringida por uma validação de login e senha, que armazena os dados dos clientes agendados, horarios marcados e muito mais.  `
