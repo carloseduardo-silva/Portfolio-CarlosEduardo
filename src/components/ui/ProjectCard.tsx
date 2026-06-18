@@ -7,27 +7,35 @@ type Props = {
 
 export default function ProjectCard({ project, onClick }: Props) {
   return (
-    <div
-      className="flex flex-col justify-center items-center m-4 mb-[5px] cursor-pointer group hover:scale-110 transition-transform duration-[550ms]"
+    <article
       onClick={() => onClick(project)}
+      className="group bg-white rounded-2xl overflow-hidden border-[1.5px] border-card-border shadow-sm transition-all duration-200 hover:-translate-y-1.5 hover:shadow-[0_20px_44px_rgba(13,24,41,0.10)] hover:border-accent/25 cursor-pointer"
     >
-      <div className="flex flex-col items-center mb-[-16.85px] relative">
-        <img
-          src={project.thumbnail}
-          alt={project.title}
-          className="w-[300px] h-[190px] border border-blue object-cover"
-        />
-        <div className="absolute bottom-[106px] text-mint font-bold text-[21px]">
-          <p>{project.title}</p>
+      {/* Gradient header */}
+      <div
+        className="relative h-[188px] flex items-end px-5 py-5"
+        style={{ background: project.bg }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent" />
+        <div className="relative z-10">
+          <span className="font-mono text-[9.5px] text-white/50 uppercase tracking-[0.15em] block mb-1">
+            {project.type}
+          </span>
+          <h3 className="text-[17px] font-bold text-white leading-tight tracking-tight">
+            {project.title}
+          </h3>
         </div>
       </div>
 
-      <div className="opacity-0 group-hover:opacity-100 group-hover:flex hidden bg-navy px-[1.06rem] pt-[0.85rem] pb-4 relative bottom-[15px] w-[90%] items-center justify-between rounded-b-[2rem] animate-[showDown_0.55s_forwards]">
-        <p className="text-mint text-[13px]">{project.dateLabel}</p>
-        <span className="no-underline px-[10px] py-2 border border-blue text-mint rounded-[10px] text-[13px] hover:text-blue cursor-pointer">
-          Ver Mais
+      {/* Footer */}
+      <div className="flex items-center justify-between px-5 py-3.5">
+        <span className="font-mono text-[11.5px] text-[#9AAABB]">
+          {project.techs.join(' · ')}
+        </span>
+        <span className="flex items-center gap-1.5 text-[12.5px] font-semibold text-accent transition-all group-hover:gap-2.5">
+          Ver <span aria-hidden>→</span>
         </span>
       </div>
-    </div>
+    </article>
   )
 }

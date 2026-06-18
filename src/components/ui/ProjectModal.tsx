@@ -30,87 +30,95 @@ export default function ProjectModal({ project, onClose, onPrev, onNext }: Props
     <>
       {/* Backdrop */}
       <div
-        className="fixed inset-0 bg-black/65 backdrop-blur-sm z-40 animate-[fade_1s]"
+        className="fixed inset-0 bg-navy-950/80 backdrop-blur-sm z-40"
         onClick={onClose}
       />
 
-      {/* Prev arrow (desktop) */}
+      {/* Prev arrow */}
       {onPrev && (
-        <span
+        <button
           onClick={onPrev}
-          className="hidden lg:block fixed top-1/2 left-[4%] -translate-y-1/2 z-50 text-[4.5rem] text-mint cursor-pointer material-symbols-outlined hover:text-blue-mid transition-colors duration-300"
+          className="hidden lg:flex fixed top-1/2 left-6 -translate-y-1/2 z-50 w-11 h-11 items-center justify-center rounded-full bg-white/10 border border-white/10 text-white hover:bg-accent/20 hover:border-accent/40 transition-all"
         >
-          arrow_back_ios
-        </span>
+          ←
+        </button>
       )}
 
       {/* Modal */}
-      <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 flex flex-col items-center max-h-[660px] w-[76%] p-8 gap-[1.85rem] bg-grey rounded-2xl animate-[fade_1s] overflow-y-auto text-navy [scrollbar-width:thin]">
+      <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 flex flex-col w-[90vw] max-w-[860px] max-h-[85vh] bg-surface-light rounded-2xl border border-card-border shadow-[0_32px_64px_rgba(13,24,41,0.18)] overflow-y-auto">
         {/* Header */}
-        <div className="flex flex-row justify-center w-full relative">
-          <h2 className="text-2xl font-semibold">{project.title}</h2>
-          <span
+        <div className="flex items-center justify-between px-7 py-5 border-b border-card-border">
+          <div>
+            <span className="font-mono text-[10px] text-accent uppercase tracking-[0.2em] block mb-1">
+              {project.type}
+            </span>
+            <h2 className="text-xl font-bold text-navy-900 tracking-tight">{project.title}</h2>
+          </div>
+          <button
             onClick={onClose}
-            className="absolute right-0 top-0 text-[28px] cursor-pointer material-symbols-outlined hover:scale-103"
+            className="w-9 h-9 flex items-center justify-center rounded-lg border border-card-border text-[#8896A8] hover:border-accent/40 hover:text-accent transition-all text-lg"
           >
-            close
-          </span>
+            ✕
+          </button>
         </div>
 
-        {/* Container: media + content */}
-        <div className="flex flex-col items-center xl:flex-row xl:items-start">
-          {project.mediaType === 'image' ? (
-            <img
-              src={project.mediaSrc}
-              alt={project.title}
-              className="w-full md:w-[80%] xl:w-[530px] xl:h-[410px] object-cover mt-[10px] mr-[3em] ml-[0.75em] mb-[10px]"
-            />
-          ) : (
-            <video
-              controls
-              className="w-full md:w-[80%] xl:w-[520px] xl:h-[90%] mt-[50px] mr-[3em] ml-[0.75em] mb-[10px]"
-            >
-              <source src={project.mediaSrc} type="video/mp4" />
-            </video>
-          )}
+        {/* Body */}
+        <div className="flex flex-col lg:flex-row gap-6 p-7">
+          {/* Media */}
+          <div className="lg:w-[52%] flex-none">
+            {project.mediaType === 'image' ? (
+              <img
+                src={project.mediaSrc}
+                alt={project.title}
+                className="w-full rounded-xl border border-card-border object-cover"
+              />
+            ) : (
+              <video
+                controls
+                className="w-full rounded-xl border border-card-border"
+              >
+                <source src={project.mediaSrc} type="video/mp4" />
+              </video>
+            )}
+          </div>
 
-          <div className="mt-[10px] xl:mt-0 xl:mx-0 mx-[3em]">
-            <h3 className="my-4 font-semibold">Informações do projeto:</h3>
-            <p className="text-[12px] md:text-[13px] lg:text-[15px]">{project.info}</p>
-            <h3 className="my-4 font-semibold">Detalhes do Projeto:</h3>
-            <ul className="list-none text-left">
-              <li className="pb-2 mb-4 border-b border-navy">
-                <p className="inline mr-[5px] text-[12px] md:text-[13px] lg:text-[15px] font-bold">Tecnologias:</p>
-                <p className="inline text-[12px] md:text-[13px] lg:text-[15px]">{project.technologies}</p>
-              </li>
-              <li className="pb-2 mb-4 border-b border-navy">
-                <p className="inline mr-[5px] text-[12px] md:text-[13px] lg:text-[15px] font-bold">Data:</p>
-                <p className="inline text-[12px] md:text-[13px] lg:text-[15px]">{project.date}</p>
-              </li>
-              <li className="pb-2 mb-4 border-b border-navy">
-                <p className="inline mr-[5px] text-[12px] md:text-[13px] lg:text-[15px] font-bold">URL:</p>
+          {/* Info */}
+          <div className="flex-1 flex flex-col gap-5">
+            <p className="text-[14.5px] text-[#4A5568] leading-relaxed">{project.info}</p>
+
+            <div className="flex flex-col gap-3">
+              <div className="p-4 bg-card-bg rounded-xl border border-card-border-blue">
+                <p className="font-mono text-[10px] text-accent uppercase tracking-[0.2em] mb-1.5">Tecnologias</p>
+                <p className="text-[13px] text-navy-900">{project.technologies}</p>
+              </div>
+              <div className="p-4 bg-card-bg rounded-xl border border-card-border-blue">
+                <p className="font-mono text-[10px] text-accent uppercase tracking-[0.2em] mb-1.5">Data</p>
+                <p className="text-[13px] text-navy-900">{project.date}</p>
+              </div>
+              <div className="p-4 bg-card-bg rounded-xl border border-card-border-blue">
+                <p className="font-mono text-[10px] text-accent uppercase tracking-[0.2em] mb-1.5">URL</p>
                 <a
                   target="_blank"
                   rel="noreferrer"
                   href={project.url}
-                  className="text-blue-dark2 text-[12px] md:text-[13px] lg:text-[15px]"
+                  className="text-[13px] text-accent hover:underline break-all"
                 >
                   {project.urlLabel}
                 </a>
-              </li>
-            </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Next arrow (desktop) */}
+      {/* Next arrow */}
       {onNext && (
-        <span
+        <button
           onClick={onNext}
-          className="hidden lg:block fixed top-1/2 right-[1%] -translate-y-1/2 z-50 text-[4.5rem] text-mint cursor-pointer material-symbols-outlined hover:text-blue-mid transition-colors duration-300"
+          className="hidden lg:flex fixed top-1/2 right-6 -translate-y-1/2 z-50 w-11 h-11 items-center justify-center rounded-full bg-white/10 border border-white/10 text-white hover:bg-accent/20 hover:border-accent/40 transition-all"
         >
-          arrow_forward_ios
-        </span>
+          →
+        </button>
       )}
     </>
   )

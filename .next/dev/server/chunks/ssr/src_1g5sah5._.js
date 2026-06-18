@@ -643,7 +643,13 @@ const experiences = [
         role: 'Desenvolvedor Front-End',
         period: 'Jul 2025 - Atualmente',
         location: 'Instituto Pedro Ruiz',
-        description: 'Operar no desenvolvimento do CRM próprio do instituto, fui responsável por todo o desenvolvimento do Front-End do sistema desde o Design UI|UX das telas até a produção e integração com as APIs do backend. Além da manutenção dos outros sistemas web utilizados dentro da empresa, como o site institucional e landing pages.'
+        description: 'Operar no desenvolvimento do CRM próprio do instituto, fui responsável por todo o desenvolvimento do Front-End do sistema desde o Design UI|UX das telas até a produção e integração com as APIs do backend. Além da manutenção dos outros sistemas web utilizados dentro da empresa, como o site institucional e landing pages.',
+        tags: [
+            'React',
+            'TypeScript',
+            'CRM',
+            'UI|UX'
+        ]
     },
     {
         id: 'prefeitura',
@@ -651,7 +657,13 @@ const experiences = [
         role: 'Desenvolvedor Frontend',
         period: 'Mai 2024 - Atualmente',
         location: 'Prefeitura Municipal de Santo André',
-        description: ' Responsável por operar na criação do conteúdo, estilos, layout, design interativo, funcionalidades e integrações com API dos Sistemas Web da Prefeitura de Santo André. Suporte e manutenção de bugs dos sites apresentados pelos setores da saúde, RH, segurança, frotas, além da vivência e prática atuando sob Metodologias Ágeis (SCRUM e KANBAN).'
+        description: ' Responsável por operar na criação do conteúdo, estilos, layout, design interativo, funcionalidades e integrações com API dos Sistemas Web da Prefeitura de Santo André. Suporte e manutenção de bugs dos sites apresentados pelos setores da saúde, RH, segurança, frotas, além da vivência e prática atuando sob Metodologias Ágeis (SCRUM e KANBAN).',
+        tags: [
+            'JavaScript',
+            'HTML5',
+            'CSS3',
+            'SCRUM'
+        ]
     },
     {
         id: 'endolife',
@@ -659,7 +671,12 @@ const experiences = [
         role: 'Web Developer e UI Designer',
         period: 'Fev 2024 - Ago 2024',
         location: 'Endolife HealthTech',
-        description: 'Webdesign e desenvolvimento de Site Intitucional + Landing Pages de alta conversão para empresa, incluindo a criação do conteúdo, estilos, interatividades, layout e design não só interativo do site, mas também responsivo sendo adaptativo para tablets e celulares.  '
+        description: 'Webdesign e desenvolvimento de Site Intitucional + Landing Pages de alta conversão para empresa, incluindo a criação do conteúdo, estilos, interatividades, layout e design não só interativo do site, mas também responsivo sendo adaptativo para tablets e celulares.  ',
+        tags: [
+            'React',
+            'Landing Pages',
+            'E-commerce'
+        ]
     },
     {
         id: 'digital-max',
@@ -667,7 +684,13 @@ const experiences = [
         role: 'Auxiliar de Informática',
         period: 'Jul 2019 - Dez 2019',
         location: 'Digital Max',
-        description: 'Primeira experiência profissional na área, onde era responsável por auxiliar os novos alunos nas aulas de informática e computação, preparação do material das aulas de informática e suporte aos professores durante os plantões de dúvidas. Tive contato com tecnologias como: Pacote Office, Excel, PowerPoint, Word, Sistema Operacional Linux'
+        description: 'Primeira experiência profissional na área, onde era responsável por auxiliar os novos alunos nas aulas de informática e computação, preparação do material das aulas de informática e suporte aos professores durante os plantões de dúvidas. Tive contato com tecnologias como: Pacote Office, Excel, PowerPoint, Word, Sistema Operacional Linux',
+        tags: [
+            'HTML5',
+            'CSS3',
+            'JavaScript',
+            'Bootstrap'
+        ]
     }
 ];
 }),
@@ -801,32 +824,44 @@ __turbopack_context__.s([
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
 ;
 function ProjectCard({ project, onClick }) {
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "flex flex-col justify-center items-center m-4 mb-[5px] cursor-pointer group hover:scale-110 transition-transform duration-[550ms]",
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("article", {
         onClick: ()=>onClick(project),
+        className: "group bg-white rounded-2xl overflow-hidden border-[1.5px] border-card-border shadow-sm transition-all duration-200 hover:-translate-y-1.5 hover:shadow-[0_20px_44px_rgba(13,24,41,0.10)] hover:border-accent/25 cursor-pointer",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "flex flex-col items-center mb-[-16.85px] relative",
+                className: "relative h-[188px] flex items-end px-5 py-5",
+                style: {
+                    background: project.bg
+                },
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                        src: project.thumbnail,
-                        alt: project.title,
-                        className: "w-[300px] h-[190px] border border-blue object-cover"
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent"
                     }, void 0, false, {
                         fileName: "[project]/src/components/ui/ProjectCard.tsx",
-                        lineNumber: 15,
+                        lineNumber: 19,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "absolute bottom-[106px] text-mint font-bold text-[21px]",
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                            children: project.title
-                        }, void 0, false, {
-                            fileName: "[project]/src/components/ui/ProjectCard.tsx",
-                            lineNumber: 21,
-                            columnNumber: 11
-                        }, this)
-                    }, void 0, false, {
+                        className: "relative z-10",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                className: "font-mono text-[9.5px] text-white/50 uppercase tracking-[0.15em] block mb-1",
+                                children: project.type
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/ui/ProjectCard.tsx",
+                                lineNumber: 21,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                className: "text-[17px] font-bold text-white leading-tight tracking-tight",
+                                children: project.title
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/ui/ProjectCard.tsx",
+                                lineNumber: 24,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
                         fileName: "[project]/src/components/ui/ProjectCard.tsx",
                         lineNumber: 20,
                         columnNumber: 9
@@ -834,32 +869,42 @@ function ProjectCard({ project, onClick }) {
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/ui/ProjectCard.tsx",
-                lineNumber: 14,
+                lineNumber: 15,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "opacity-0 group-hover:opacity-100 group-hover:flex hidden bg-navy px-[1.06rem] pt-[0.85rem] pb-4 relative bottom-[15px] w-[90%] items-center justify-between rounded-b-[2rem] animate-[showDown_0.55s_forwards]",
+                className: "flex items-center justify-between px-5 py-3.5",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                        className: "text-mint text-[13px]",
-                        children: project.dateLabel
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                        className: "font-mono text-[11.5px] text-[#9AAABB]",
+                        children: project.techs.join(' · ')
                     }, void 0, false, {
                         fileName: "[project]/src/components/ui/ProjectCard.tsx",
-                        lineNumber: 26,
+                        lineNumber: 32,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "no-underline px-[10px] py-2 border border-blue text-mint rounded-[10px] text-[13px] hover:text-blue cursor-pointer",
-                        children: "Ver Mais"
-                    }, void 0, false, {
+                        className: "flex items-center gap-1.5 text-[12.5px] font-semibold text-accent transition-all group-hover:gap-2.5",
+                        children: [
+                            "Ver ",
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                "aria-hidden": true,
+                                children: "→"
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/ui/ProjectCard.tsx",
+                                lineNumber: 36,
+                                columnNumber: 15
+                            }, this)
+                        ]
+                    }, void 0, true, {
                         fileName: "[project]/src/components/ui/ProjectCard.tsx",
-                        lineNumber: 27,
+                        lineNumber: 35,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/ui/ProjectCard.tsx",
-                lineNumber: 25,
+                lineNumber: 31,
                 columnNumber: 7
             }, this)
         ]
@@ -905,43 +950,59 @@ function ProjectModal({ project, onClose, onPrev, onNext }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "fixed inset-0 bg-black/65 backdrop-blur-sm z-40 animate-[fade_1s]",
+                className: "fixed inset-0 bg-navy-950/80 backdrop-blur-sm z-40",
                 onClick: onClose
             }, void 0, false, {
                 fileName: "[project]/src/components/ui/ProjectModal.tsx",
                 lineNumber: 32,
                 columnNumber: 7
             }, this),
-            onPrev && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+            onPrev && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                 onClick: onPrev,
-                className: "hidden lg:block fixed top-1/2 left-[4%] -translate-y-1/2 z-50 text-[4.5rem] text-mint cursor-pointer material-symbols-outlined hover:text-blue-mid transition-colors duration-300",
-                children: "arrow_back_ios"
+                className: "hidden lg:flex fixed top-1/2 left-6 -translate-y-1/2 z-50 w-11 h-11 items-center justify-center rounded-full bg-white/10 border border-white/10 text-white hover:bg-accent/20 hover:border-accent/40 transition-all",
+                children: "←"
             }, void 0, false, {
                 fileName: "[project]/src/components/ui/ProjectModal.tsx",
                 lineNumber: 39,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 flex flex-col items-center max-h-[660px] w-[76%] p-8 gap-[1.85rem] bg-grey rounded-2xl animate-[fade_1s] overflow-y-auto text-navy [scrollbar-width:thin]",
+                className: "fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 flex flex-col w-[90vw] max-w-[860px] max-h-[85vh] bg-surface-light rounded-2xl border border-card-border shadow-[0_32px_64px_rgba(13,24,41,0.18)] overflow-y-auto",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "flex flex-row justify-center w-full relative",
+                        className: "flex items-center justify-between px-7 py-5 border-b border-card-border",
                         children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                className: "text-2xl font-semibold",
-                                children: project.title
-                            }, void 0, false, {
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: "font-mono text-[10px] text-accent uppercase tracking-[0.2em] block mb-1",
+                                        children: project.type
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/ui/ProjectModal.tsx",
+                                        lineNumber: 52,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                                        className: "text-xl font-bold text-navy-900 tracking-tight",
+                                        children: project.title
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/ui/ProjectModal.tsx",
+                                        lineNumber: 55,
+                                        columnNumber: 13
+                                    }, this)
+                                ]
+                            }, void 0, true, {
                                 fileName: "[project]/src/components/ui/ProjectModal.tsx",
                                 lineNumber: 51,
                                 columnNumber: 11
                             }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                 onClick: onClose,
-                                className: "absolute right-0 top-0 text-[28px] cursor-pointer material-symbols-outlined hover:scale-103",
-                                children: "close"
+                                className: "w-9 h-9 flex items-center justify-center rounded-lg border border-card-border text-[#8896A8] hover:border-accent/40 hover:text-accent transition-all text-lg",
+                                children: "✕"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/ui/ProjectModal.tsx",
-                                lineNumber: 52,
+                                lineNumber: 57,
                                 columnNumber: 11
                             }, this)
                         ]
@@ -951,129 +1012,67 @@ function ProjectModal({ project, onClose, onPrev, onNext }) {
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "flex flex-col items-center xl:flex-row xl:items-start",
+                        className: "flex flex-col lg:flex-row gap-6 p-7",
                         children: [
-                            project.mediaType === 'image' ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
-                                src: project.mediaSrc,
-                                alt: project.title,
-                                className: "w-full md:w-[80%] xl:w-[530px] xl:h-[410px] object-cover mt-[10px] mr-[3em] ml-[0.75em] mb-[10px]"
-                            }, void 0, false, {
-                                fileName: "[project]/src/components/ui/ProjectModal.tsx",
-                                lineNumber: 63,
-                                columnNumber: 13
-                            }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("video", {
-                                controls: true,
-                                className: "w-full md:w-[80%] xl:w-[520px] xl:h-[90%] mt-[50px] mr-[3em] ml-[0.75em] mb-[10px]",
-                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("source", {
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "lg:w-[52%] flex-none",
+                                children: project.mediaType === 'image' ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
                                     src: project.mediaSrc,
-                                    type: "video/mp4"
+                                    alt: project.title,
+                                    className: "w-full rounded-xl border border-card-border object-cover"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/ui/ProjectModal.tsx",
-                                    lineNumber: 73,
+                                    lineNumber: 70,
+                                    columnNumber: 15
+                                }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("video", {
+                                    controls: true,
+                                    className: "w-full rounded-xl border border-card-border",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("source", {
+                                        src: project.mediaSrc,
+                                        type: "video/mp4"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/components/ui/ProjectModal.tsx",
+                                        lineNumber: 80,
+                                        columnNumber: 17
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/ui/ProjectModal.tsx",
+                                    lineNumber: 76,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/ui/ProjectModal.tsx",
-                                lineNumber: 69,
-                                columnNumber: 13
+                                lineNumber: 68,
+                                columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "mt-[10px] xl:mt-0 xl:mx-0 mx-[3em]",
+                                className: "flex-1 flex flex-col gap-5",
                                 children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                        className: "my-4 font-semibold",
-                                        children: "Informações do projeto:"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/ui/ProjectModal.tsx",
-                                        lineNumber: 78,
-                                        columnNumber: 13
-                                    }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "text-[12px] md:text-[13px] lg:text-[15px]",
+                                        className: "text-[14.5px] text-[#4A5568] leading-relaxed",
                                         children: project.info
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/ui/ProjectModal.tsx",
-                                        lineNumber: 79,
+                                        lineNumber: 87,
                                         columnNumber: 13
                                     }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                        className: "my-4 font-semibold",
-                                        children: "Detalhes do Projeto:"
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/components/ui/ProjectModal.tsx",
-                                        lineNumber: 80,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
-                                        className: "list-none text-left",
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "flex flex-col gap-3",
                                         children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                className: "pb-2 mb-4 border-b border-navy",
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "p-4 bg-card-bg rounded-xl border border-card-border-blue",
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                        className: "inline mr-[5px] text-[12px] md:text-[13px] lg:text-[15px] font-bold",
-                                                        children: "Tecnologias:"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/src/components/ui/ProjectModal.tsx",
-                                                        lineNumber: 83,
-                                                        columnNumber: 17
-                                                    }, this),
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                        className: "inline text-[12px] md:text-[13px] lg:text-[15px]",
-                                                        children: project.technologies
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/src/components/ui/ProjectModal.tsx",
-                                                        lineNumber: 84,
-                                                        columnNumber: 17
-                                                    }, this)
-                                                ]
-                                            }, void 0, true, {
-                                                fileName: "[project]/src/components/ui/ProjectModal.tsx",
-                                                lineNumber: 82,
-                                                columnNumber: 15
-                                            }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                className: "pb-2 mb-4 border-b border-navy",
-                                                children: [
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                        className: "inline mr-[5px] text-[12px] md:text-[13px] lg:text-[15px] font-bold",
-                                                        children: "Data:"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/src/components/ui/ProjectModal.tsx",
-                                                        lineNumber: 87,
-                                                        columnNumber: 17
-                                                    }, this),
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                        className: "inline text-[12px] md:text-[13px] lg:text-[15px]",
-                                                        children: project.date
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/src/components/ui/ProjectModal.tsx",
-                                                        lineNumber: 88,
-                                                        columnNumber: 17
-                                                    }, this)
-                                                ]
-                                            }, void 0, true, {
-                                                fileName: "[project]/src/components/ui/ProjectModal.tsx",
-                                                lineNumber: 86,
-                                                columnNumber: 15
-                                            }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                                className: "pb-2 mb-4 border-b border-navy",
-                                                children: [
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                        className: "inline mr-[5px] text-[12px] md:text-[13px] lg:text-[15px] font-bold",
-                                                        children: "URL:"
+                                                        className: "font-mono text-[10px] text-accent uppercase tracking-[0.2em] mb-1.5",
+                                                        children: "Tecnologias"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/ui/ProjectModal.tsx",
                                                         lineNumber: 91,
                                                         columnNumber: 17
                                                     }, this),
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                                        target: "_blank",
-                                                        rel: "noreferrer",
-                                                        href: project.url,
-                                                        className: "text-blue-dark2 text-[12px] md:text-[13px] lg:text-[15px]",
-                                                        children: project.urlLabel
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                        className: "text-[13px] text-navy-900",
+                                                        children: project.technologies
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/ui/ProjectModal.tsx",
                                                         lineNumber: 92,
@@ -1084,23 +1083,76 @@ function ProjectModal({ project, onClose, onPrev, onNext }) {
                                                 fileName: "[project]/src/components/ui/ProjectModal.tsx",
                                                 lineNumber: 90,
                                                 columnNumber: 15
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "p-4 bg-card-bg rounded-xl border border-card-border-blue",
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                        className: "font-mono text-[10px] text-accent uppercase tracking-[0.2em] mb-1.5",
+                                                        children: "Data"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/components/ui/ProjectModal.tsx",
+                                                        lineNumber: 95,
+                                                        columnNumber: 17
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                        className: "text-[13px] text-navy-900",
+                                                        children: project.date
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/components/ui/ProjectModal.tsx",
+                                                        lineNumber: 96,
+                                                        columnNumber: 17
+                                                    }, this)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/src/components/ui/ProjectModal.tsx",
+                                                lineNumber: 94,
+                                                columnNumber: 15
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "p-4 bg-card-bg rounded-xl border border-card-border-blue",
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                        className: "font-mono text-[10px] text-accent uppercase tracking-[0.2em] mb-1.5",
+                                                        children: "URL"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/components/ui/ProjectModal.tsx",
+                                                        lineNumber: 99,
+                                                        columnNumber: 17
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                                        target: "_blank",
+                                                        rel: "noreferrer",
+                                                        href: project.url,
+                                                        className: "text-[13px] text-accent hover:underline break-all",
+                                                        children: project.urlLabel
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/components/ui/ProjectModal.tsx",
+                                                        lineNumber: 100,
+                                                        columnNumber: 17
+                                                    }, this)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/src/components/ui/ProjectModal.tsx",
+                                                lineNumber: 98,
+                                                columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/ui/ProjectModal.tsx",
-                                        lineNumber: 81,
+                                        lineNumber: 89,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/ui/ProjectModal.tsx",
-                                lineNumber: 77,
+                                lineNumber: 86,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/ui/ProjectModal.tsx",
-                        lineNumber: 61,
+                        lineNumber: 66,
                         columnNumber: 9
                     }, this)
                 ]
@@ -1109,13 +1161,13 @@ function ProjectModal({ project, onClose, onPrev, onNext }) {
                 lineNumber: 48,
                 columnNumber: 7
             }, this),
-            onNext && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+            onNext && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                 onClick: onNext,
-                className: "hidden lg:block fixed top-1/2 right-[1%] -translate-y-1/2 z-50 text-[4.5rem] text-mint cursor-pointer material-symbols-outlined hover:text-blue-mid transition-colors duration-300",
-                children: "arrow_forward_ios"
+                className: "hidden lg:flex fixed top-1/2 right-6 -translate-y-1/2 z-50 w-11 h-11 items-center justify-center rounded-full bg-white/10 border border-white/10 text-white hover:bg-accent/20 hover:border-accent/40 transition-all",
+                children: "→"
             }, void 0, false, {
                 fileName: "[project]/src/components/ui/ProjectModal.tsx",
-                lineNumber: 108,
+                lineNumber: 116,
                 columnNumber: 9
             }, this)
         ]
@@ -1135,156 +1187,211 @@ const projects = [
     {
         id: '3',
         title: 'Controle de Frotas',
+        type: 'Sistema Web',
         date: 'Jan, 2025',
         dateLabel: 'Janeiro de 2025',
         thumbnail: '/images/frotas-projectB.png',
         info: 'Sistema administrativo para o gerenciamento de Controle de Frotas da Prefeitura Municipal de Santo André, a aplicação é responsável pelo cadastro e edição de motoristas e veículos, contempla um sistema de agendamentos de viagens operadas e admitidas por um administrador, além de um sistema de relatórios e gráficos para o acompanhamento do desempenho da frota. O sistema foi desenvolvido com o intuito de otimizar o tempo e a eficiência dos processos administrativos das frotas da prefeitura.',
         technologies: 'HTML5, CSS3, JavaScript, ASP.NET, C#, SQL Server, Bootstrap, Python, FASTAPI',
+        techs: [
+            'ASP.NET',
+            'C#',
+            'Python',
+            'SQL Server'
+        ],
         url: 'http://egovdes/controlefrotas/admin/',
         urlLabel: 'http://egovdes/controlefrotas/admin/ - (ACESSO RESTRINGINDO POR VPN)',
         mediaType: 'image',
         mediaSrc: '/images/projects-frotas.png',
-        highlight: true
+        highlight: true,
+        bg: 'linear-gradient(135deg, #1A3C70 0%, #0D1829 100%)'
     },
     {
         id: '4',
-        title: 'Apostila Virtual - Adélia',
+        title: 'Apostila Virtual — Adélia',
+        type: 'Plataforma Educacional',
         date: 'Mar, 2025',
         dateLabel: 'Março de 2025',
         thumbnail: '/images/fundo-adelia.png',
         info: ' Site Instituicional Educativo para o Colégio Adelia, aplicação desenvolvida a fim de disponibilizar um ambiente virtual completo e interativo para otimizar o aprendizado e o acesso aos materiais didáticos. O sistema conta com uma apostila virtual, materiais complementares como vídeos e pdfs, resumos e mapa mentais, além de ser 100% responsivo otimizado para qualquer tipo de dispositivo. A aplicação já está em uso e é acessada localmente por diversos alunos.',
         technologies: 'HTML5, CSS3, JavaScript, Next.js, TailwindCSS, Python',
+        techs: [
+            'Next.js',
+            'TailwindCSS',
+            'Python'
+        ],
         url: 'https://deploy-apostila-adelia.vercel.app/apostila/POO5',
         urlLabel: 'https://deploy-apostila-adelia.vercel.app/apostila/POO5',
         mediaType: 'image',
         mediaSrc: '/images/projects-adelia.png',
-        highlight: true
+        highlight: true,
+        bg: 'linear-gradient(135deg, #2C5899 0%, #192E5C 100%)'
     },
     {
         id: '5',
         title: 'ASC.COSTA Engenharia',
+        type: 'Landing Page',
         date: 'Mai, 2024',
         dateLabel: 'Maio de 2024',
         thumbnail: '/images/ascosta-black.png',
         info: 'Landing Page responsiva para a Empresa de Reforma e Construção ASC.Costa Engenharia. Aplicação desenvolvida a fim de demonstrar os serviços realizados pela empreitera, legitimar a qualidade do produto e prospectar novos clientes. A página traz um destaque para o serviço de lavagem de fachada onde há maior detalhamento e destaque do processo.',
         technologies: 'HTML5, CSS3, JavaScript, WordPress, Elementor, Canva',
+        techs: [
+            'WordPress',
+            'Elementor',
+            'Canva'
+        ],
         url: 'https://www.ascostaengenharia.com.br/',
         urlLabel: 'https://www.ascostaengenharia.com.br/',
         mediaType: 'image',
         mediaSrc: '/images/projects-ascosta.png',
-        highlight: false
+        highlight: false,
+        bg: 'linear-gradient(135deg, #3A3A3A 0%, #1A1A1A 100%)'
     },
     {
         id: '7',
         title: 'Endolife',
+        type: 'Site Institucional',
         date: 'Ago, 2024',
         dateLabel: 'Setembro de 2024',
         thumbnail: '/images/endolife-black.png',
         info: 'Site institucional para a empresa healthtech Endolife, a principal finalidade de um site instituicional é informar o cliente/usuário sobre quais são os principais serviços, vantagens e confiabilidade que ele pode ter em determinado produto. Fui responsável pela criação dos estilos, interatividades, banners, além de idealizar o webdesign das páginas.',
         technologies: 'HTML5, CSS3, JavaScript, WordPress, Elementor, Canva',
+        techs: [
+            'WordPress',
+            'Elementor',
+            'Canva'
+        ],
         url: 'https://endolife.app/',
         urlLabel: 'https://endolife.app/',
         mediaType: 'image',
         mediaSrc: '/images/projects-endolife.png',
-        highlight: true
+        highlight: true,
+        bg: 'linear-gradient(135deg, #BF1C1C 0%, #7F1A1A 100%)'
     },
     {
         id: '8',
         title: 'PUMP GYM',
+        type: 'Landing Page',
         date: 'Nov, 2023',
         dateLabel: 'Novembro de 2023',
         thumbnail: '/images/pump-projectB.png',
         info: 'Projeto de Sistema Web responsivo para uma Academia. Aplicação desenvolvida afim de consolidar meus conhecimentos em React.js, como React Hooks, Context API, Redux, Styled-Components, Ciclo de Vida, entre outros conceitos. O projeto conta com páginas interativas e reponsivas para navegação dos clietes da academia, exibindo o seus serviços como: modalidades, unidades próximas (consultas baseadas no cep utilizando BrasilAPI), planos e horários.',
         technologies: 'HTML5, CSS3, JavaScript, React.js, Firebase, Canva',
+        techs: [
+            'React.js',
+            'Firebase',
+            'JavaScript'
+        ],
         url: 'https://carloseduardo-silva.github.io/pump-gym/',
         urlLabel: 'https://carloseduardo-silva.github.io/pump-gym/',
         mediaType: 'image',
         mediaSrc: '/images/projects-pumpgyn.png',
-        highlight: true
+        highlight: true,
+        bg: 'linear-gradient(135deg, #262626 0%, #111111 100%)'
     },
     {
         id: '10',
         title: "Barbearia Kadu Corte's",
+        type: 'Site Institucional',
         date: 'Jun, 2023',
         dateLabel: 'Junho de 2023',
         thumbnail: '/images/barbearia-projectB.png',
         info: "Projeto desenvolvido para Barbearia Kadu Corte's residente em Guarujá-SP, a qual solicitou um sistema web responsivo para aplicações mobiles e que fosse interativo para os clientes. O sistema conta tanto com uma ClientPage atrativa a qual expoem para os usuários as informações da barbearia e fornece um sistema de agendamento completo com validações, quanto uma AdminPage restringida por uma validação de login e senha, que armazena os dados dos clientes agendados, horarios marcados e muito mais.",
         technologies: 'HTML5, CSS3, JavaScript, Redis, Canva, MySql',
+        techs: [
+            'JavaScript',
+            'Redis',
+            'MySQL'
+        ],
         url: 'https://barbearia-kadu-cortes-client.vercel.app/html/index.html',
         urlLabel: 'https://barbearia-kadu-cortes-client.vercel.app/html/index.html',
         mediaType: 'image',
         mediaSrc: '/images/projects-barbeariakadu.png',
-        highlight: true
+        highlight: true,
+        bg: 'linear-gradient(135deg, #2C2018 0%, #1A1008 100%)'
     },
     {
         id: '11',
         title: 'Restaurante Bucéfalus',
+        type: 'Site Institucional',
         date: 'Ago, 2023',
         dateLabel: 'Agosto de 2023',
         thumbnail: '/images/saboroso-projectB.png',
         info: 'Projeto de um website para o Restaurante Bucéfalus residente em Guarujá-SP, desenvolvido utilizando em sua base JavaScript, Embedded JavaScript em conjunto com o Boostrap. Há também a conexão com o banco de dados MySql, suportando tanto uma ClientPage regida pelo sistema de rotas CRUD, quanto uma AdminPage (dashboard) com restrição de acesso por usuário e senha.',
         technologies: 'HTML5, CSS3, JavaScript, Redis, Canva, MySql',
+        techs: [
+            'JavaScript',
+            'EJS',
+            'MySQL'
+        ],
         url: 'https://restaurente-bucefalus-client.vercel.app/html/index.html',
         urlLabel: 'https://restaurente-bucefalus-client.vercel.app/html/index.html',
         mediaType: 'image',
         mediaSrc: '/images/projects-bucefalus.png',
-        highlight: true
+        highlight: true,
+        bg: 'linear-gradient(135deg, #1A4828 0%, #0D2014 100%)'
     },
     {
         id: '12',
         title: 'WhatsApp Clone',
+        type: 'Clone',
         date: 'Jul, 2023',
         dateLabel: 'Julho 2023',
         thumbnail: '/images/whatsapp-projectB.png',
         info: 'Projeto desenvolvido durante o curso de JavaScript Avançado da HCODEBR, o qual nos trouxe o desenvolvimento de um clone do Whatsapp, contanto com todas as suas funcionalidades programadas através do banco de dados Firebase(FireStore + RealTimeDataBase), em conjunto com o JavaScript e algumas libs como: APIs de audio, camera e video, Path, Navigator, etc.',
         technologies: 'HTML5, CSS3, JavaScript, Firebase',
+        techs: [
+            'JavaScript',
+            'Firebase'
+        ],
         url: 'https://github.com/carloseduardo-silva/curso-javascript-projeto-whatsapp-clone',
         urlLabel: 'REPOSITÓRIO - https://github.com/carloseduardo-silva/curso-javascript-projeto-whatsapp-clone',
         mediaType: 'video',
         mediaSrc: '/videos/whatsappProjectVideo.mp4',
-        highlight: false
+        highlight: false,
+        bg: 'linear-gradient(135deg, #1A3A1A 0%, #0D200D 100%)'
     },
     {
         id: '13',
         title: 'Manage Users',
+        type: 'CRUD App',
         date: 'Jun, 2023',
         dateLabel: 'Maio de 2023',
         thumbnail: '/images/usuarios-projectB.png',
         info: 'Projeto desenvolvido essencialmente com JavaScript, afim de otimizar meus conhecimentos em sistemas de routes CRUD regido por uma API REST que consome dados do Banco de Dados Nedb, trazendo assincronidade ao website.',
         technologies: 'HTML5, CSS3, JavaScript, Nedb',
+        techs: [
+            'JavaScript',
+            'Node.js',
+            'NeDB'
+        ],
         url: 'https://github.com/carloseduardo-silva/curso-javascript-projeto-usuarios-restapi',
         urlLabel: 'REPOSITÓRIO - https://github.com/carloseduardo-silva/curso-javascript-projeto-usuarios-restapi',
         mediaType: 'video',
         mediaSrc: '/videos/userdashboardProjectVideo.mp4',
-        highlight: false
+        highlight: false,
+        bg: 'linear-gradient(135deg, #1E2B3A 0%, #0F1820 100%)'
     },
     {
         id: '14',
         title: 'DropBox Clone',
+        type: 'Clone',
         date: 'Jun, 2023',
         dateLabel: 'Junho de 2023',
         thumbnail: '/images/dropbox-projectB.png',
         info: 'Projeto desenvolvido durante o curso de JavaScript Avançado da HCODEBR, o qual nos trouxe o desenvolvimento de um clone do DropBox, contanto com todas as suas funcionalidades programadas através do banco de dados Firebase(FireStore + RealTimeDataBase), em conjunto com o JavaScript, por meio do sistema de routes CRUD e algumas libs como: Formidable, Path, Fs, etc.',
         technologies: 'HTML5, CSS3, JavaScript, Firebase',
+        techs: [
+            'JavaScript',
+            'Firebase'
+        ],
         url: 'https://github.com/carloseduardo-silva/curso-javascript-projeto-dropbox-clone',
         urlLabel: 'REPOSITÓRIO - https://github.com/carloseduardo-silva/curso-javascript-projeto-dropbox-clone',
         mediaType: 'video',
         mediaSrc: '/videos/dropboxCloneProjectVideo.mp4',
-        highlight: false
-    },
-    {
-        id: '15',
-        title: 'NOVOS PROJETOS EM DESENVOLVIMENTO',
-        date: '2025',
-        dateLabel: '2025 - Próximos Projetos',
-        thumbnail: '/images/perfil-blue2.jpg',
-        info: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta eligendi earum quas maxime nam asperiores dolor nesciunt odio quasi aspernatur natus voluptatum, quae dignissimos fugiat dolorum qui nemo sit doloribus.',
-        technologies: '...',
-        url: '#projects',
-        urlLabel: 'Voltar',
-        mediaType: 'image',
-        mediaSrc: '/images/perfil-blue3-Photoroom.jpg',
-        highlight: false
+        highlight: false,
+        bg: 'linear-gradient(135deg, #003594 0%, #001A4A 100%)'
     }
 ];
 const highlightProjects = projects.filter((p)=>p.highlight);

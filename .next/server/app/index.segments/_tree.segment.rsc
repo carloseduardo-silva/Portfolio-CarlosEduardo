@@ -1,13 +1,4 @@
-:HL["/_next/static/chunks/1agj9j03bxu0n.css","style"]
-:HL["/_next/static/media/07454f8ad8aaac57-s.p.2kjei9psvcorz.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-:HL["/_next/static/media/47fe1b7cd6e6ed85-s.p.3bh2vc0w-r-ll.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-:HL["/_next/static/media/8e6fa89aa22d24ec-s.p.2o7m9ogm38dql.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-:HL["/_next/static/media/a218039a3287bcfd-s.p.43zbiuwnnoiok.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-:HL["/_next/static/media/c7d9ca68f9942779-s.p.38ww0mi76nb30.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-:HL["/_next/static/media/c875c6f5d3e977ac-s.p.1h18_wedhzk4h.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-:HL["/_next/static/media/e2334d715941921e-s.p.3o_v2fun1jzxk.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-:HL["https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200","style"]
-:HL["https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css","style"]
-:HL["/images/icons8-linkedin-30.png","image"]
-:HL["/images/icons8-github-30.png","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}},"staleTime":300,"buildId":"MErRr71Q3kg7xHcfWayi9"}
+:HL["/_next/static/chunks/0y8fhe5_bx6z_.css","style"]
+:HL["/_next/static/media/051742360c26797e-s.p.1bkzbscqrt8rl.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/c41ca59f1c34ba31-s.p.2y2uoi4t910qy.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}},"staleTime":300,"buildId":"BUSWMIxUlMCdoTA45NQgt"}

@@ -1,38 +1,40 @@
 import ScrollReveal from '@/components/ui/ScrollReveal'
-import SkillCard from '@/components/ui/SkillCard'
-import { skills, services } from '@/data/skills'
+import { SectionLabel } from '@/components/ui/SectionLabel'
+import { techGroups } from '@/data/skills'
 
 export default function Skills() {
   return (
-    <ScrollReveal>
-      <section
-        id="skills"
-        className="flex flex-col items-center justify-center p-4 mt-4 lg:mt-40"
-      >
-        <h2 className="text-[2.3em] text-navy mt-5 lg:mt-8">Tecnologias</h2>
+    <section id="tecnologias" className="bg-surface-light px-6 md:px-10 lg:px-15 py-28">
+      <div className="max-w-[1280px] mx-auto">
+        <ScrollReveal>
+          <SectionLabel index="03" label="Stack & Ferramentas" />
+          <h2 className="mt-5 text-[36px] md:text-[44px] font-extrabold text-navy-900 tracking-tight leading-tight mb-14">
+            Stack & Ferramentas<span className="text-accent">.</span>
+          </h2>
+        </ScrollReveal>
 
-        <div className="flex justify-center items-center flex-wrap w-[75%] max-w-[600px]:w-[98%] my-12 mx-2">
-          {skills.map((skill) => (
-            <SkillCard key={skill.name} skill={skill} />
-          ))}
-        </div>
-
-        <h2 className="text-[2.3em] text-navy mb-[-20px]">Habilidades</h2>
-
-        <div className="flex flex-col items-center justify-center px-[18px] py-6 sm:px-14 mt-4 w-full lg:w-[75%] lg:max-w-[835px] lg:px-14">
-          {services.map((service) => (
-            <div key={service.title} className="flex flex-row items-center gap-[1.15em] my-[1.6em]">
-              <span className="material-symbols-outlined text-navy text-[4.5em] lg:text-[4.75em] lg:mt-[25px]">
-                {service.icon}
-              </span>
-              <div>
-                <h2 className="text-[1.5em] lg:text-[2.02em] text-navy">{service.title}</h2>
-                <p className="text-[14px] lg:text-[16px]">{service.description}</p>
+        <div className="grid md:grid-cols-2 gap-6">
+          {techGroups.map((group) => (
+            <ScrollReveal key={group.category}>
+              <div className="bg-white rounded-2xl border border-card-border p-7 shadow-sm">
+                <span className="font-mono text-[10px] text-accent uppercase tracking-[0.2em] block mb-5">
+                  {group.category}
+                </span>
+                <div className="flex flex-wrap gap-2">
+                  {group.items.map((item) => (
+                    <span
+                      key={item}
+                      className="px-3.5 py-1.5 rounded-full bg-surface-muted border border-card-border text-[13px] font-medium text-navy-900 transition-all hover:bg-accent/10 hover:border-accent/30 hover:text-accent cursor-default"
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
               </div>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
-      </section>
-    </ScrollReveal>
+      </div>
+    </section>
   )
 }

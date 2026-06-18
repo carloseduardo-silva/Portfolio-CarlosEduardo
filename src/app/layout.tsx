@@ -1,40 +1,32 @@
 import type { Metadata } from 'next'
-import { Poppins, Nunito } from 'next/font/google'
+import { Sora, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
 
-const poppins = Poppins({
+const sora = Sora({
   subsets: ['latin'],
-  weight: ['200', '300', '400', '500', '600', '700'],
-  variable: '--font-poppins',
+  weight: ['300', '400', '500', '600', '700', '800'],
+  variable: '--font-sora-var',
   display: 'swap',
 })
 
-const nunito = Nunito({
+const jetbrainsMono = JetBrains_Mono({
   subsets: ['latin'],
-  weight: ['200', '300', '400', '500', '600', '700', '800', '900', '1000'],
-  variable: '--font-nunito',
+  weight: ['400', '500'],
+  variable: '--font-mono-var',
   display: 'swap',
 })
 
 export const metadata: Metadata = {
-  title: 'PortFólio | Carlos Eduardo',
-  description: 'Portfólio de Carlos Eduardo da Silva — Desenvolvedor Front-End',
+  title: 'Carlos Eduardo — Desenvolvedor Front-End',
+  description:
+    'Portfólio de Carlos Eduardo da Silva, Desenvolvedor Front-End com 2+ anos de experiência em React, TypeScript e Next.js.',
+  keywords: ['desenvolvedor front-end', 'react', 'next.js', 'typescript', 'portfólio'],
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="pt-br">
-      <head>
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-        />
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
-        />
-      </head>
-      <body className={`${poppins.variable} ${nunito.variable} font-[var(--font-poppins)] bg-grey flex flex-col lg:flex-row`}>
+    <html lang="pt-BR" className={`${sora.variable} ${jetbrainsMono.variable}`}>
+      <body className="font-sora bg-surface-light text-navy-900 overflow-x-hidden antialiased">
         {children}
       </body>
     </html>

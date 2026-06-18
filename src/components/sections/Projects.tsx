@@ -2,69 +2,72 @@
 
 import { useState } from 'react'
 import ScrollReveal from '@/components/ui/ScrollReveal'
+import { SectionLabel } from '@/components/ui/SectionLabel'
 import ProjectCard from '@/components/ui/ProjectCard'
 import ProjectModal from '@/components/ui/ProjectModal'
 import { projects, highlightProjects, Project } from '@/data/projects'
+import { cn } from '@/lib/cn'
 
-type Tab = 'highlights' | 'all'
+type Filter = 'highlights' | 'all'
 
 export default function Projects() {
-  const [tab, setTab] = useState<Tab>('highlights')
+  const [filter, setFilter] = useState<Filter>('highlights')
   const [selected, setSelected] = useState<Project | null>(null)
 
-  const displayedProjects = tab === 'highlights' ? highlightProjects : projects
-
-  const currentIndex = selected ? displayedProjects.findIndex((p) => p.id === selected.id) : -1
-
-  const handlePrev = currentIndex > 0 ? () => setSelected(displayedProjects[currentIndex - 1]) : null
-  const handleNext =
-    currentIndex < displayedProjects.length - 1 ? () => setSelected(displayedProjects[currentIndex + 1]) : null
+  const displayed = filter === 'highlights' ? highlightProjects : projects
+  const currentIndex = selected ? displayed.findIndex((p) => p.id === selected.id) : -1
+  const onPrev = currentIndex > 0 ? () => setSelected(displayed[currentIndex - 1]) : null
+  const onNext = currentIndex < displayed.length - 1 ? () => setSelected(displayed[currentIndex + 1]) : null
 
   return (
-    <ScrollReveal>
-      <section
-        id="projects"
-        className="flex flex-col items-center justify-center p-4 lg:mt-[11.4em] lg:mb-20"
-      >
-        <h2 className="text-[2.3em] text-navy mb-7">Projetos</h2>
+    <section id="projetos" className="bg-surface-muted px-6 md:px-10 lg:px-15 py-28">
+      <div className="max-w-[1280px] mx-auto">
+        <ScrollReveal>
+          <SectionLabel index="04" label="Trabalhos Recentes" />
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5 mt-5 mb-14">
+            <h2 className="text-[36px] md:text-[44px] font-extrabold text-navy-900 tracking-tight leading-tight">
+              Trabalhos Recentes<span className="text-accent">.</span>
+            </h2>
 
-        {/* Filter nav */}
-        <nav className="flex flex-row items-center justify-center gap-8 text-navy mb-8">
-          <div
-            onClick={() => setTab('highlights')}
-            className={`px-3 py-[6px] cursor-pointer hover:text-blue-mid transition-colors ${
-              tab === 'highlights' ? 'border-b-[2.2px] border-blue-mid' : ''
-            }`}
-          >
-            Destaques
+            {/* Filter toggle */}
+            <div className="flex items-center bg-white border border-card-border rounded-xl p-1 gap-1 self-start">
+              {(['highlights', 'all'] as Filter[]).map((f) => (
+                <button
+                  key={f}
+                  onClick={() => setFilter(f)}
+                  className={cn(
+                    'px-5 py-2 rounded-lg text-[13px] font-medium transition-all',
+                    filter === f
+                      ? 'bg-navy-950 text-[#E8ECF4] shadow-sm'
+                      : 'text-[#8896A8] hover:text-navy-900',
+                  )}
+                >
+                  {f === 'highlights' ? 'Destaques' : 'Todos'}
+                </button>
+              ))}
+            </div>
           </div>
-          <div
-            onClick={() => setTab('all')}
-            className={`px-3 py-[6px] cursor-pointer hover:text-blue-mid transition-colors ${
-              tab === 'all' ? 'border-b-[2.2px] border-blue-mid' : ''
-            }`}
-          >
-            Todos
-          </div>
-        </nav>
+        </ScrollReveal>
 
         {/* Project grid */}
-        <div className="flex flex-row items-center justify-center flex-wrap">
-          {displayedProjects.map((project) => (
-            <ProjectCard key={project.id} project={project} onClick={setSelected} />
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {displayed.map((project) => (
+            <ScrollReveal key={project.id}>
+              <ProjectCard project={project} onClick={setSelected} />
+            </ScrollReveal>
           ))}
         </div>
+      </div>
 
-        {/* Modal */}
-        {selected && (
-          <ProjectModal
-            project={selected}
-            onClose={() => setSelected(null)}
-            onPrev={handlePrev}
-            onNext={handleNext}
-          />
-        )}
-      </section>
-    </ScrollReveal>
+      {/* Modal */}
+      {selected && (
+        <ProjectModal
+          project={selected}
+          onClose={() => setSelected(null)}
+          onPrev={onPrev}
+          onNext={onNext}
+        />
+      )}
+    </section>
   )
 }

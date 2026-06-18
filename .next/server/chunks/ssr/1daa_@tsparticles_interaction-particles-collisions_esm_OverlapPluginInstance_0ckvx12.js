@@ -1,3 +1,0 @@
-module.exports=[666,a=>{"use strict";a.i(92348);var b=a.i(72008);a.s(["OverlapPluginInstance",0,class{#a;constructor(a){this.#a=a}checkParticlePosition(a,b,c){return!this.#b(a,b,c)}#b(a,c,d){let e=a.options.collisions;if(!e?.enable)return!1;let f=e.overlap;if(f.enable)return!1;let g=f.retries;if(g>=0&&d>g)throw Error("Particle is overlapping and can't be placed");return!!this.#a.particles.find(d=>(0,b.getDistance)(c,d.position)<a.getRadius()+d.getRadius())}}])}];
-
-//# sourceMappingURL=1daa_%40tsparticles_interaction-particles-collisions_esm_OverlapPluginInstance_0ckvx12.js.map

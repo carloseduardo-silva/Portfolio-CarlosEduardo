@@ -1,129 +1,82 @@
 'use client'
 
 import { useState } from 'react'
-import Image from 'next/image'
-import MobileNav from './MobileNav'
-
-const navLinks = [
-  { icon: 'ic:round-start', href: '#', label: 'Início' },
-  { icon: 'gg:profile', href: '#about', label: 'Quem sou' },
-  { icon: 'mdi:work-outline', href: '#experience', label: 'Experiências' },
-  { icon: 'teenyicons:computer-outline', href: '#skills', label: 'Tecnologias' },
-  { icon: 'material-symbols:folder-outline', href: '#projects', label: 'Projetos' },
-  { icon: 'mynaui:telephone-call', href: '#contacts', label: 'Contato' },
-]
+import Link from 'next/link'
+import { navItems } from '@/data/portfolio'
+import { cn } from '@/lib/cn'
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
 
-  const toggleMenu = () => setMenuOpen((prev) => !prev)
-  const closeMenu = () => setMenuOpen(false)
-
   return (
     <>
-      {/* Overlay escuro quando menu mobile está aberto */}
-      {menuOpen && (
-        <div
-          className="fixed inset-0 bg-black/65 backdrop-blur-sm z-40 animate-[fade_1s] lg:hidden"
-          onClick={closeMenu}
-        />
-      )}
-
-      <div className="fixed w-full lg:w-[19%] z-50 lg:z-0 lg:h-screen">
-        {/* Nav bar */}
-        <div
-          id="nav"
-          className="flex flex-row justify-between items-center px-[15px] py-3 bg-grey text-navy
-                     lg:flex-col lg:justify-center lg:items-center lg:h-screen lg:w-full lg:py-[10px] lg:px-[6px] lg:shadow-[2px_-2px_18px_rgba(0,0,0,0.36)]"
+      <nav className="fixed top-0 left-0 right-0 z-50 h-16 flex items-center justify-between px-6 md:px-10 lg:px-15 bg-navy-950/95 backdrop-blur-xl border-b border-white/5">
+        {/* Logo */}
+        <Link
+          href="#inicio"
+          className="font-mono text-base font-medium text-accent tracking-tight"
+          onClick={() => setMenuOpen(false)}
         >
-          {/* Logo + Nome */}
-          <div className="flex flex-col items-center name-div">
-            <Image
-              src="/images/perfil-blue3-Photoroom.jpg"
-              alt="Carlos Eduardo"
-              width={120}
-              height={120}
-              className="hidden lg:flex rounded-[49%] border-2 border-blue-mid shadow-[2px_2px_7px_rgba(0,0,0,0.55)] w-[60%] max-w-[380px] max-h-[380px] mx-auto hover:scale-[1.02] transition-transform duration-300"
-            />
-            <h2 className="text-[1.5em] font-semibold lg:hidden hover:text-blue transition-colors duration-500 cursor-pointer">
-              Carlos Eduardo
-            </h2>
-          </div>
+          &lt;CE /&gt;
+        </Link>
 
-          {/* Desktop Nav */}
-          <nav className="desktop-nav hidden lg:flex flex-col mr-[10px]">
-            <ul className="list-none text-center mt-7">
-              {navLinks.map((link) => (
-                <li
-                  key={link.href}
-                  className="flex flex-row items-center justify-center gap-[13px] hover:text-blue group"
-                >
-                  <a
-                    href={link.href}
-                    className="no-underline text-black py-4 text-[18px] font-medium group-hover:text-blue transition-colors duration-300"
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-              <li className="ml-4">
-                <a target="_blank" rel="noreferrer" href="/images/cv_CARLOS-EDUARDO.pdf">
-                  <button className="rounded-[10px] text-mint bg-navy px-[1.25em] py-[0.75em] my-[10px] text-[15px] hover:scale-110 transition-transform duration-300 cursor-pointer">
-                    DOWNLOAD CV
-                  </button>
-                </a>
-              </li>
-            </ul>
-
-            {/* Social icons — desktop */}
-            <div className="flex flex-row items-center justify-center my-6">
-              <a target="_blank" rel="noreferrer" href="https://wa.me/5513974022220">
-                <img src="/images/icons8-whatsapp-40.png" alt="whatsapp" className="w-[28px] h-[29px] mx-[10px] mt-[6px] hover:scale-110 transition-transform cursor-pointer" />
-              </a>
-              <a target="_blank" rel="noreferrer" href="https://linkedin.com/in/carlos-eduardo-da-silva-050403235">
-                <img src="/images/icons8-linkedin-40.png" alt="linkedin" className="w-[28px] h-[29px] mx-[10px] mt-[6px] hover:scale-110 transition-transform cursor-pointer" />
-              </a>
-              <a target="_blank" rel="noreferrer" href="https://github.com/carloseduardo-silva">
-                <img src="/images/icons8-github-40.png" alt="github" className="w-[28px] h-[29px] mx-[10px] mt-[6px] hover:scale-110 transition-transform cursor-pointer" />
-              </a>
-            </div>
-          </nav>
-
-          {/* Mobile right side: social icons + hamburger */}
-          <div className="flex flex-row items-center pt-[3px] lg:hidden">
-            <div id="icons-nav" className="hidden sm:flex">
-              <a target="_blank" rel="noreferrer" href="https://wa.me/5513974022220">
-                <img src="/images/icons8-whatsapp-40.png" alt="whatsapp" className="w-[22px] h-[23px] mx-[7px] mt-[6px] hover:scale-110 cursor-pointer" />
-              </a>
-              <a target="_blank" rel="noreferrer" href="https://linkedin.com/in/carlos-eduardo-da-silva-050403235">
-                <img src="/images/icons8-linkedin-40.png" alt="linkedin" className="w-[22px] h-[23px] mx-[7px] mt-[6px] hover:scale-110 cursor-pointer" />
-              </a>
-              <a target="_blank" rel="noreferrer" href="https://github.com/carloseduardo-silva">
-                <img src="/images/icons8-github-40.png" alt="github" className="w-[22px] h-[23px] mx-[7px] mt-[6px] hover:scale-110 cursor-pointer" />
-              </a>
-            </div>
-
-            {!menuOpen ? (
-              <span
-                onClick={toggleMenu}
-                className="material-symbols-outlined text-[34px] font-semibold ml-[19px] cursor-pointer"
-              >
-                menu
-              </span>
-            ) : (
-              <span
-                onClick={toggleMenu}
-                className="material-symbols-outlined text-[34px] font-semibold ml-[19px] cursor-pointer"
-              >
-                close
-              </span>
-            )}
-          </div>
+        {/* Desktop links */}
+        <div className="hidden md:flex items-center gap-8 lg:gap-10">
+          {navItems.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="text-[13px] font-medium text-[#E8ECF4]/55 tracking-wide transition-colors duration-200 hover:text-[#E8ECF4]"
+            >
+              {item.label}
+            </Link>
+          ))}
         </div>
 
-        {/* Mobile Nav overlay */}
-        {menuOpen && <MobileNav onClose={closeMenu} />}
-      </div>
+        {/* Desktop CTA */}
+        <Link
+          href="/images/cv_CARLOS-EDUARDO.pdf"
+          target="_blank"
+          className="hidden md:block px-5 py-2 bg-accent text-white rounded-md text-xs font-bold tracking-[0.08em] uppercase transition-colors hover:bg-accent-dark"
+        >
+          Download CV
+        </Link>
+
+        {/* Mobile hamburger */}
+        <button
+          onClick={() => setMenuOpen((p) => !p)}
+          className="md:hidden flex flex-col gap-[5px] p-2"
+          aria-label="Menu"
+        >
+          <span className={cn('w-6 h-[2px] bg-[#E8ECF4] transition-all', menuOpen && 'rotate-45 translate-y-[7px]')} />
+          <span className={cn('w-6 h-[2px] bg-[#E8ECF4] transition-all', menuOpen && 'opacity-0')} />
+          <span className={cn('w-6 h-[2px] bg-[#E8ECF4] transition-all', menuOpen && '-rotate-45 -translate-y-[7px]')} />
+        </button>
+      </nav>
+
+      {/* Mobile menu */}
+      {menuOpen && (
+        <div className="md:hidden fixed inset-0 z-40 bg-navy-950/98 backdrop-blur-xl flex flex-col items-center justify-center gap-8 pt-16">
+          {navItems.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              onClick={() => setMenuOpen(false)}
+              className="text-2xl font-semibold text-[#E8ECF4]/70 hover:text-[#E8ECF4] transition-colors"
+            >
+              {item.label}
+            </Link>
+          ))}
+          <Link
+            href="/images/cv_CARLOS-EDUARDO.pdf"
+            target="_blank"
+            onClick={() => setMenuOpen(false)}
+            className="mt-4 px-8 py-3 bg-accent text-white rounded-lg text-sm font-bold tracking-[0.08em] uppercase"
+          >
+            Download CV
+          </Link>
+        </div>
+      )}
     </>
   )
 }

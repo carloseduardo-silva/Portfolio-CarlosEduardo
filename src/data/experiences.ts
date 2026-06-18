@@ -5,6 +5,7 @@ export type Experience = {
   period: string
   location: string
   description: string
+  tags: string[]
 }
 
 export const experiences: Experience[] = [
@@ -16,6 +17,7 @@ export const experiences: Experience[] = [
     location: 'Instituto Pedro Ruiz',
     description:
       'Operar no desenvolvimento do CRM próprio do instituto, fui responsável por todo o desenvolvimento do Front-End do sistema desde o Design UI|UX das telas até a produção e integração com as APIs do backend. Além da manutenção dos outros sistemas web utilizados dentro da empresa, como o site institucional e landing pages.',
+    tags: ['React', 'TypeScript', 'CRM', 'UI|UX'],
   },
   {
     id: 'prefeitura',
@@ -25,6 +27,7 @@ export const experiences: Experience[] = [
     location: 'Prefeitura Municipal de Santo André',
     description:
       ' Responsável por operar na criação do conteúdo, estilos, layout, design interativo, funcionalidades e integrações com API dos Sistemas Web da Prefeitura de Santo André. Suporte e manutenção de bugs dos sites apresentados pelos setores da saúde, RH, segurança, frotas, além da vivência e prática atuando sob Metodologias Ágeis (SCRUM e KANBAN).',
+    tags: ['JavaScript', 'HTML5', 'CSS3', 'SCRUM'],
   },
   {
     id: 'endolife',
@@ -34,6 +37,7 @@ export const experiences: Experience[] = [
     location: 'Endolife HealthTech',
     description:
       'Webdesign e desenvolvimento de Site Intitucional + Landing Pages de alta conversão para empresa, incluindo a criação do conteúdo, estilos, interatividades, layout e design não só interativo do site, mas também responsivo sendo adaptativo para tablets e celulares.  ',
+    tags: ['React', 'Landing Pages', 'E-commerce'],
   },
   {
     id: 'digital-max',
@@ -43,5 +47,6 @@ export const experiences: Experience[] = [
     location: 'Digital Max',
     description:
       'Primeira experiência profissional na área, onde era responsável por auxiliar os novos alunos nas aulas de informática e computação, preparação do material das aulas de informática e suporte aos professores durante os plantões de dúvidas. Tive contato com tecnologias como: Pacote Office, Excel, PowerPoint, Word, Sistema Operacional Linux',
+    tags: ['HTML5', 'CSS3', 'JavaScript', 'Bootstrap'],
   },
 ]

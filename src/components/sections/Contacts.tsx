@@ -1,60 +1,65 @@
 import ScrollReveal from '@/components/ui/ScrollReveal'
+import { SectionLabel } from '@/components/ui/SectionLabel'
+import { contactLinks } from '@/data/portfolio'
 
-const contacts = [
-  {
-    icon: <span className="material-symbols-outlined text-[40px] text-blue bg-navy p-[0.3em] rounded-full mb-[14px]">mail</span>,
-    label: 'E-mail',
-    value: 'desenvolvedorcarloseduardo@gmail.com',
-    href: 'mailto:desenvolvedorcarloseduardo@gmail.com',
-  },
-  {
-    icon: <span className="material-symbols-outlined text-[40px] text-blue bg-navy p-[0.3em] rounded-full mb-[14px]">call</span>,
-    label: 'Telefone',
-    value: '(13) 97402-2220',
-    href: 'https://api.whatsapp.com/send/?phone=5513974022220&text&type=phone_number&app_absent=0',
-  },
-  {
-    icon: <img height="45" src="/images/icons8-linkedin-30.png" alt="linkedin" className="bg-navy p-[0.7em] rounded-full mb-[5px]" />,
-    label: 'Linkedin',
-    value: '@carloseduardodasilva',
-    href: 'https://linkedin.com/in/carlos-eduardo-da-silva-050403235',
-  },
-  {
-    icon: <img style={{ height: '46.5px' }} src="/images/icons8-github-30.png" alt="github" className="bg-navy p-[0.7em] rounded-full mb-[5px]" />,
-    label: 'Github',
-    value: '@carloseduardo-silva',
-    href: 'https://github.com/carloseduardo-silva',
-  },
-]
+const icons: Record<string, string> = {
+  'E-mail':    '✉',
+  'Telefone':  '📞',
+  'LinkedIn':  'in',
+  'GitHub':    '</>',
+}
 
 export default function Contacts() {
   return (
-    <ScrollReveal>
-      <section
-        id="contacts"
-        className="flex justify-center items-center flex-col px-0 py-4 lg:h-[85vh] lg:py-8 lg:px-4"
-      >
-        <h2 className="text-[2.3em] text-navy mb-[5px]">Contato</h2>
+    <section id="contato" className="bg-navy-950 px-6 md:px-10 lg:px-15 py-28">
+      <div className="max-w-[1280px] mx-auto flex flex-col items-center text-center">
+        <ScrollReveal>
+          <SectionLabel index="05" label="Contato" dark centered />
+          <h2 className="mt-5 text-[36px] md:text-[44px] font-extrabold text-[#E8ECF4] tracking-tight leading-tight mb-4">
+            Vamos conversar<span className="text-accent">?</span>
+          </h2>
+          <p className="text-[15px] text-[#E8ECF4]/40 max-w-[420px] leading-relaxed mb-14">
+            Estou disponível para novas oportunidades, freelas e parcerias.
+            Sinta-se à vontade para entrar em contato!
+          </p>
+        </ScrollReveal>
 
-        <div className="flex flex-col flex-wrap justify-center items-center mx-4 my-12 md:flex-row md:my-4 md:mx-[1.3em] md:mb-12 lg:my-4 lg:mx-8 lg:mb-12">
-          {contacts.map((c) => (
-            <div
-              key={c.label}
-              className="flex justify-center items-center flex-col mx-8 my-12 md:mx-8 md:my-12 gap-[10px] hover:scale-110 transition-transform duration-[220ms] cursor-pointer"
-            >
-              <a target="_blank" rel="noreferrer" href={c.href}>
-                {c.icon}
+        {/* Contact cards 2×2 */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-[720px]">
+          {contactLinks.map((c) => (
+            <ScrollReveal key={c.label}>
+              <a
+                href={c.href}
+                target={c.external ? '_blank' : undefined}
+                rel={c.external ? 'noopener noreferrer' : undefined}
+                className="group flex items-center gap-5 p-6 bg-white/[0.04] border border-white/[0.08] rounded-2xl transition-all hover:bg-accent/[0.08] hover:border-accent/25 text-left"
+              >
+                {/* Icon */}
+                <div className="flex-none w-12 h-12 flex items-center justify-center rounded-xl bg-accent/10 border border-accent/20 font-mono text-[15px] font-bold text-accent group-hover:bg-accent/20 transition-all">
+                  {icons[c.label]}
+                </div>
+
+                {/* Text */}
+                <div>
+                  <p className="font-mono text-[10px] text-accent uppercase tracking-[0.15em] mb-0.5">
+                    {c.label}
+                  </p>
+                  <p className="text-[14px] font-medium text-[#E8ECF4]/70 group-hover:text-[#E8ECF4] transition-colors">
+                    {c.value}
+                  </p>
+                </div>
               </a>
-              <a target="_blank" rel="noreferrer" className="font-bold no-underline text-navy" href={c.href}>
-                {c.label}
-              </a>
-              <a target="_blank" rel="noreferrer" className="no-underline text-navy text-[16px]" href={c.href}>
-                {c.value}
-              </a>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
-      </section>
-    </ScrollReveal>
+
+        {/* Footer */}
+        <div className="mt-20 pt-8 border-t border-white/[0.06] w-full text-center">
+          <p className="font-mono text-[11px] text-[#E8ECF4]/25 tracking-[0.05em]">
+            © 2025 Carlos Eduardo. Todos os direitos reservados.
+          </p>
+        </div>
+      </div>
+    </section>
   )
 }

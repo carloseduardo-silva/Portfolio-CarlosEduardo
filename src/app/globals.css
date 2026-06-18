@@ -1,92 +1,72 @@
 @import "tailwindcss";
 
+/* ── Design Tokens ────────────────────────────────────────────────────── */
 @theme inline {
-  --color-navy: #0b2545;
-  --color-blue: #3c87dc;
-  --color-blue-mid: #276ebe;
-  --color-blue-dark2: #13315C;
-  --color-blue-light0: #8DA9C4;
-  --color-mint: #EEF4ED;
-  --color-grey: #dadada;
+  /* Colors */
+  --color-navy-950:         #09101F;
+  --color-navy-900:         #0D1829;
+  --color-accent:           #4B7BE5;
+  --color-accent-dark:      #3B6BD5;
+  --color-accent-light:     #7CB8FF;
+  --color-surface-light:    #FAFBFF;
+  --color-surface-muted:    #F2F4FB;
+  --color-card-border:      #DDE3EE;
+  --color-card-bg:          #EEF2FB;
+  --color-card-border-blue: #DDE5F5;
 
-  --font-poppins: 'Poppins', sans-serif;
-  --font-nunito: 'Nunito', sans-serif;
+  /* Fonts */
+  --font-sora: var(--font-sora-var), sans-serif;
+  --font-mono: var(--font-mono-var), monospace;
+
+  /* Letter spacing */
+  --tracking-tightest: -0.04em;
+  --tracking-tighter2: -0.03em;
+
+  /* Animations */
+  --animate-blink: blink 1.1s step-end infinite;
 }
 
-/* ── Keyframes do legado ─────────────────────────────── */
-
-@keyframes typing {
-  from { width: 0; }
-  to   { width: 103%; }
-}
-
+/* ── Keyframes ────────────────────────────────────────────────────────── */
 @keyframes blink {
-  from { border-right-color: #0B2545; }
-  to   { border-right-color: transparent; }
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
 }
 
-@keyframes fade {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+/* ── Base ────────────────────────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
 }
 
-@keyframes show {
-  from { opacity: 0; transform: translateX(-8rem); }
-  to   { transform: translateX(0rem); }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-@keyframes showDown {
-  from { opacity: 0; bottom: 104px; }
-  to   { opacity: 1; }
+::selection {
+  background-color: rgba(75, 123, 229, 0.25);
 }
 
-@keyframes slide {
-  from { opacity: 0; bottom: 30px; }
-  to   { opacity: 1; bottom: 5px; }
-}
+/* ── Utilities ───────────────────────────────────────────────────────── */
+@layer utilities {
+  .bg-dot-grid {
+    background-image: radial-gradient(
+      circle,
+      rgba(75, 123, 229, 0.18) 1px,
+      transparent 1px
+    );
+    background-size: 40px 40px;
+  }
 
-@keyframes borderAnimation {
-  0%   { border: 2px solid #0b2545; }
-  25%  { border: 2px solid #13315C; }
-  50%  { border: 2px solid #276ebe; }
-  75%  { border: 2px solid #3c87dc; transform: scale(1.05); }
-  100% { border: 2px solid #276ebe; }
-}
+  .glow-hero {
+    background: radial-gradient(
+      circle at 60% 40%,
+      rgba(75, 123, 229, 0.07) 0%,
+      transparent 65%
+    );
+  }
 
-/* ── Utility classes do legado ───────────────────────── */
-
-.typing-animation {
-  animation:
-    blink steps(30) 550ms infinite normal,
-    typing 4s steps(30) 2s infinite alternate-reverse;
-  overflow: hidden;
-  white-space: nowrap;
-  border-right: 6px solid #0b2545;
-}
-
-.slide-animation {
-  position: absolute;
-  bottom: 10px;
-  animation: slide 1200ms infinite normal;
-}
-
-.looping-border-button {
-  position: relative;
-  border: none;
-  cursor: pointer;
-  overflow: hidden;
-  outline: none;
-  transition: color 0.4s;
-  animation: borderAnimation 2s linear infinite;
-}
-
-/* ── Scrollbar ───────────────────────────────────────── */
-
-::-webkit-scrollbar {
-  background-color: #dadada;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #0B2545;
-  border-radius: 3px;
+  .scroll-line {
+    background: linear-gradient(to bottom, rgba(232, 236, 244, 0.5), transparent);
+  }
 }
