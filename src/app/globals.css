@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-navy: #0b2545;
+  --color-blue: #3c87dc;
+  --color-blue-mid: #276ebe;
+  --color-blue-dark2: #13315C;
+  --color-blue-light0: #8DA9C4;
+  --color-mint: #EEF4ED;
+  --color-grey: #dadada;
+
+  --font-poppins: 'Poppins', sans-serif;
+  --font-nunito: 'Nunito', sans-serif;
+}
+
+/* ── Keyframes do legado ─────────────────────────────── */
+
+@keyframes typing {
+  from { width: 0; }
+  to   { width: 103%; }
+}
+
+@keyframes blink {
+  from { border-right-color: #0B2545; }
+  to   { border-right-color: transparent; }
+}
+
+@keyframes fade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes show {
+  from { opacity: 0; transform: translateX(-8rem); }
+  to   { transform: translateX(0rem); }
+}
+
+@keyframes showDown {
+  from { opacity: 0; bottom: 104px; }
+  to   { opacity: 1; }
+}
+
+@keyframes slide {
+  from { opacity: 0; bottom: 30px; }
+  to   { opacity: 1; bottom: 5px; }
+}
+
+@keyframes borderAnimation {
+  0%   { border: 2px solid #0b2545; }
+  25%  { border: 2px solid #13315C; }
+  50%  { border: 2px solid #276ebe; }
+  75%  { border: 2px solid #3c87dc; transform: scale(1.05); }
+  100% { border: 2px solid #276ebe; }
+}
+
+/* ── Utility classes do legado ───────────────────────── */
+
+.typing-animation {
+  animation:
+    blink steps(30) 550ms infinite normal,
+    typing 4s steps(30) 2s infinite alternate-reverse;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 6px solid #0b2545;
+}
+
+.slide-animation {
+  position: absolute;
+  bottom: 10px;
+  animation: slide 1200ms infinite normal;
+}
+
+.looping-border-button {
+  position: relative;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  transition: color 0.4s;
+  animation: borderAnimation 2s linear infinite;
+}
+
+/* ── Scrollbar ───────────────────────────────────────── */
+
+::-webkit-scrollbar {
+  background-color: #dadada;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #0B2545;
+  border-radius: 3px;
+}
