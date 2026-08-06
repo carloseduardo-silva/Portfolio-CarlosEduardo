@@ -1,12 +1,28 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { navItems } from '@/data/portfolio'
 import { cn } from '@/lib/cn'
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
+
+  // Trava o scroll do body e permite fechar o overlay com Esc.
+  useEffect(() => {
+    if (!menuOpen) return
+
+    document.body.style.overflow = 'hidden'
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setMenuOpen(false)
+    }
+    window.addEventListener('keydown', onKeyDown)
+
+    return () => {
+      document.body.style.overflow = ''
+      window.removeEventListener('keydown', onKeyDown)
+    }
+  }, [menuOpen])
 
   return (
     <>
@@ -46,7 +62,9 @@ export default function Navbar() {
         <button
           onClick={() => setMenuOpen((p) => !p)}
           className="md:hidden flex flex-col gap-[5px] p-2"
-          aria-label="Menu"
+          aria-label={menuOpen ? 'Fechar menu' : 'Abrir menu'}
+          aria-expanded={menuOpen}
+          aria-controls="mobile-nav"
         >
           <span className={cn('w-6 h-[2px] bg-[#E8ECF4] transition-all', menuOpen && 'rotate-45 translate-y-[7px]')} />
           <span className={cn('w-6 h-[2px] bg-[#E8ECF4] transition-all', menuOpen && 'opacity-0')} />
@@ -56,7 +74,10 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="md:hidden fixed inset-0 z-40 bg-navy-950/98 backdrop-blur-xl flex flex-col items-center justify-center gap-8 pt-16">
+        <div
+          id="mobile-nav"
+          className="md:hidden fixed inset-0 z-40 bg-navy-950/98 backdrop-blur-xl flex flex-col items-center justify-center gap-8 pt-16"
+        >
           {navItems.map((item) => (
             <Link
               key={item.href}

@@ -34,6 +34,31 @@ export default function Skills() {
             </ScrollReveal>
           ))}
         </div>
+
+        {/* Habilidades */}
+        <ScrollReveal>
+          <h2 className="mt-20 text-[36px] md:text-[44px] font-extrabold text-navy-900 tracking-tight leading-tight mb-14">
+            Habilidades<span className="text-accent">.</span>
+          </h2>
+        </ScrollReveal>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {services.map((service, i) => (
+            <ScrollReveal key={service.title}>
+              <div className="h-full bg-white rounded-2xl border border-card-border p-7 shadow-sm transition-all hover:border-accent/25 hover:shadow-[0_20px_44px_rgba(13,24,41,0.08)]">
+                <span className="font-mono text-[11px] font-medium text-accent tracking-[0.25em] block mb-4">
+                  {String(i + 1).padStart(2, '0')}
+                </span>
+                <h3 className="text-[17px] font-bold text-navy-900 tracking-tight mb-3">
+                  {service.title}
+                </h3>
+                <p className="text-[14px] text-[#4A5568] leading-relaxed">
+                  {service.description}
+                </p>
+              </div>
+            </ScrollReveal>
+          ))}
+        </div>
       </div>
     </section>
   )

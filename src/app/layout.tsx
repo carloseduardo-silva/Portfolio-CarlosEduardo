@@ -1,5 +1,6 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Sora, JetBrains_Mono } from 'next/font/google'
+import { authorName, siteDescription, siteName, siteTitle, siteUrl } from '@/lib/site'
 import './globals.css'
 
 const sora = Sora({
@@ -17,10 +18,32 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Carlos Eduardo — Desenvolvedor Front-End',
-  description:
-    'Portfólio de Carlos Eduardo da Silva, Desenvolvedor Front-End com 2+ anos de experiência em React, TypeScript e Next.js.',
+  metadataBase: new URL(siteUrl),
+  title: siteTitle,
+  description: siteDescription,
   keywords: ['desenvolvedor front-end', 'react', 'next.js', 'typescript', 'portfólio'],
+  authors: [{ name: authorName }],
+  creator: authorName,
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'pt_BR',
+    url: '/',
+    siteName,
+    title: siteTitle,
+    description: siteDescription,
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: siteTitle,
+    description: siteDescription,
+  },
+}
+
+export const viewport: Viewport = {
+  themeColor: '#09101F',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

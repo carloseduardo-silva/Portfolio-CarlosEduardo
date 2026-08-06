@@ -12,6 +12,9 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Pastas de referência — espelham o `exclude` do tsconfig.json.
+    "_legacy_backup/**",
+    "_design_reference/**",
   ]),
 ]);
 

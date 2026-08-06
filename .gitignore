@@ -7,6 +7,8 @@
 /out/
 .turbo
 *.tsbuildinfo
+# gerado pelo next dev/build — alterna de conteudo a cada execucao
+next-env.d.ts
 
 dist
 build

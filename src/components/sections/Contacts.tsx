@@ -35,7 +35,10 @@ export default function Contacts() {
                 className="group flex items-center gap-5 p-6 bg-white/[0.04] border border-white/[0.08] rounded-2xl transition-all hover:bg-accent/[0.08] hover:border-accent/25 text-left"
               >
                 {/* Icon */}
-                <div className="flex-none w-12 h-12 flex items-center justify-center rounded-xl bg-accent/10 border border-accent/20 font-mono text-[15px] font-bold text-accent group-hover:bg-accent/20 transition-all">
+                <div
+                  aria-hidden
+                  className="flex-none w-12 h-12 flex items-center justify-center rounded-xl bg-accent/10 border border-accent/20 font-mono text-[15px] font-bold text-accent group-hover:bg-accent/20 transition-all"
+                >
                   {icons[c.label]}
                 </div>
 
