@@ -48,10 +48,7 @@ export default function Hero() {
 
       {/* Glow blobs */}
       <div className="absolute top-[5%] right-[5%] w-[720px] h-[720px] rounded-full glow-hero pointer-events-none" />
-      <div
-        className="absolute bottom-0 left-[20%] w-[500px] h-[300px] pointer-events-none"
-        style={{ background: 'radial-gradient(ellipse, rgba(75,123,229,0.04) 0%, transparent 70%)' }}
-      />
+      <div className="absolute bottom-0 left-[20%] w-[500px] h-[300px] glow-hero-soft pointer-events-none" />
 
       <div className="flex flex-col items-center gap-3 mx-auto text-center pt-10">
 

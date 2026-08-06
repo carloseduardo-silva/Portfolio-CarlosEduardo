@@ -1,6 +1,6 @@
 import ScrollReveal from '@/components/ui/ScrollReveal'
 import { SectionLabel } from '@/components/ui/SectionLabel'
-import { techGroups } from '@/data/skills'
+import { techGroups, services } from '@/data/skills'
 
 export default function Skills() {
   return (

@@ -3,7 +3,6 @@ export type Project = {
   title: string
   type: string
   date: string
-  dateLabel: string
   thumbnail: string
   info: string
   technologies: string
@@ -22,7 +21,6 @@ export const projects: Project[] = [
     title: 'Controle de Frotas',
     type: 'Sistema Web',
     date: 'Jan, 2025',
-    dateLabel: 'Janeiro de 2025',
     thumbnail: '/images/frotas-projectB.png',
     info: 'Sistema administrativo para o gerenciamento de Controle de Frotas da Prefeitura Municipal de Santo André, a aplicação é responsável pelo cadastro e edição de motoristas e veículos, contempla um sistema de agendamentos de viagens operadas e admitidas por um administrador, além de um sistema de relatórios e gráficos para o acompanhamento do desempenho da frota. O sistema foi desenvolvido com o intuito de otimizar o tempo e a eficiência dos processos administrativos das frotas da prefeitura.',
     technologies: 'HTML5, CSS3, JavaScript, ASP.NET, C#, SQL Server, Bootstrap, Python, FASTAPI',
@@ -39,7 +37,6 @@ export const projects: Project[] = [
     title: 'Apostila Virtual — Adélia',
     type: 'Plataforma Educacional',
     date: 'Mar, 2025',
-    dateLabel: 'Março de 2025',
     thumbnail: '/images/fundo-adelia.png',
     info: ' Site Instituicional Educativo para o Colégio Adelia, aplicação desenvolvida a fim de disponibilizar um ambiente virtual completo e interativo para otimizar o aprendizado e o acesso aos materiais didáticos. O sistema conta com uma apostila virtual, materiais complementares como vídeos e pdfs, resumos e mapa mentais, além de ser 100% responsivo otimizado para qualquer tipo de dispositivo. A aplicação já está em uso e é acessada localmente por diversos alunos.',
     technologies: 'HTML5, CSS3, JavaScript, Next.js, TailwindCSS, Python',
@@ -56,7 +53,6 @@ export const projects: Project[] = [
     title: 'ASC.COSTA Engenharia',
     type: 'Landing Page',
     date: 'Mai, 2024',
-    dateLabel: 'Maio de 2024',
     thumbnail: '/images/ascosta-black.png',
     info: 'Landing Page responsiva para a Empresa de Reforma e Construção ASC.Costa Engenharia. Aplicação desenvolvida a fim de demonstrar os serviços realizados pela empreitera, legitimar a qualidade do produto e prospectar novos clientes. A página traz um destaque para o serviço de lavagem de fachada onde há maior detalhamento e destaque do processo.',
     technologies: 'HTML5, CSS3, JavaScript, WordPress, Elementor, Canva',
@@ -73,7 +69,6 @@ export const projects: Project[] = [
     title: 'Endolife',
     type: 'Site Institucional',
     date: 'Ago, 2024',
-    dateLabel: 'Setembro de 2024',
     thumbnail: '/images/endolife-black.png',
     info: 'Site institucional para a empresa healthtech Endolife, a principal finalidade de um site instituicional é informar o cliente/usuário sobre quais são os principais serviços, vantagens e confiabilidade que ele pode ter em determinado produto. Fui responsável pela criação dos estilos, interatividades, banners, além de idealizar o webdesign das páginas.',
     technologies: 'HTML5, CSS3, JavaScript, WordPress, Elementor, Canva',
@@ -90,7 +85,6 @@ export const projects: Project[] = [
     title: 'PUMP GYM',
     type: 'Landing Page',
     date: 'Nov, 2023',
-    dateLabel: 'Novembro de 2023',
     thumbnail: '/images/pump-projectB.png',
     info: 'Projeto de Sistema Web responsivo para uma Academia. Aplicação desenvolvida afim de consolidar meus conhecimentos em React.js, como React Hooks, Context API, Redux, Styled-Components, Ciclo de Vida, entre outros conceitos. O projeto conta com páginas interativas e reponsivas para navegação dos clietes da academia, exibindo o seus serviços como: modalidades, unidades próximas (consultas baseadas no cep utilizando BrasilAPI), planos e horários.',
     technologies: 'HTML5, CSS3, JavaScript, React.js, Firebase, Canva',
@@ -107,7 +101,6 @@ export const projects: Project[] = [
     title: "Barbearia Kadu Corte's",
     type: 'Site Institucional',
     date: 'Jun, 2023',
-    dateLabel: 'Junho de 2023',
     thumbnail: '/images/barbearia-projectB.png',
     info: "Projeto desenvolvido para Barbearia Kadu Corte's residente em Guarujá-SP, a qual solicitou um sistema web responsivo para aplicações mobiles e que fosse interativo para os clientes. O sistema conta tanto com uma ClientPage atrativa a qual expoem para os usuários as informações da barbearia e fornece um sistema de agendamento completo com validações, quanto uma AdminPage restringida por uma validação de login e senha, que armazena os dados dos clientes agendados, horarios marcados e muito mais.",
     technologies: 'HTML5, CSS3, JavaScript, Redis, Canva, MySql',
@@ -124,7 +117,6 @@ export const projects: Project[] = [
     title: 'Restaurante Bucéfalus',
     type: 'Site Institucional',
     date: 'Ago, 2023',
-    dateLabel: 'Agosto de 2023',
     thumbnail: '/images/saboroso-projectB.png',
     info: 'Projeto de um website para o Restaurante Bucéfalus residente em Guarujá-SP, desenvolvido utilizando em sua base JavaScript, Embedded JavaScript em conjunto com o Boostrap. Há também a conexão com o banco de dados MySql, suportando tanto uma ClientPage regida pelo sistema de rotas CRUD, quanto uma AdminPage (dashboard) com restrição de acesso por usuário e senha.',
     technologies: 'HTML5, CSS3, JavaScript, Redis, Canva, MySql',
@@ -141,7 +133,6 @@ export const projects: Project[] = [
     title: 'WhatsApp Clone',
     type: 'Clone',
     date: 'Jul, 2023',
-    dateLabel: 'Julho 2023',
     thumbnail: '/images/whatsapp-projectB.png',
     info: 'Projeto desenvolvido durante o curso de JavaScript Avançado da HCODEBR, o qual nos trouxe o desenvolvimento de um clone do Whatsapp, contanto com todas as suas funcionalidades programadas através do banco de dados Firebase(FireStore + RealTimeDataBase), em conjunto com o JavaScript e algumas libs como: APIs de audio, camera e video, Path, Navigator, etc.',
     technologies: 'HTML5, CSS3, JavaScript, Firebase',
@@ -158,7 +149,6 @@ export const projects: Project[] = [
     title: 'Manage Users',
     type: 'CRUD App',
     date: 'Jun, 2023',
-    dateLabel: 'Maio de 2023',
     thumbnail: '/images/usuarios-projectB.png',
     info: 'Projeto desenvolvido essencialmente com JavaScript, afim de otimizar meus conhecimentos em sistemas de routes CRUD regido por uma API REST que consome dados do Banco de Dados Nedb, trazendo assincronidade ao website.',
     technologies: 'HTML5, CSS3, JavaScript, Nedb',
@@ -175,7 +165,6 @@ export const projects: Project[] = [
     title: 'DropBox Clone',
     type: 'Clone',
     date: 'Jun, 2023',
-    dateLabel: 'Junho de 2023',
     thumbnail: '/images/dropbox-projectB.png',
     info: 'Projeto desenvolvido durante o curso de JavaScript Avançado da HCODEBR, o qual nos trouxe o desenvolvimento de um clone do DropBox, contanto com todas as suas funcionalidades programadas através do banco de dados Firebase(FireStore + RealTimeDataBase), em conjunto com o JavaScript, por meio do sistema de routes CRUD e algumas libs como: Formidable, Path, Fs, etc.',
     technologies: 'HTML5, CSS3, JavaScript, Firebase',

@@ -1,5 +1,13 @@
 .env
+.env*.local
 /node_modules
+
+# next.js
+/.next/
+/out/
+.turbo
+*.tsbuildinfo
+
 dist
 build
 coverage
