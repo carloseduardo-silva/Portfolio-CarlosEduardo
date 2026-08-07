@@ -64,7 +64,7 @@ export default function ProjectModal({ project, onClose, onPrev, onNext }: Props
       {/* Backdrop */}
       <div
         aria-hidden
-        className="fixed inset-0 bg-navy-950/80 backdrop-blur-sm z-40"
+        className="fixed inset-0 bg-navy-900/55 backdrop-blur-sm z-40"
         onClick={onClose}
       />
 
@@ -73,7 +73,7 @@ export default function ProjectModal({ project, onClose, onPrev, onNext }: Props
         <button
           onClick={onPrev}
           aria-label="Projeto anterior"
-          className="hidden lg:flex fixed top-1/2 left-6 -translate-y-1/2 z-50 w-11 h-11 items-center justify-center rounded-full bg-white/10 border border-white/10 text-white hover:bg-accent/20 hover:border-accent/40 transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+          className="hidden lg:flex fixed top-1/2 left-6 -translate-y-1/2 z-50 w-11 h-11 items-center justify-center rounded-full bg-surface border border-card-border text-ink shadow-md hover:bg-accent/10 hover:border-accent/40 hover:text-accent-text transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
         >
           <span aria-hidden>←</span>
         </button>
@@ -90,10 +90,10 @@ export default function ProjectModal({ project, onClose, onPrev, onNext }: Props
         {/* Header */}
         <div className="flex items-center justify-between px-7 py-5 border-b border-card-border">
           <div>
-            <span className="font-mono text-[10px] text-accent uppercase tracking-[0.2em] block mb-1">
+            <span className="font-mono text-[10px] text-accent-text uppercase tracking-[0.2em] block mb-1">
               {project.type}
             </span>
-            <h2 id="project-modal-title" className="text-xl font-bold text-navy-900 tracking-tight">
+            <h2 id="project-modal-title" className="text-xl font-bold text-ink tracking-tight">
               {project.title}
             </h2>
           </div>
@@ -101,7 +101,7 @@ export default function ProjectModal({ project, onClose, onPrev, onNext }: Props
             ref={closeRef}
             onClick={onClose}
             aria-label="Fechar"
-            className="w-9 h-9 flex-none flex items-center justify-center rounded-lg border border-card-border text-[#8896A8] hover:border-accent/40 hover:text-accent transition-all text-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+            className="w-9 h-9 flex-none flex items-center justify-center rounded-lg border border-card-border text-ink-subtle hover:border-accent/40 hover:text-accent-text transition-all text-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
           >
             <span aria-hidden>✕</span>
           </button>
@@ -136,24 +136,24 @@ export default function ProjectModal({ project, onClose, onPrev, onNext }: Props
 
           {/* Info */}
           <div className="flex-1 flex flex-col gap-5">
-            <p className="text-[14.5px] text-[#4A5568] leading-relaxed">{project.info}</p>
+            <p className="text-[14.5px] text-ink-muted leading-relaxed">{project.info}</p>
 
             <div className="flex flex-col gap-3">
               <div className="p-4 bg-card-bg rounded-xl border border-card-border-blue">
-                <p className="font-mono text-[10px] text-accent uppercase tracking-[0.2em] mb-1.5">Tecnologias</p>
-                <p className="text-[13px] text-navy-900">{project.technologies}</p>
+                <p className="font-mono text-[10px] text-accent-text uppercase tracking-[0.2em] mb-1.5">Tecnologias</p>
+                <p className="text-[13px] text-ink">{project.technologies}</p>
               </div>
               <div className="p-4 bg-card-bg rounded-xl border border-card-border-blue">
-                <p className="font-mono text-[10px] text-accent uppercase tracking-[0.2em] mb-1.5">Data</p>
-                <p className="text-[13px] text-navy-900">{project.date}</p>
+                <p className="font-mono text-[10px] text-accent-text uppercase tracking-[0.2em] mb-1.5">Data</p>
+                <p className="text-[13px] text-ink">{project.date}</p>
               </div>
               <div className="p-4 bg-card-bg rounded-xl border border-card-border-blue">
-                <p className="font-mono text-[10px] text-accent uppercase tracking-[0.2em] mb-1.5">URL</p>
+                <p className="font-mono text-[10px] text-accent-text uppercase tracking-[0.2em] mb-1.5">URL</p>
                 <a
                   target="_blank"
                   rel="noreferrer"
                   href={project.url}
-                  className="text-[13px] text-accent hover:underline break-all"
+                  className="text-[13px] text-accent-text hover:underline break-all"
                 >
                   {project.urlLabel}
                 </a>
@@ -168,7 +168,7 @@ export default function ProjectModal({ project, onClose, onPrev, onNext }: Props
         <button
           onClick={onNext}
           aria-label="Próximo projeto"
-          className="hidden lg:flex fixed top-1/2 right-6 -translate-y-1/2 z-50 w-11 h-11 items-center justify-center rounded-full bg-white/10 border border-white/10 text-white hover:bg-accent/20 hover:border-accent/40 transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+          className="hidden lg:flex fixed top-1/2 right-6 -translate-y-1/2 z-50 w-11 h-11 items-center justify-center rounded-full bg-surface border border-card-border text-ink shadow-md hover:bg-accent/10 hover:border-accent/40 hover:text-accent-text transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
         >
           <span aria-hidden>→</span>
         </button>

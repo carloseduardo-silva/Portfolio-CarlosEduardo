@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
-import { typewriterRoles } from '@/data/portfolio'
+import { typewriterRoles, socialLinks } from '@/data/portfolio'
 
 export default function Hero() {
   const [typeText, setTypeText] = useState('')
@@ -41,7 +41,7 @@ export default function Hero() {
   return (
     <section
       id="inicio"
-      className="relative min-h-screen bg-navy-950 flex items-center px-6 md:px-10 lg:px-15 pt-20 pb-16 overflow-hidden"
+      className="relative min-h-screen bg-surface-light flex items-center px-6 md:px-10 lg:px-15 pt-20 lg:pt-0 pb-16 overflow-hidden"
     >
       {/* Dot grid */}
       <div className="absolute inset-0 bg-dot-grid opacity-60 pointer-events-none" />
@@ -54,14 +54,14 @@ export default function Hero() {
 
         {/* Typewriter */}
         <div className="flex items-center h-12 mb-3">
-          <span className="text-[20px] md:text-[24px] font-light text-[#E8ECF4]/50 tracking-tight">
+          <span className="text-[20px] md:text-[24px] font-light text-ink-subtle tracking-tight">
             {typeText}
           </span>
           <span className="inline-block w-[2.5px] h-7 bg-accent ml-[3px] rounded-sm animate-blink" />
         </div>
 
         {/* Heading */}
-        <h1 className="text-center text-[52px] md:text-[64px] lg:text-[70px] font-extrabold leading-none tracking-tightest text-[#E8ECF4] mb-5">
+        <h1 className="text-center text-[40px] sm:text-[52px] md:text-[64px] lg:text-[70px] font-extrabold leading-none tracking-tightest text-ink mb-5">
           Desenvolvedor
           <br />
           Carlos
@@ -69,7 +69,7 @@ export default function Hero() {
         </h1>
 
         {/* Subtitle */}
-        <p className="text-[15px] text-[#E8ECF4]/40 leading-relaxed max-w-[460px] mb-11">
+        <p className="text-[15px] text-ink-muted leading-relaxed max-w-[460px] mb-11">
           Desenvolvedor Front-End com 2+ anos de experiência construindo
           aplicações web modernas, performáticas e com foco em UI/UX de qualidade.
         </p>
@@ -84,29 +84,25 @@ export default function Hero() {
           </Link>
           <Link
             href="#projetos"
-            className="px-8 py-3.5 border border-white/10 text-[#E8ECF4]/70 rounded-lg text-sm font-medium transition-all hover:border-accent/50 hover:text-accent-light"
+            className="px-8 py-3.5 border border-card-border text-ink-muted rounded-lg text-sm font-medium transition-all hover:border-accent/50 hover:text-accent-text"
           >
             Ver Projetos
           </Link>
         </div>
 
-        {/* Social */}
-        <div className="flex items-center gap-5">
-          <span className="font-mono text-[10px] text-[#E8ECF4]/20 uppercase tracking-[0.2em]">
+        {/* Social — redundante com a sidebar no desktop, essencial no mobile */}
+        <div className="flex items-center gap-5 lg:hidden">
+          <span className="font-mono text-[10px] text-ink-subtle uppercase tracking-[0.2em]">
             Social
           </span>
-          <span className="w-5 h-px bg-white/10" />
-          {[
-            { label: 'LinkedIn', href: 'https://linkedin.com/in/carlos-eduardo-da-silva-050403235' },
-            { label: 'GitHub', href: 'https://github.com/carloseduardo-silva' },
-            { label: 'WhatsApp', href: 'https://wa.me/5513974022220' },
-          ].map((s) => (
+          <span className="w-5 h-px bg-card-border" />
+          {socialLinks.map((s) => (
             <a
               key={s.label}
               href={s.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm font-medium text-[#E8ECF4]/40 transition-colors hover:text-accent"
+              className="text-sm font-medium text-ink-subtle transition-colors hover:text-accent-text"
             >
               {s.label}
             </a>

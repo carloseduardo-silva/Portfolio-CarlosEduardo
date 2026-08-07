@@ -1,4 +1,5 @@
-import Navbar from '@/components/layout/Navbar'
+import Sidebar from '@/components/layout/Sidebar'
+import ReadingProgress from '@/components/layout/ReadingProgress'
 import Hero from '@/components/sections/Hero'
 import About from '@/components/sections/About'
 import Experience from '@/components/sections/Experience'
@@ -9,8 +10,9 @@ import Contacts from '@/components/sections/Contacts'
 export default function Home() {
   return (
     <>
-      <Navbar />
-      <main>
+      <Sidebar />
+      <ReadingProgress />
+      <main className="lg:pl-[var(--sidebar-w)]">
         <Hero />
         <About />
         <Experience />

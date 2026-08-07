@@ -20,20 +20,38 @@ src/
     opengraph-image.tsx ← OG image gerada com next/og
     robots.ts / sitemap.ts
   components/
-    layout/          ← Navbar.tsx (inclui a nav mobile)
+    layout/          ← Sidebar.tsx (aside + top bar mobile), ReadingProgress.tsx, icons.tsx
     sections/        ← Hero.tsx, About.tsx, Experience.tsx, Skills.tsx, Projects.tsx, Contacts.tsx
     ui/              ← ProjectCard.tsx, ProjectModal.tsx, ScrollReveal.tsx, SectionLabel.tsx
   data/              ← projects.ts, experiences.ts, skills.ts, portfolio.ts (dados tipados, sem lógica)
-  hooks/             ← useIntersectionObserver.ts
+  hooks/             ← useIntersectionObserver.ts, useActiveSection.ts
   lib/               ← cn.ts, site.ts
 public/
   images/            ← todos os assets de imagem (NUNCA altere os nomes dos arquivos)
   videos/            ← todos os vídeos dos projetos (NUNCA altere os nomes dos arquivos)
 ```
 
-Não existem `Footer.tsx`, `MobileNav.tsx` nem `SkillCard.tsx` — foram removidos no redesign:
+Não existem `Navbar.tsx`, `Footer.tsx`, `MobileNav.tsx` nem `SkillCard.tsx`:
 - o **rodapé** (copyright) vive no fim de `sections/Contacts.tsx`
-- a **nav mobile** (hambúrguer + overlay) vive dentro de `layout/Navbar.tsx`
+- a **navegação inteira** (aside desktop + barra de topo mobile + overlay) vive em `layout/Sidebar.tsx`
+
+## Layout — sidebar 25 / conteúdo 75
+
+A partir de `lg:` (1024px) a navegação é uma coluna fixa à esquerda; abaixo disso vira barra de topo de 64px + overlay em tela cheia.
+
+- A largura é a custom property **`--sidebar-w: clamp(280px, 25vw, 360px)`**, declarada em `:root` no `globals.css`. Fonte única: o `<aside>` usa `w-[var(--sidebar-w)]`, o `<main>` compensa com `lg:pl-[var(--sidebar-w)]` e a barra de progresso com `lg:left-[var(--sidebar-w)]`.
+  Ela **não** fica no `@theme` porque o namespace `--spacing-*` do Tailwind v4 é só o multiplicador base e não gera utilities nomeadas (`w-sidebar` não existe).
+- `section[id] { scroll-margin-top: 4rem }` no `@layer base` impede que as âncoras aterrissem sob a barra de topo; zera em `lg:`, onde não há barra.
+- Estados da navegação vêm de `useActiveSection` (scroll-spy por `IntersectionObserver` numa faixa central do viewport), refletidos em `aria-current` + `border-l-[3px] border-accent`.
+- Ícones são **SVG inline** em `layout/icons.tsx`, indexados pelas chaves `icon` de `navItems`/`socialLinks` em `data/portfolio.ts`. O legado usava Iconify/Material Symbols por CDN — proibido aqui.
+
+### ⚠️ Grids dentro das seções usam container queries, não breakpoints de viewport
+
+Com a sidebar, o conteúdo é ~300px mais estreito que a tela, então `md:`/`lg:` mentem sobre o espaço disponível. Cada seção marca sua `div.max-w-[1280px].mx-auto` com **`@container/content`** e os grids usam variantes `@xl/content:`, `@3xl/content:`, `@4xl/content:` — que medem a largura útil real.
+
+O container é a div **interna**, nunca o `<main>`, por dois motivos:
+1. a largura do container passa a ser exatamente a largura do conteúdo, sem descontar padding;
+2. `container-type: inline-size` **cria containing block para descendentes `fixed`** — com o container no `<main>`, o `ProjectModal` (`fixed inset-0`, `w-[90vw]`, `max-h-[85vh]`) deixaria de se posicionar pelo viewport. O modal é renderizado fora dessa div, então permanece um overlay de tela cheia por cima da sidebar.
 
 ### Pastas de referência — não editar
 - `_legacy_backup/` — o site original em HTML/CSS/JS vanilla (fonte da verdade para a copy legada)
@@ -49,20 +67,40 @@ Ambas estão fora do `tsconfig.json` (`exclude`). Servem para consulta, nunca pa
 - O CV deve sempre apontar para `/images/cv_CARLOS-EDUARDO.pdf`
 
 ## Design System (`@theme inline` em `globals.css`)
-Use os tokens definidos — nunca hex arbitrário:
+
+O site é **inteiramente claro**. Os tokens são **semânticos**: o componente pede "tinta forte" ou "superfície", nunca uma cor literal. Isso é o que permitiria um dark mode futuro ser um único `@media (prefers-color-scheme: dark)` redefinindo os tokens, em vez de outra varredura de arquivos.
+
 ```
-navy-950         → #09101F  (fundo escuro — Hero, Experience, Contacts)
-navy-900         → #0D1829  (texto principal em fundo claro)
-accent           → #4B7BE5  (azul de destaque)
+surface          → #FFFFFF  (sidebar, cards elevados)
+surface-light    → #FAFBFF  (fundo de todas as seções, body)
+surface-muted    → #F2F4FB  (chips, hover, info-cards)
+
+ink              → #0D1829  (títulos e corpo forte)
+ink-muted        → #4A5568  (corpo secundário)
+ink-subtle       → #5C6B7F  (labels e texto terciário)
+
+accent           → #4B7BE5  (SUPERFÍCIE: fundo, borda, barra, ícone grande)
+accent-text      → #3866CE  (TEXTO pequeno sobre claro)
 accent-dark      → #3B6BD5  (hover de botão primário)
-accent-light     → #7CB8FF  (hover em fundo escuro)
-surface-light    → #FAFBFF  (fundo claro padrão — body, About, Skills)
-surface-muted    → #F2F4FB  (fundo claro alternado — Projects)
-card-border      → #DDE3EE  (borda de card em fundo claro)
+
+card-border      → #DDE3EE  (borda de card e hairline entre seções)
 card-bg          → #EEF2FB  (fundo dos info-cards do modal)
 card-border-blue → #DDE5F5  (borda dos info-cards do modal)
 ```
-Texto sobre fundo escuro usa `#E8ECF4` com opacidade (`/70`, `/40`, `/25`) — padrão já estabelecido.
+
+### ⚠️ `accent` é superfície, `accent-text` é texto
+`accent #4B7BE5` sobre fundo claro dá apenas **3,86:1** e reprova WCAG AA para texto normal. Todo texto abaixo de 18px em azul usa **`accent-text`** (≥4,8:1 nas três superfícies). Use `accent` só onde ele é fundo, borda ou preenchimento — aí o contraste não se aplica.
+
+Os três tons de `ink` passam AA sobre as três superfícies. Não introduza cinzas novos sem medir.
+
+### Escuro remanescente — não é dark mode
+Três elementos continuam escuros de propósito, e `navy-900`/`navy-950` existem só para eles:
+- gradientes `project.bg` nos cards de projeto (capa/identidade do projeto);
+- backdrop do `ProjectModal` (overlay precisa recuar o fundo em qualquer tema);
+- pill do filtro ativo em Projects (estado selecionado).
+
+### Ritmo entre seções
+Não há alternância de fundo: todas as seções são `surface-light`, separadas por um hairline aplicado pela regra base `main > section + section` no `globals.css`. Não adicione `border-t` manualmente nas seções.
 
 Fontes (via `next/font/google`, sem CDN):
 - `font-sora` — base de todo o site (pesos 300–800)
@@ -74,7 +112,7 @@ Tracking: `tracking-tightest` (-0.04em) nos títulos grandes.
 
 ### `'use client'` obrigatório em:
 - Qualquer componente que use `useState`, `useEffect`, `useRef`, ou event handlers do browser
-- `Hero.tsx` (typewriter), `Navbar.tsx` (menu), `Projects.tsx` (filtro + modal), `Experience.tsx` (tabs), `ProjectModal.tsx`, `ScrollReveal.tsx`
+- `Hero.tsx` (typewriter), `Sidebar.tsx` (menu + scroll-spy), `ReadingProgress.tsx`, `Projects.tsx` (filtro + modal), `Experience.tsx` (tabs), `ProjectModal.tsx`, `ScrollReveal.tsx`
 
 Tudo o mais é Server Component por padrão — mantenha assim (`About.tsx`, `Skills.tsx`, `Contacts.tsx`, `ProjectCard.tsx`, `SectionLabel.tsx`).
 
@@ -110,5 +148,6 @@ Tudo o mais é Server Component por padrão — mantenha assim (`About.tsx`, `Sk
 - ❌ Não altere `public/images/` ou `public/videos/` (só leitura durante desenvolvimento)
 - ❌ Não use `any` em TypeScript sem comentário justificando
 - ❌ Não commite `.next/` (está no `.gitignore`)
-- ❌ Não quebre responsividade: mobile-first, breakpoints padrão do Tailwind — `sm:` 640px, `md:` 768px, `lg:` 1024px
+- ❌ Não quebre responsividade: mobile-first, breakpoints padrão do Tailwind — `sm:` 640px, `md:` 768px, `lg:` 1024px. **Dentro das seções use container queries** (ver acima), não breakpoints de viewport
+- ❌ Não coloque `@container` no `<main>` nem em nenhum ancestral do `ProjectModal` — quebra o posicionamento `fixed`
 - ❌ Não quebre acessibilidade: elementos clicáveis são `<button>`/`<a>` (nunca `<div onClick>`), ícones decorativos levam `aria-hidden`

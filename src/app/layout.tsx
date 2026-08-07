@@ -43,13 +43,13 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: '#09101F',
+  themeColor: '#FAFBFF',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="pt-BR" className={`${sora.variable} ${jetbrainsMono.variable}`}>
-      <body className="font-sora bg-surface-light text-navy-900 overflow-x-hidden antialiased">
+      <body className="font-sora bg-surface-light text-ink overflow-x-hidden antialiased">
         {children}
       </body>
     </html>

@@ -2,17 +2,35 @@
 
 /* ── Design Tokens ────────────────────────────────────────────────────── */
 @theme inline {
-  /* Colors */
-  --color-navy-950:         #09101F;
-  --color-navy-900:         #0D1829;
+  /* ── Superfícies ──
+     Do mais elevado para o mais recuado. */
+  --color-surface:          #FFFFFF;   /* sidebar, cards elevados */
+  --color-surface-light:    #FAFBFF;   /* fundo de todas as seções */
+  --color-surface-muted:    #F2F4FB;   /* chips, hover, info-cards */
+
+  /* ── Tinta ──
+     Nome semântico: o componente pede "tinta forte", não "navy-900".
+     Todos passam AA sobre surface-light. */
+  --color-ink:              #0D1829;   /* títulos e corpo forte      17.2:1 */
+  --color-ink-muted:        #4A5568;   /* corpo secundário            7.3:1 */
+  --color-ink-subtle:       #5C6B7F;   /* labels e texto terciário    5.3:1 */
+
+  /* ── Accent ──
+     `accent` é para superfície (fundo, borda, barra); `accent-text` é para
+     texto — o accent puro dá só 3.86:1 sobre claro e reprova AA. */
   --color-accent:           #4B7BE5;
-  --color-accent-dark:      #3B6BD5;
-  --color-accent-light:     #7CB8FF;
-  --color-surface-light:    #FAFBFF;
-  --color-surface-muted:    #F2F4FB;
+  --color-accent-text:      #3866CE;   /* texto pequeno sobre claro   ≥4.8:1 */
+  --color-accent-dark:      #3B6BD5;   /* hover de botão primário */
+
+  /* ── Bordas ── */
   --color-card-border:      #DDE3EE;
   --color-card-bg:          #EEF2FB;
   --color-card-border-blue: #DDE5F5;
+
+  /* Escuros remanescentes: backdrop do modal e pill de filtro ativo.
+     Não são "dark mode" — são overlay e estado selecionado. */
+  --color-navy-950:         #09101F;
+  --color-navy-900:         #0D1829;
 
   /* Fonts */
   --font-sora: var(--font-sora-var), sans-serif;
@@ -32,6 +50,15 @@
 }
 
 /* ── Base ────────────────────────────────────────────────────────────── */
+
+/* Largura da sidebar: 25% da tela, com piso e teto para não virar um vazio
+   em ultrawide. Fonte única — consumida via w-[var(--sidebar-w)] e afins.
+   Fica fora do @theme porque o namespace --spacing-* do Tailwind v4 é só o
+   multiplicador base e não gera utilities nomeadas. */
+:root {
+  --sidebar-w: clamp(280px, 25vw, 300px);
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -46,12 +73,32 @@ html {
   background-color: rgba(75, 123, 229, 0.25);
 }
 
+/* Âncoras não podem aterrissar sob a barra de topo do mobile.
+   No desktop a navegação é lateral, então o offset zera. */
+section[id] {
+  scroll-margin-top: 4rem;
+}
+
+@media (min-width: 64rem) {
+  section[id] {
+    scroll-margin-top: 0;
+  }
+}
+
+/* Sem a alternância claro/escuro, o ritmo entre seções vem de um hairline.
+   Regra base em vez de repetir a classe nos cinco componentes. */
+main > section + section {
+  border-top: 1px solid var(--color-card-border);
+}
+
 /* ── Utilities ───────────────────────────────────────────────────────── */
 @layer utilities {
+  /* Opacidades recalibradas para fundo claro: o que era sutil sobre #09101F
+     desaparece sobre #FAFBFF, e o que era denso vira sujeira. */
   .bg-dot-grid {
     background-image: radial-gradient(
       circle,
-      rgba(75, 123, 229, 0.18) 1px,
+      rgba(75, 123, 229, 0.22) 1px,
       transparent 1px
     );
     background-size: 40px 40px;
@@ -60,21 +107,21 @@ html {
   .glow-hero {
     background: radial-gradient(
       circle at 60% 40%,
-      rgba(75, 123, 229, 0.07) 0%,
-      transparent 65%
+      rgba(75, 123, 229, 0.11) 0%,
+      transparent 72%
     );
   }
 
   .glow-hero-soft {
     background: radial-gradient(
       ellipse,
-      rgba(75, 123, 229, 0.04) 0%,
-      transparent 70%
+      rgba(75, 123, 229, 0.07) 0%,
+      transparent 75%
     );
   }
 
   .scroll-line {
-    background: linear-gradient(to bottom, rgba(232, 236, 244, 0.5), transparent);
+    background: linear-gradient(to bottom, rgba(13, 24, 41, 0.35), transparent);
   }
 }
 

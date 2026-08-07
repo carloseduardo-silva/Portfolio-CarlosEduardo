@@ -7,7 +7,7 @@ export const contentType = 'image/png'
 
 // Gerada em build time — evita adicionar um arquivo estático em public/,
 // que é somente leitura. Os valores hex espelham os tokens do globals.css
-// (navy-950, accent, texto sobre fundo escuro).
+// (surface-light, accent-text, ink).
 export default function OpengraphImage() {
   return new ImageResponse(
     (
@@ -19,9 +19,9 @@ export default function OpengraphImage() {
           flexDirection: 'column',
           justifyContent: 'center',
           padding: '80px',
-          backgroundColor: '#09101F',
+          backgroundColor: '#FAFBFF',
           backgroundImage:
-            'radial-gradient(circle at 78% 26%, rgba(75,123,229,0.22) 0%, transparent 55%)',
+            'radial-gradient(circle at 78% 26%, rgba(75,123,229,0.16) 0%, transparent 55%)',
         }}
       >
         <div
@@ -32,11 +32,11 @@ export default function OpengraphImage() {
             fontSize: 22,
             letterSpacing: '0.25em',
             textTransform: 'uppercase',
-            color: '#4B7BE5',
+            color: '#3866CE',
           }}
         >
           Portfólio
-          <div style={{ width: '160px', height: '1px', backgroundColor: 'rgba(255,255,255,0.12)' }} />
+          <div style={{ width: '160px', height: '1px', backgroundColor: '#DDE3EE' }} />
         </div>
 
         <div
@@ -47,7 +47,7 @@ export default function OpengraphImage() {
             fontWeight: 800,
             letterSpacing: '-0.04em',
             lineHeight: 1.05,
-            color: '#E8ECF4',
+            color: '#0D1829',
           }}
         >
           <span>{authorName.replace(' da Silva', '')}</span>
@@ -59,7 +59,7 @@ export default function OpengraphImage() {
             marginTop: '26px',
             fontSize: 34,
             fontWeight: 500,
-            color: 'rgba(232,236,244,0.55)',
+            color: '#4A5568',
           }}
         >
           Desenvolvedor Front-End
@@ -71,7 +71,7 @@ export default function OpengraphImage() {
             display: 'flex',
             gap: '14px',
             fontSize: 22,
-            color: 'rgba(232,236,244,0.35)',
+            color: '#5C6B7F',
           }}
         >
           <span>React</span>
