@@ -12,7 +12,7 @@ export default function ProjectCard({ project, onClick }: Props) {
       onClick={() => onClick(project)}
       aria-haspopup="dialog"
       aria-label={`Ver detalhes do projeto ${project.title}`}
-      className="group block w-full text-left bg-surface rounded-2xl overflow-hidden border-[1.5px] border-card-border shadow-sm transition-all duration-200 hover:-translate-y-1.5 hover:shadow-[0_20px_44px_rgba(13,24,41,0.10)] hover:border-accent/25 cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+      className="group block text-left bg-surface rounded-2xl overflow-hidden border-[1.5px] border-card-border shadow-sm transition-all duration-200 hover:-translate-y-1.5 hover:shadow-[0_20px_44px_rgba(13,24,41,0.10)] hover:border-accent/25 cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
     >
       {/* Gradient header */}
       <div

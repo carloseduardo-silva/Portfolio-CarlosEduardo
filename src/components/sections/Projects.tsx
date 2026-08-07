@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import ScrollReveal from '@/components/ui/ScrollReveal'
+import CardRail from '@/components/ui/CardRail'
 import { SectionLabel } from '@/components/ui/SectionLabel'
 import ProjectCard from '@/components/ui/ProjectCard'
 import ProjectModal from '@/components/ui/ProjectModal'
@@ -49,14 +50,14 @@ export default function Projects() {
           </div>
         </ScrollReveal>
 
-        {/* Project grid */}
-        <div className="grid @xl/content:grid-cols-2 @4xl/content:grid-cols-3 gap-5">
-          {displayed.map((project) => (
-            <ScrollReveal key={project.id}>
-              <ProjectCard project={project} onClick={setSelected} />
-            </ScrollReveal>
-          ))}
-        </div>
+        {/* Grid no desktop, trilho deslizável no mobile */}
+        <ScrollReveal>
+          <CardRail maxCols={3} gap="gap-5" label="Trabalhos recentes">
+            {displayed.map((project) => (
+              <ProjectCard key={project.id} project={project} onClick={setSelected} />
+            ))}
+          </CardRail>
+        </ScrollReveal>
       </div>
 
       {/* Modal */}

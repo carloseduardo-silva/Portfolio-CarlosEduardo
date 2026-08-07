@@ -1,4 +1,5 @@
 import ScrollReveal from '@/components/ui/ScrollReveal'
+import CardRail from '@/components/ui/CardRail'
 import { SectionLabel } from '@/components/ui/SectionLabel'
 import { techGroups, services } from '@/data/skills'
 
@@ -42,10 +43,13 @@ export default function Skills() {
           </h2>
         </ScrollReveal>
 
-        <div className="grid @xl/content:grid-cols-2 @4xl/content:grid-cols-3 gap-6">
-          {services.map((service, i) => (
-            <ScrollReveal key={service.title}>
-              <div className="h-full bg-surface rounded-2xl border border-card-border p-7 shadow-sm transition-all hover:border-accent/25 hover:shadow-[0_20px_44px_rgba(13,24,41,0.08)]">
+        <ScrollReveal>
+          <CardRail maxCols={3} gap="gap-6" label="Habilidades">
+            {services.map((service, i) => (
+              <div
+                key={service.title}
+                className="h-full bg-surface rounded-2xl border border-card-border p-7 shadow-sm transition-all hover:border-accent/25 hover:shadow-[0_20px_44px_rgba(13,24,41,0.08)]"
+              >
                 <span className="font-mono text-[11px] font-medium text-accent-text tracking-[0.25em] block mb-4">
                   {String(i + 1).padStart(2, '0')}
                 </span>
@@ -56,9 +60,9 @@ export default function Skills() {
                   {service.description}
                 </p>
               </div>
-            </ScrollReveal>
-          ))}
-        </div>
+            ))}
+          </CardRail>
+        </ScrollReveal>
       </div>
     </section>
   )

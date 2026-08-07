@@ -22,7 +22,7 @@ src/
   components/
     layout/          ← Sidebar.tsx (aside + top bar mobile), ReadingProgress.tsx, icons.tsx
     sections/        ← Hero.tsx, About.tsx, Experience.tsx, Skills.tsx, Projects.tsx, Contacts.tsx
-    ui/              ← ProjectCard.tsx, ProjectModal.tsx, ScrollReveal.tsx, SectionLabel.tsx
+    ui/              ← ProjectCard.tsx, ProjectModal.tsx, ScrollReveal.tsx, SectionLabel.tsx, CardRail.tsx
   data/              ← projects.ts, experiences.ts, skills.ts, portfolio.ts (dados tipados, sem lógica)
   hooks/             ← useIntersectionObserver.ts, useActiveSection.ts
   lib/               ← cn.ts, site.ts
@@ -98,6 +98,16 @@ Três elementos continuam escuros de propósito, e `navy-900`/`navy-950` existem
 - gradientes `project.bg` nos cards de projeto (capa/identidade do projeto);
 - backdrop do `ProjectModal` (overlay precisa recuar o fundo em qualquer tema);
 - pill do filtro ativo em Projects (estado selecionado).
+
+### Cards que empilhariam no mobile usam `CardRail`, não `grid`
+
+`ui/CardRail.tsx` é trilho horizontal com `scroll-snap` abaixo de `@xl/content` e volta a ser grid acima. Usado em Habilidades e Trabalhos Recentes; os cards de categoria de Stack ficam empilhados de propósito (são baixos). Sem JS e sem dependência — `scroll-snap` nativo já dá toque, inércia e encaixe.
+
+Duas regras não óbvias ao mexer nele:
+- **O `ScrollReveal` vai por fora do trilho, nunca por card.** Num trilho horizontal os cards fora da tela não intersectam o viewport e ficariam em `opacity-0` — inclusive o que espia na borda, matando a affordance de arrastar.
+- **`overflow-x-auto` tira o eixo Y de `visible`** (é a especificação), o que recorta as sombras dos cards. O `py-2 -my-2` do componente existe só para isso; não remova.
+
+As classes de slide (`snap-start`, `shrink-0`, `basis-[86%]`) são aplicadas pelo pai via `[&>*]:`, então o call site não precisa saber que está num carrossel. Cards dentro dele não devem usar `w-full` — conflita com o `basis`.
 
 ### Ritmo entre seções
 Não há alternância de fundo: todas as seções são `surface-light`, separadas por um hairline aplicado pela regra base `main > section + section` no `globals.css`. Não adicione `border-t` manualmente nas seções.

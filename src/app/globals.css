@@ -123,6 +123,17 @@ main > section + section {
   .scroll-line {
     background: linear-gradient(to bottom, rgba(13, 24, 41, 0.35), transparent);
   }
+
+  /* Trilhos do CardRail: a affordance é o card espiando na borda, então a
+     barra de rolagem seria ruído. */
+  .no-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 /* ── Reduced motion ──────────────────────────────────────────────────── */
