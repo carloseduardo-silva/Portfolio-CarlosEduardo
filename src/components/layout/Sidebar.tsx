@@ -13,7 +13,7 @@ const sectionIds = navItems.map((item) => item.href.slice(1))
 function ProfilePhoto({ size, className = '' }: { size: number; className?: string }) {
   return (
     <Image
-      src="/images/perfil-blue3-Photoroom.jpg"
+      src="/images/foto-kadu-att.webp"
       alt="Carlos Eduardo"
       width={size}
       height={size}
