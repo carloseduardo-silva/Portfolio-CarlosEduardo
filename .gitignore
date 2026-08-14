@@ -1,0 +1,27 @@
+.env
+.env*.local
+/node_modules
+
+# next.js
+/.next/
+/out/
+.turbo
+*.tsbuildinfo
+# gerado pelo next dev/build — alterna de conteudo a cada execucao
+next-env.d.ts
+
+dist
+build
+coverage
+.DS_Store
+*.log
+*.tmp
+*.bak
+*.swp
+.idea
+.vscode
+*.sublime-project
+*.sublime-workspace
+*.iml
+*.class
+*.jar
