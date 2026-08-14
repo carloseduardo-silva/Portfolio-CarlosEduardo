@@ -24,8 +24,8 @@ export default function Projects() {
     <section id="projetos" className="bg-surface-light px-6 md:px-10 lg:px-15 py-28">
       <div className="@container/content max-w-[1280px] mx-auto">
         <ScrollReveal>
-          <SectionLabel index="04" label="Trabalhos Recentes" />
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5 mt-5 mb-14">
+            
             <h2 className="text-[36px] md:text-[44px] font-extrabold text-ink tracking-tight leading-tight">
               Trabalhos Recentes<span className="text-accent">.</span>
             </h2>

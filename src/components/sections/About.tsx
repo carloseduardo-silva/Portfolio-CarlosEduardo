@@ -6,7 +6,6 @@ export default function About() {
     <section id="sobre" className="bg-surface-light px-6 md:px-10 lg:px-15 py-28">
       <div className="@container/content max-w-[1280px] mx-auto">
         <ScrollReveal>
-          <SectionLabel index="01" label="Sobre mim" />
           <h2 className="mt-5 text-[36px] md:text-[44px] font-extrabold text-ink tracking-tight leading-tight mb-14">
             Sobre mim<span className="text-accent">.</span>
           </h2>
@@ -72,15 +71,19 @@ export default function About() {
               estar atuando como <strong className="text-ink font-semibold">Desenvolvedor Front-End</strong> à 2 anos.
             </p>
             <p>
-              Como desenvolvedor possuo experiência em criação de Aplicações Web e Design de Interfaces Interativas
-              utilizando as mais <strong className="text-ink font-semibold">diversas</strong> tecnologias de
-              Front-end, também possuo conhecimentos em Criação e Integração de APIs utilizando{' '}
+              Como desenvolvedor possuo experiência em criação de sites, landing pages, e-commerces e sistemas web,
+              utilizando as mais <strong className="text-ink font-semibold">diversas</strong> tecnologias do mercado.
+            </p>
+
+            {/* <p> Front-end, também possuo conhecimentos em Criação e Integração de APIs utilizando{' '}
               <strong className="text-ink font-semibold">C# e Python</strong>, sistemas de versionamento de
               código <strong className="text-ink font-semibold">(Git e GitHub)</strong>, testes unitários e
               depuração de código{' '}
               <strong className="text-ink font-semibold">(Jest e DevTools)</strong>, além da vivência com
               metodologias ágeis <strong className="text-ink font-semibold">(SCRUM e KANBAN)</strong>.
-            </p>
+            </p> */}
+
+
             <p>
               Atualmente, estou atuando no{' '}
               <a

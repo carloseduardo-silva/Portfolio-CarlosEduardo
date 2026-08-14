@@ -41,7 +41,7 @@ export default function Hero() {
   return (
     <section
       id="inicio"
-      className="relative min-h-screen bg-surface-light flex items-center px-6 md:px-10 lg:px-15 pt-[5rem!important] md:pt-[4.5rem!important] lg:pt-0 pb-16 overflow-hidden"
+      className="relative min-h-screen bg-surface-light flex items-center px-6 md:px-10 lg:px-15 pt-[5rem!important] md:pt-[4.75rem!important] lg:pt-0 pb-16 overflow-hidden"
     >
       {/* Dot grid */}
       <div className="absolute inset-0 bg-dot-grid opacity-60 pointer-events-none" />

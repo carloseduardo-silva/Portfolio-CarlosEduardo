@@ -14,7 +14,6 @@ export default function Experience() {
     <section id="experiencias" className="bg-surface-light px-6 md:px-10 lg:px-15 py-28">
       <div className="@container/content max-w-[1280px] mx-auto">
         <ScrollReveal>
-          <SectionLabel index="02" label="Trajetória" />
           <h2 className="mt-5 text-[36px] md:text-[44px] font-extrabold text-ink tracking-tight leading-tight mb-14">
             Trajetória<span className="text-accent">.</span>
           </h2>

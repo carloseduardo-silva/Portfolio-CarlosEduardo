@@ -85,7 +85,7 @@ export default function ProjectModal({ project, onClose, onPrev, onNext }: Props
         role="dialog"
         aria-modal="true"
         aria-labelledby="project-modal-title"
-        className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 flex flex-col w-[90vw] max-w-[860px] max-h-[85vh] bg-surface-light rounded-2xl border border-card-border shadow-[0_32px_64px_rgba(13,24,41,0.18)] overflow-y-auto"
+        className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 flex flex-col w-[90vw] max-w-[860px] max-h-[85vh] bg-surface-light rounded-2xl border border-card-border shadow-[0_32px_64px_rgba(13,24,41,0.18)] overflow-y-auto scrollbar-thin scrollbar-thumb-card-border scrollbar-track-card-bg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
       >
         {/* Header */}
         <div className="flex items-center justify-between px-7 py-5 border-b border-card-border">
@@ -138,29 +138,37 @@ export default function ProjectModal({ project, onClose, onPrev, onNext }: Props
           <div className="flex-1 flex flex-col gap-5">
             <p className="text-[14.5px] text-ink-muted leading-relaxed">{project.info}</p>
 
-            <div className="flex flex-col gap-3">
-              <div className="p-4 bg-card-bg rounded-xl border border-card-border-blue">
-                <p className="font-mono text-[10px] text-accent-text uppercase tracking-[0.2em] mb-1.5">Tecnologias</p>
-                <p className="text-[13px] text-ink">{project.technologies}</p>
-              </div>
-              <div className="p-4 bg-card-bg rounded-xl border border-card-border-blue">
-                <p className="font-mono text-[10px] text-accent-text uppercase tracking-[0.2em] mb-1.5">Data</p>
-                <p className="text-[13px] text-ink">{project.date}</p>
-              </div>
-              <div className="p-4 bg-card-bg rounded-xl border border-card-border-blue">
-                <p className="font-mono text-[10px] text-accent-text uppercase tracking-[0.2em] mb-1.5">URL</p>
-                <a
-                  target="_blank"
-                  rel="noreferrer"
-                  href={project.url}
-                  className="text-[13px] text-accent-text hover:underline break-all"
-                >
-                  {project.urlLabel}
-                </a>
-              </div>
+            <div className="p-4 bg-card-bg rounded-xl border border-card-border-blue">
+              <p className="font-mono text-[10px] text-accent-text uppercase tracking-[0.2em] mb-1.5">URL</p>
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href={project.url}
+                className="text-[13px] text-accent-text hover:underline break-all"
+              >
+                {project.urlLabel}
+              </a>
             </div>
+
           </div>
+
         </div>
+
+        {/* <div className="flex flex-row gap-3">
+          <div className="p-4 bg-card-bg rounded-xl border border-card-border-blue">
+            <p className="font-mono text-[10px] text-accent-text uppercase tracking-[0.2em] mb-1.5">Tecnologias</p>
+            <p className="text-[13px] text-ink">{project.technologies}</p>
+          </div>
+
+
+          <div className="p-4 bg-card-bg rounded-xl border border-card-border-blue">
+            <p className="font-mono text-[10px] text-accent-text uppercase tracking-[0.2em] mb-1.5">Data</p>
+            <p className="text-[13px] text-ink">{project.date}</p>
+          </div>
+
+
+
+        </div> */}
       </div>
 
       {/* Next arrow */}
