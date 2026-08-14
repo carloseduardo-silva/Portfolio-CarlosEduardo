@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { Project } from '@/data/projects'
 
 type Props = {
@@ -19,6 +20,13 @@ export default function ProjectCard({ project, onClick }: Props) {
         className="relative h-[188px] flex items-end px-5 py-5"
         style={{ background: project.bg }}
       >
+        <Image
+          src={project.mediaType === 'video' ? project.thumbnail : project.mediaSrc}
+          alt={project.title}
+          fill
+          sizes="(max-width: 1024px) 86vw, 420px"
+          className="object-cover"
+        />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
         <div className="relative z-10">
           <span className="font-mono text-[9.5px] text-white/50 uppercase tracking-[0.15em] block mb-1">

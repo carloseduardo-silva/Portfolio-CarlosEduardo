@@ -1,13 +1,12 @@
 'use client'
 
-import { useState } from 'react'
-import ScrollReveal from '@/components/ui/ScrollReveal'
 import CardRail from '@/components/ui/CardRail'
-import { SectionLabel } from '@/components/ui/SectionLabel'
 import ProjectCard from '@/components/ui/ProjectCard'
 import ProjectModal from '@/components/ui/ProjectModal'
-import { projects, highlightProjects, Project } from '@/data/projects'
+import ScrollReveal from '@/components/ui/ScrollReveal'
+import { highlightProjects, Project, projects } from '@/data/projects'
 import { cn } from '@/lib/cn'
+import { useState } from 'react'
 
 type Filter = 'highlights' | 'all'
 
