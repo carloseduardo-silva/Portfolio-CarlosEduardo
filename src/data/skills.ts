@@ -4,10 +4,10 @@ export type TechGroup = {
 }
 
 export const techGroups: TechGroup[] = [
-  { category: 'Frontend Core',              items: ['HTML5', 'CSS3', 'JavaScript', 'TypeScript'] },
+  { category: 'Frontend Core',              items: ['HTML5', 'CSS3', 'JavaScript', 'TypeScript', '.NET'] },
   { category: 'Frameworks & Libs',          items: ['React', 'Next.js', 'jQuery', 'Bootstrap', 'Tailwind CSS'] },
-  { category: 'Backend & Banco de Dados',   items: ['C#', 'Python', 'MySQL', 'Firebase', 'SQL'] },
-  { category: 'Ferramentas & Metodologias', items: ['Git', 'GitHub', 'Jest', 'DevTools', 'Canva', 'SCRUM', 'KANBAN'] },
+  { category: 'Backend & Banco de Dados',   items: ['C#', 'Python', 'MySQL', 'PostgreSQL', 'Firebase', 'SQL'] },
+  { category: 'Ferramentas & Metodologias', items: ['Git', 'GitHub', 'Jest', 'Playwright', 'DevTools', 'Canva', 'SCRUM'] },
 ]
 
 export type Service = {
