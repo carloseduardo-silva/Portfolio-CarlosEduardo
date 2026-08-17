@@ -1,11 +1,10 @@
-import ScrollReveal from '@/components/ui/ScrollReveal'
 import CardRail from '@/components/ui/CardRail'
-import { SectionLabel } from '@/components/ui/SectionLabel'
-import { techGroups, services } from '@/data/skills'
+import ScrollReveal from '@/components/ui/ScrollReveal'
+import { services, techGroups } from '@/data/skills'
 
 export default function Skills() {
   return (
-    <section id="tecnologias" className="bg-surface-light px-6 md:px-10 lg:px-15 py-28">
+    <section id="tecnologias" className="bg-surface-light px-6 md:px-10 lg:px-15 py-18 md:py-24">
       <div className="@container/content max-w-[1280px] mx-auto">
         <ScrollReveal>
           <h2 className="mt-5 text-[36px] md:text-[44px] font-extrabold text-ink tracking-tight leading-tight mb-14">
@@ -37,8 +36,8 @@ export default function Skills() {
 
         {/* Habilidades */}
         <ScrollReveal>
-          <h2 className="mt-20 text-[36px] md:text-[44px] font-extrabold text-ink tracking-tight leading-tight mb-14">
-            Habilidades<span className="text-accent">.</span>
+          <h2 className="mt-22 text-[36px] md:text-[40px] font-extrabold text-ink tracking-tight leading-tight mb-12">
+            Habilidades
           </h2>
         </ScrollReveal>
 

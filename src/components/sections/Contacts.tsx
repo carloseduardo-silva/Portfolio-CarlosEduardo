@@ -11,7 +11,7 @@ const icons: Record<string, string> = {
 
 export default function Contacts() {
   return (
-    <section id="contato" className="bg-surface-light px-6 md:px-10 lg:px-15 py-28">
+    <section id="contato" className="bg-surface-light px-6 md:px-10 lg:px-15 py-18 md:py-24">
       <div className="@container/content max-w-[1280px] mx-auto flex flex-col items-center text-center">
         <ScrollReveal>
           <h2 className="mt-5 text-[36px] md:text-[44px] font-extrabold text-ink tracking-tight leading-tight mb-4">

@@ -56,7 +56,7 @@
    Fica fora do @theme porque o namespace --spacing-* do Tailwind v4 é só o
    multiplicador base e não gera utilities nomeadas. */
 :root {
-  --sidebar-w: clamp(280px, 25vw, 300px);
+  --sidebar-w: clamp(260px, 25vw, 280px);
 }
 
 html {

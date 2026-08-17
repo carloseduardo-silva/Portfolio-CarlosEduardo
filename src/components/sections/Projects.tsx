@@ -20,7 +20,7 @@ export default function Projects() {
   const onNext = currentIndex < displayed.length - 1 ? () => setSelected(displayed[currentIndex + 1]) : null
 
   return (
-    <section id="projetos" className="bg-surface-light px-6 md:px-10 lg:px-15 py-28">
+    <section id="projetos" className="bg-surface-light px-6 md:px-10 lg:px-15 py-18 md:py-24">
       <div className="@container/content max-w-[1280px] mx-auto">
         <ScrollReveal>
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5 mt-5 mb-14">
